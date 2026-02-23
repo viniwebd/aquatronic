@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos - Aquatronic</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/src/styles/global.css">
+    <link rel="stylesheet" href="/src/styles/technology.css"> <!-- Reusing tech-card styles -->
+    <link rel="stylesheet" href="/src/styles/products.css">
+</head>
+<body>
+    <site-header></site-header>
+    
+    <main id="app">
+       <!-- Page Hero Component -->
+        <page-hero
+            title="Soluções completas para o tratamento de água"
+            subtitle="Geradores de cloro por eletrólise e sistemas desenvolvidos para garantir eficiência, segurança operacional e sustentabilidade em diferentes aplicações.">
+        </page-hero>    
+
+        <!-- Block 2: Intro -->
+        <section class="intro-section section-padding container">
+            <div class="center-header">
+                <h2>Tecnologia aplicada a cada necessidade</h2>
+                <p>
+                    O portfólio de produtos da Aquatronic foi desenvolvido para atender diferentes demandas de tratamento de água, desde pequenas instalações até sistemas de grande porte.
+                    <br>
+                    Nosso equipamentos utilizam tecnologia de eletrólise salina para gerar cloro ativo no próprio local de uso, garantindo desinfecção contínua, segura e econômica.
+                </p>
+            </div>
+        </section>
+
+        <!-- Block 3: Products (Tabs) -->
+        <section id="produtos" class="products-tabs-section section-padding">
+            <div class="container">
+                <!-- Tab Navigation -->
+                <div class="tabs-nav">
+                    <button class="tab-btn active" data-tab="aquastart">AquaStart</button>
+                    <button class="tab-btn" data-tab="aquacore">AquaCore</button>
+                    <button class="tab-btn" data-tab="aquamax">AquaMax</button>
+                </div>
+
+                <!-- Tab Content: AquaStart -->
+                <div id="aquastart" class="tab-content active">
+                    <div class="product-header">
+                        <h3>AquaStart – Compactos e inteligentes</h3>
+                        <p class="product-description">
+                            A linha AquaStart é ideal para instalações de pequeno porte, projetos piloto e aplicações institucionais que exigem eficiência com simplicidade operacional.
+                        </p>
+                    </div>
+                    
+                    <div class="product-details-grid">
+                        <div class="detail-col">
+                            <h4>Indicação de uso</h4>
+                            <ul class="check-list">
+                                <li>Pequenas instalações</li>
+                                <li>Unidades institucionais</li>
+                                <li>Tratamento comunitário básico</li>
+                                <li>Projetos piloto</li>
+                            </ul>
+
+                            <div class="models-box">
+                                <h4>Modelos disponíveis</h4>
+                                <ul class="model-list">
+                                    <li><strong>AquaStart 050</strong> – ~50 g/dia</li>
+                                    <li><strong>AquaStart 100</strong> – ~100 g/dia</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="detail-col">
+                            <h4>Benefícios</h4>
+                            <ul class="benefit-list">
+                                <li><i class="fas fa-check-circle"></i> Design compacto</li>
+                                <li><i class="fas fa-check-circle"></i> Operação simples e segura</li>
+                                <li><i class="fas fa-check-circle"></i> Baixo custo operacional</li>
+                                <li><i class="fas fa-check-circle"></i> Produção local de cloro</li>
+                            </ul>
+                            <div class="tab-cta">
+                                <a href="/contato" class="btn btn-outline">Ver ficha técnica</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab Content: AquaCore -->
+                <div id="aquacore" class="tab-content">
+                    <div class="product-header">
+                        <h3>AquaCore – Robustez e flexibilidade</h3>
+                        <p class="product-description">
+                            A linha AquaCore atende aplicações de médio porte que exigem maior capacidade de geração de cloro, com sistemas robustos, confiáveis e flexíveis.
+                        </p>
+                    </div>
+                    
+                    <div class="product-details-grid">
+                        <div class="detail-col">
+                            <h4>Indicação de uso</h4>
+                            <ul class="check-list">
+                                <li>Sistemas descentralizados</li>
+                                <li>Aplicações comerciais e industriais</li>
+                                <li>Operações de médio porte</li>
+                            </ul>
+
+                            <div class="models-box">
+                                <h4>Modelos disponíveis</h4>
+                                <ul class="model-list">
+                                    <li><strong>AquaCore 2000</strong> – ~2.000 g/dia</li>
+                                    <li><strong>AquaCore 4000</strong> – ~4.000 g/dia</li>
+                                    <li><strong>AquaCore 8000</strong> – ~8.000 g/dia</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="detail-col">
+                            <h4>Benefícios</h4>
+                            <ul class="benefit-list">
+                                <li><i class="fas fa-check-circle"></i> Alta confiabilidade operacional</li>
+                                <li><i class="fas fa-check-circle"></i> Fácil integração com sistemas existentes</li>
+                                <li><i class="fas fa-check-circle"></i> Operação contínua e automatizada</li>
+                                <li><i class="fas fa-check-circle"></i> Excelente custo-benefício</li>
+                            </ul>
+                            <div class="tab-cta">
+                                <a href="/contato" class="btn btn-outline">Ver ficha técnica</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab Content: AquaMax -->
+                <div id="aquamax" class="tab-content">
+                    <div class="product-header">
+                        <h3>AquaMax – Alta performance para grandes demandas</h3>
+                        <p class="product-description">
+                            Projetada para aplicações de grande porte, a linha AquaMax entrega máxima capacidade de geração de cloro, com operação contínua e alto desempenho técnico.
+                        </p>
+                    </div>
+                    
+                    <div class="product-details-grid">
+                        <div class="detail-col">
+                            <h4>Indicação de uso</h4>
+                            <ul class="check-list">
+                                <li>Sistemas municipais</li>
+                                <li>Grandes projetos de saneamento</li>
+                                <li>Instalações industriais de alta demanda</li>
+                            </ul>
+
+                            <div class="models-box">
+                                <h4>Modelos disponíveis</h4>
+                                <ul class="model-list">
+                                    <li><strong>AquaMax 12000</strong> – ~12.000 g/dia</li>
+                                    <li><strong>AquaMax 18000</strong> – ~18.000 g/dia</li>
+                                    <li><strong>AquaMax 24000</strong> – ~24.000 g/dia</li>
+                                    <li><strong>AquaMax 36000</strong> – ~36.000 g/dia</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="detail-col">
+                            <h4>Benefícios</h4>
+                            <ul class="benefit-list">
+                                <li><i class="fas fa-check-circle"></i> Alta capacidade de geração</li>
+                                <li><i class="fas fa-check-circle"></i> Operação estável e contínua</li>
+                                <li><i class="fas fa-check-circle"></i> Projetado para operação crítica</li>
+                                <li><i class="fas fa-check-circle"></i> Máxima eficiência e segurança</li>
+                            </ul>
+                            <div class="tab-cta">
+                                <a href="/contato" class="btn btn-outline">Ver ficha técnica</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Block 4: Differentiators -->
+        <section class="differentiators-section section-padding">
+            <div class="container">
+                <div class="center-header">
+                    <h2>Por que escolher os produtos Aquatronic</h2>
+                </div>
+                <div class="cards-grid four-col">
+                    <!-- Note: Reusing .tech-card from technology.css for strict visual consistency -->
+                    <div class="tech-card">
+                        <i class="fas fa-shield-virus"></i>
+                        <h3>Tecnologia de eletrólise salina segura e eficiente</h3>
+                    </div>
+                    <div class="tech-card">
+                        <i class="fas fa-industry"></i>
+                        <h3>Produção local de cloro ativo</h3>
+                    </div>
+                    <div class="tech-card">
+                        <i class="fas fa-user-shield"></i>
+                        <h3>Redução de riscos operacionais</h3>
+                    </div>
+                    <div class="tech-card">
+                        <i class="fas fa-piggy-bank"></i>
+                        <h3>Economia operacional a médio e longo prazo</h3>
+                    </div>
+                    <!-- The 5th card mentioned in request "Engenharia aplicada e projetos personalizados" creates an odd grid row. 
+                         The prompt lists 5 items for "Cards". A 4-column grid with 5 items leaves one orphan.
+                         User Requirement: "Cards: ... 5 items".
+                         I will make this a flexible grid or center the last one. -->
+                    <div class="tech-card">
+                        <i class="fas fa-drafting-compass"></i>
+                        <h3>Engenharia aplicada e projetos personalizados</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Block 5: Downloads & Support -->
+        <section class="downloads-section section-padding container">
+            <div class="two-col-grid">
+                <div class="text-col">
+                    <h2>Informação técnica e suporte especializado</h2>
+                    <p>
+                        Todos os produtos Aquatronic possuem documentação técnica completa para auxiliar no dimensionamento e na especificação correta dos sistemas.
+                    </p>
+                    <a href="/contato" class="btn">Falar com suporte técnico</a>
+                </div>
+                <div class="list-col">
+                    <ul class="support-list">
+                        <li>
+                            <i class="fas fa-file-download"></i>
+                            <span>Download de fichas técnicas</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-headset"></i>
+                            <span>Apoio técnico para especificação</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-comments"></i>
+                            <span>Consultoria especializada</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="products-cta section-padding full-width">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Encontre a solução ideal para o seu projeto</h2>
+                    <p>
+                        Nossa equipe está pronta para ajudar você a escolher o sistema mais adequado para sua aplicação, garantindo eficiência, segurança e sustentabilidade.
+                    </p>
+                    <div class="cta-actions">
+                        <a href="/contato" class="btn">Falar com um especialista</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <site-footer></site-footer>
+
+    <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="/src/components/SiteHeader.ts"></script>
+    <script type="module" src="/src/components/SiteFooter.ts"></script>
+    <script type="module" src="/src/components/PageHero.ts"></script>
+    
+    <!-- Inline script for Tabs to ensure it works immediately on this page -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            function activateTab(tabId) {
+                // Determine target ID (handle hash with or without #)
+                const targetId = tabId.replace('#', '');
+                
+                // Find matching button and content
+                const targetBtn = document.querySelector(`.tab-btn[data-tab="${targetId}"]`);
+                const targetContent = document.getElementById(targetId);
+
+                if (targetBtn && targetContent) {
+                    // Remove active from all
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    tabContents.forEach(c => c.classList.remove('active'));
+
+                    // Add active to current
+                    targetBtn.classList.add('active');
+                    targetContent.classList.add('active');
+                    
+                    // Scroll to tabs section if it's a hash navigation
+                    document.getElementById('produtos').scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+
+            // Click Event
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const tabId = btn.getAttribute('data-tab');
+                    activateTab(tabId);
+                });
+            });
+
+            // Check hash on load
+            if (window.location.hash) {
+                activateTab(window.location.hash);
+            }
+        });
+    </script>
+</body>
+</html>

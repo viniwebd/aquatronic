@@ -1,0 +1,216 @@
+/* Technology Page Styles */
+
+/* Hero Section */
+.tech-hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://anbaragency.com.br/wp-content/uploads/2026/01/2547.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    color: white;
+    font-size: 3.5rem;
+    margin-bottom: 25px;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+/* Overview Section */
+.overview-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.overview-content h2 {
+    margin-bottom: 25px;
+}
+
+.overview-content p {
+    margin-bottom: 20px;
+    color: var(--clr-text);
+}
+
+/* Two Column Grid (Shared) */
+.two-col-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.two-col-grid h2 {
+    margin-bottom: 25px;
+}
+
+.two-col-grid p {
+    margin-bottom: 20px;
+    color: var(--clr-text);
+}
+
+.image-col img {
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Benefit List */
+.benefit-list {
+    margin-top: 30px;
+}
+
+.benefit-list li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    color: var(--clr-primary);
+    font-weight: 500;
+}
+
+.benefit-list i {
+    color: var(--clr-blue);
+    font-size: 1.2rem;
+}
+
+/* Sustainable Section */
+.sustainable-section {
+    background-color: var(--clr-bg-blue-light);
+}
+
+.center-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 60px;
+}
+
+.center-header h2 {
+    margin-bottom: 20px;
+}
+
+.center-header p {
+    color: var(--clr-text);
+}
+
+/* Cards Grid */
+.cards-grid {
+    display: grid;
+    gap: 30px;
+}
+
+.three-col {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.four-col {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* Tech Card (Standard Component) */
+.tech-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    height: 100%;
+    transition: transform 0.3s ease;
+    text-align: center; /* Per guideline: center or left */
+}
+
+/* Note: Guideline says alignment central or left. Overview/Lifecycle are center aligned in structure. */
+
+.tech-card:hover {
+    transform: translateY(-5px);
+}
+
+.tech-card i {
+    font-size: 2.5rem;
+    color: var(--clr-blue);
+    margin-bottom: 25px;
+    display: inline-block;
+}
+
+.tech-card h3 {
+    font-size: 1.25rem; /* H3 size approx */
+    margin-bottom: 15px;
+    color: var(--clr-primary);
+}
+
+.tech-card p {
+    color: var(--clr-text);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* CTA Section */
+.tech-cta.full-width {
+    background-color: var(--clr-bg-blue-light);
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-content h2 {
+    margin-bottom: 20px;
+}
+
+.cta-content p {
+    margin-bottom: 40px;
+    font-size: 1.2rem;
+    color: var(--clr-text);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .cards-grid.three-col,
+    .cards-grid.four-col {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .two-col-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .reverse-mobile {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    
+    .cards-grid.three-col,
+    .cards-grid.four-col {
+        grid-template-columns: 1fr;
+    }
+
+    .tech-card {
+        padding: 30px 20px;
+    }
+}

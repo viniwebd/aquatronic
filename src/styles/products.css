@@ -1,0 +1,203 @@
+/* Products Page Styles */
+.products-hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://anbaragency.com.br/wp-content/uploads/2026/01/2544.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+/* Tabs Section */
+.products-tabs-section {
+    background-color: var(--clr-bg-blue-light);
+}
+
+.tabs-nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    padding: 15px 40px;
+    border: 2px solid var(--clr-blue);
+    background: transparent;
+    color: var(--clr-blue);
+    border-radius: 999px;
+    font-family: var(--ff-primary);
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+    background-color: rgba(1, 129, 254, 0.05);
+}
+
+.tab-btn.active {
+    background-color: var(--clr-blue);
+    color: white;
+    box-shadow: 0 10px 20px rgba(1, 129, 254, 0.2);
+}
+
+/* Tab Content */
+.tab-content {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.product-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 50px;
+}
+
+.product-header h3 {
+    font-size: 2rem;
+    color: var(--clr-primary);
+    margin-bottom: 20px;
+}
+
+.product-description {
+    font-size: 1.1rem;
+    color: var(--clr-text);
+}
+
+.product-details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    background: white;
+    padding: 60px;
+    border-radius: 30px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+}
+
+.detail-col h4 {
+    margin-bottom: 25px;
+    font-size: 1.25rem;
+    color: var(--clr-primary);
+    border-left: 4px solid var(--clr-blue);
+    padding-left: 15px;
+}
+
+/* Lists */
+.check-list, .model-list {
+    list-style: none;
+    margin-bottom: 40px;
+}
+
+.check-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    color: var(--clr-text);
+}
+
+.model-list li {
+    padding: 12px 0;
+    background: #f9f9f9;
+    margin-bottom: 10px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    color: var(--clr-secondary);
+}
+
+.models-box {
+    margin-top: 40px;
+}
+
+.tab-cta {
+    margin-top: 40px;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--clr-blue);
+    color: var(--clr-blue);
+}
+
+.btn-outline:hover {
+    background: var(--clr-blue);
+    color: white;
+}
+
+/* Differentiators Grid Adjustments */
+.bg-light {
+    background-color: var(--clr-light-grey);
+}
+
+/* Support Section */
+.support-list {
+    list-style: none;
+}
+
+.support-list li {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+    font-weight: 500;
+    color: var(--clr-primary);
+    transition: transform 0.3s;
+}
+
+.support-list li:hover {
+    transform: translateX(10px);
+}
+
+.support-list i {
+    font-size: 1.5rem;
+    color: var(--clr-blue);
+}
+
+/* CTA */
+.products-cta.full-width {
+    background-color: var(--clr-bg-blue-light);
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .product-details-grid {
+        gap: 40px;
+        padding: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .product-details-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .tabs-nav {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .tab-btn {
+        text-align: center;
+    }
+
+    .cards-grid.four-col {
+        grid-template-columns: 1fr; /* Stack cards on mobile */
+    }
+}

@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd:*)",
+      "Bash(copy \"c:\\\\Users\\\\vinim\\\\OneDrive\\\\Área de Trabalho\\\\Antigravity\\\\Aquatronic-v2\\\\src\\\\assets\\\\images\\\\logo-aquatronic-auzl.png\" \"c:\\\\Users\\\\vinim\\\\OneDrive\\\\Área de Trabalho\\\\Antigravity\\\\Aquatronic-v2\\\\public\\\\images\\\\logo-aquatronic-auzl.png\")",
+      "Bash(copy \"c:\\\\Users\\\\vinim\\\\OneDrive\\\\Área de Trabalho\\\\Antigravity\\\\Aquatronic-v2\\\\src\\\\assets\\\\images\\\\logo-aquatronic-branco.png\" \"c:\\\\Users\\\\vinim\\\\OneDrive\\\\Área de Trabalho\\\\Antigravity\\\\Aquatronic-v2\\\\public\\\\images\\\\logo-aquatronic-branco.png\")"
+    ]
+  }
+}

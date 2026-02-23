@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicações - Aquatronic</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/src/styles/global.css">
+    <link rel="stylesheet" href="/src/styles/technology.css"> <!-- Reusing tech-card styles -->
+    <link rel="stylesheet" href="/src/styles/applications.css">
+</head>
+<body>
+    <site-header></site-header>
+    
+    <main id="app">
+        <!-- Page Hero Component -->
+        <page-hero
+            title="Tecnologia Aquatronic aplicada a diferentes contextos"
+            subtitle="Soluções flexíveis e escaláveis para garantir desinfecção eficiente, segura e sustentável em diferentes aplicações de tratamento de água.">
+        </page-hero>    
+
+        <!-- Block 2: Intro -->
+        <section class="intro-section section-padding container">
+            <div class="center-header">
+                <h2>Soluções que se adaptam à sua realidade</h2>
+                <p>
+                    As tecnologias Aquatronic foram desenvolvidas para operar com eficiência em diferentes contextos, volumes de água e níveis de exigência operacional.
+                    <br>
+                    Independentemente da aplicação, nossos sistemas garantem desinfecção contínua, segurança para operadores e redução de custos operacionais.
+                </p>
+            </div>
+        </section>
+
+        <!-- Block 3: Applications Grid -->
+        <section id="aplicacoes" class="applications-grid-section section-padding">
+            <div class="container">
+                <div class="cards-grid four-col">
+                    <!-- Card 1 -->
+                    <div class="tech-card">
+                        <i class="fas fa-water"></i>
+                        <h3>Saneamento Básico</h3>
+                        <p>Soluções ideais para estações de tratamento de água e projetos públicos que exigem confiabilidade, operação contínua e conformidade com padrões de potabilidade.</p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="tech-card">
+                        <i class="fas fa-swimming-pool"></i>
+                        <h3>Piscinas e Lazer</h3>
+                        <p>Sistemas automatizados que mantêm níveis estáveis de desinfecção, reduzindo odores, irritações e o uso excessivo de produtos químicos.</p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="tech-card">
+                        <i class="fas fa-industry"></i>
+                        <h3>Indústrias e Processos</h3>
+                        <p>Tratamento de água para processos industriais, reutilização e apoio ao consumo, com foco em eficiência, segurança e sustentabilidade operacional.</p>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="tech-card">
+                        <i class="fas fa-hotel"></i>
+                        <h3>Projetos Comerciais e Institucionais</h3>
+                        <p>Soluções para hotéis, clubes, hospitais, condomínios e grandes empreendimentos que priorizam qualidade da água e segurança para usuários.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Block 4: Explanation Block -->
+        <section class="explanation-section section-padding container">
+            <div class="cards-grid three-col">
+                <!-- Card 1 -->
+                <div class="explanation-card">
+                    <div class="icon-box">
+                        <i class="fas fa-exclamation-circle"></i>
+                    </div>
+                    <h3>O desafio</h3>
+                    <p>Cada aplicação apresenta desafios específicos, como variação de volume, demanda de cloro, segurança operacional e custos de manutenção.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="explanation-card highlight">
+                    <div class="icon-box">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>A solução Aquatronic</h3>
+                    <p>A Aquatronic utiliza tecnologia de eletrólise salina e engenharia aplicada para dimensionar sistemas sob medida, garantindo desinfecção eficiente e contínua.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="explanation-card">
+                    <div class="icon-box">
+                        <i class="fas fa-hand-holding-water"></i>
+                    </div>
+                    <h3>Benefícios práticos</h3>
+                    <p>Operação segura, redução de riscos químicos, economia operacional e maior confiabilidade no tratamento da água.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="applications-cta section-padding full-width">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>A solução certa para a sua aplicação</h2>
+                    <p>
+                        Fale com nossos especialistas e descubra como a tecnologia Aquatronic pode ser aplicada de forma eficiente e sustentável ao seu projeto.
+                    </p>
+                    <div class="cta-actions">
+                        <a href="/tecnologia" class="btn btn-outline-white">Ver casos reais</a>
+                        <a href="/contato" class="btn">Fazer uma simulação</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <site-footer></site-footer>
+
+    <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="/src/components/SiteHeader.ts"></script>
+    <script type="module" src="/src/components/SiteFooter.ts"></script>
+    <script type="module" src="/src/components/PageHero.ts"></script>
+</body>
+</html>

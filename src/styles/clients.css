@@ -1,0 +1,192 @@
+/* Clients and Cases Page Styles */
+
+/* Hero */
+.clients-hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://anbaragency.com.br/wp-content/uploads/2026/01/2149129524.jpg'); /* Different image */
+    background-size: cover;
+    background-position: center;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+/* Intro Section */
+.intro-section .center-header {
+    max-width: 900px;
+}
+
+/* Background Utility */
+.bg-light {
+    background-color: var(--clr-light-grey);
+}
+
+/* Highlight Cards (Reusing .tech-card) */
+.highlight-card .icon-header {
+    color: var(--clr-blue);
+    font-size: 2.5rem; /* Larger icon for highlights */
+    margin-bottom: 20px;
+}
+
+/* Cases Section */
+.cases-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.case-card {
+    background: white;
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.case-content h3 {
+    color: var(--clr-primary);
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--clr-blue);
+}
+
+.case-block {
+    margin-bottom: 30px;
+}
+
+.case-block h4 {
+    font-size: 1.1rem;
+    color: var(--clr-secondary);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.case-block p {
+    color: var(--clr-text);
+    line-height: 1.6;
+}
+
+.results-box {
+    background: #fcfcfc;
+    padding: 30px;
+    border-radius: 15px;
+    margin-top: auto; /* Push to bottom */
+}
+
+.results-box h4 {
+    color: var(--clr-blue);
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.results-box .check-list {
+    list-style: none;
+    padding: 0;
+}
+
+.results-box .check-list li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    color: var(--clr-primary);
+    font-weight: 500;
+}
+
+.results-box .check-list li::before {
+    content: '\f00c';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: var(--clr-blue);
+}
+
+/* Clients Grid */
+.logos-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+    align-items: center;
+}
+
+.client-logo {
+    background: white;
+    height: 120px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e0e0e0; /* Placeholder color */
+    border: 1px solid #eee;
+    transition: all 0.3s;
+}
+
+.client-logo:hover {
+    border-color: var(--clr-blue);
+    color: var(--clr-blue);
+    transform: translateY(-5px);
+}
+
+/* CTA */
+.clients-cta {
+    background: linear-gradient(135deg, var(--clr-primary) 0%, var(--clr-blue) 100%);
+    text-align: center;
+    color: white;
+}
+
+.cta-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.btn-outline-white {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 17px 30px;
+    border-radius: 9999px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-outline-white:hover {
+    background: white;
+    color: var(--clr-blue);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .logos-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .cases-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .logos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .cta-actions {
+        flex-direction: column;
+    }
+
+    .btn-outline-white {
+        text-align: center;
+    }
+}

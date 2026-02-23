@@ -1,0 +1,346 @@
+/* About Page Styles */
+.about-hero {
+    padding: 100px 0;
+    text-align: center;
+    background-color: #fff;
+}
+
+.hero-header-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.about-hero .main-title {
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    color: #212121;
+}
+
+.about-hero .subtitle {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.hero-actions {
+    display: flex;
+    justify-content: center;
+}
+
+.mission-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin: 100px 0;
+}
+
+.vision-card {
+    height: 450px;
+    border-radius: 30px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.vision-card:hover {
+    transform: translateY(-10px);
+}
+
+.card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, rgba(8, 83, 160, 0.95) 0%, rgba(8, 83, 160, 0.3) 100%);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: background 0.4s ease;
+}
+
+.vision-card:hover .card-overlay {
+    background: linear-gradient(0deg, rgba(8, 83, 160, 1) 0%, rgba(8, 83, 160, 0.5) 100%);
+}
+
+.card-label {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    padding: 6px 15px;
+    border-radius: 50px;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.card-content h3 {
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.card-content p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.card-icon-header {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.stats-section {
+    background-color: var(--clr-bg-blue-light);
+    padding: 80px 0;
+    margin-bottom: 80px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    text-align: center;
+}
+
+.stat-card {
+    padding: 20px;
+}
+
+.stat-number {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #0853A0;
+    margin-bottom: 15px;
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #444;
+}
+
+.history-section {
+    padding-bottom: 100px;
+}
+
+.history-content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.section-tag {
+    background-color: #E9F4FF;
+    color: #0853A0;
+    padding: 6px 15px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 25px;
+}
+
+.history-text h2 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    color: #212121;
+}
+
+.history-text p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.history-actions {
+    margin-top: 30px;
+}
+
+.history-image img {
+    width: 100%;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.volunteer-section {
+    padding: 100px 0;
+}
+
+.volunteer-content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.volunteer-image img {
+    width: 100%;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-list {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+}
+
+.benefit-list li {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.benefit-icon i {
+    color: #0853A0;
+    font-size: 1.5rem;
+}
+
+.benefit-info strong {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: #212121;
+}
+
+.benefit-info p {
+    font-size: 0.95rem;
+    color: #666;
+    margin: 0;
+}
+
+.technology-section {
+    background-color: var(--clr-bg-blue-light);
+    padding: 100px 0;
+}
+
+.tech-content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.tech-card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.tech-card:hover {
+    transform: translateY(-5px);
+}
+
+.tech-card i {
+    font-size: 2rem;
+    color: #0853A0;
+    margin-bottom: 20px;
+}
+
+.tech-card h4 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #212121;
+}
+
+.tech-card p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+}
+
+.tech-image img {
+    width: 100%;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+
+
+@media (max-width: 1024px) {
+    .about-hero .main-title {
+        font-size: 3rem;
+    }
+    
+    .mission-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .vision-card {
+        height: 350px;
+    }
+
+    .history-content-wrapper,
+    .volunteer-content-wrapper,
+    .tech-content-wrapper {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-hero .main-title {
+        font-size: 2.5rem;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .history-content-wrapper,
+    .volunteer-content-wrapper,
+    .tech-content-wrapper {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .history-image,
+    .volunteer-image {
+        order: -1;
+    }
+
+    .benefit-list li {
+        text-align: left;
+    }
+
+    .tech-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .history-actions,
+    .volunteer-actions {
+        display: flex;
+        justify-content: center;
+    }
+
+    .section-tag {
+        justify-content: center;
+    }
+}

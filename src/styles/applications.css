@@ -1,0 +1,106 @@
+/* Applications Page Styles */
+.applications-hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://anbaragency.com.br/wp-content/uploads/2026/01/2149221193.jpg'); /* Different image for variety */
+    background-size: cover;
+    background-position: center;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+/* Intro Section */
+.intro-section .center-header {
+    max-width: 900px;
+}
+
+.applications-grid-section {
+    background-color: var(--clr-bg-blue-light);
+}
+
+.explanation-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    height: 100%;
+    border: 1px solid rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.explanation-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.explanation-card.highlight {
+    background: #f0f7ff;
+    border-color: rgba(1, 129, 254, 0.1);
+}
+
+.explanation-card .icon-box {
+    width: 60px;
+    height: 60px;
+    background: var(--clr-baby-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+}
+
+.explanation-card.highlight .icon-box {
+    background: white;
+}
+
+.explanation-card .icon-box i {
+    font-size: 1.5rem;
+    color: var(--clr-blue);
+}
+
+.explanation-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+    color: var(--clr-primary);
+}
+
+.explanation-card p {
+    font-size: 0.95rem;
+    color: var(--clr-text);
+    line-height: 1.6;
+}
+
+/* CTA Actions */
+.cta-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn-outline-white {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 17px 30px;
+    border-radius: 9999px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-white:hover {
+    background: white;
+    color: var(--clr-blue);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .cta-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .btn-outline-white {
+        text-align: center;
+    }
+}
