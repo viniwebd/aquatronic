@@ -49,7 +49,6 @@
 
 .case-content h3 {
     color: var(--clr-primary);
-    font-size: 1.5rem;
     margin-bottom: 30px;
     padding-bottom: 20px;
     border-bottom: 2px solid var(--clr-primary-500);
@@ -60,17 +59,15 @@
 }
 
 .case-block h4 {
-    font-size: 1.1rem;
     color: var(--clr-secondary);
     margin-bottom: 10px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-weight: 600;
 }
 
 .case-block p {
     color: var(--clr-text);
-    line-height: 1.6;
+    line-height: var(--lh-body);
 }
 
 .results-box {
@@ -82,9 +79,8 @@
 
 .results-box h4 {
     color: var(--clr-primary-500);
-    font-size: 1.1rem;
     margin-bottom: 15px;
-    font-weight: 700;
+    font-weight: var(--fw-bold);
 }
 
 .results-box .check-list {
@@ -97,7 +93,7 @@
     padding-left: 25px;
     margin-bottom: 10px;
     color: var(--clr-primary);
-    font-weight: 500;
+    font-weight: var(--fw-medium);
 }
 
 .results-box .check-list li::before {
@@ -156,7 +152,7 @@
     color: white;
     padding: 17px 30px;
     border-radius: 9999px;
-    font-weight: 600;
+    font-weight: var(--fw-semibold);
     transition: all 0.3s ease;
     text-decoration: none;
     display: inline-block;

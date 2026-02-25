@@ -31,8 +31,8 @@
     color: var(--clr-primary-500);
     border-radius: 999px;
     font-family: var(--ff-primary);
-    font-weight: 600;
-    font-size: 1.1rem;
+    font-weight: var(--fw-semibold);
+    font-size: var(--fs-body);
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -69,13 +69,12 @@
 }
 
 .product-header h3 {
-    font-size: 2rem;
     color: var(--clr-primary);
     margin-bottom: 20px;
 }
 
 .product-description {
-    font-size: 1.1rem;
+    font-size: var(--fs-body);
     color: var(--clr-text);
 }
 
@@ -91,7 +90,6 @@
 
 .detail-col h4 {
     margin-bottom: 25px;
-    font-size: 1.25rem;
     color: var(--clr-primary);
     border-left: 4px solid var(--clr-primary-500);
     padding-left: 15px;
@@ -156,7 +154,7 @@
     align-items: center;
     gap: 20px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.03);
-    font-weight: 500;
+    font-weight: var(--fw-medium);
     color: var(--clr-primary);
     transition: transform 0.3s;
 }
@@ -166,7 +164,7 @@
 }
 
 .support-list i {
-    font-size: 1.5rem;
+    font-size: var(--fs-h4);
     color: var(--clr-primary-500);
 }
 

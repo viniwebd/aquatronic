@@ -49,7 +49,7 @@
 
 .hero-eyebrow {
   font-size: 0.7rem;
-  font-weight: 700;
+  font-weight: var(--fw-bold);
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--clr-primary-300);
@@ -69,22 +69,18 @@
 }
 
 .hero-title {
-  font-size: clamp(3rem, 7vw, 4.5rem);
-  font-weight: 600;
   color: var(--clr-white);
-  line-height: 1.05;
-  letter-spacing: -0.03em;
   margin-bottom: 28px;
   max-width: 720px;
 }
 
 .hero-subtitle {
-  font-size: 1.125rem;
+  font-size: var(--fs-body);
   color: rgba(255, 255, 255, 0.8);
   max-width: 520px;
   margin-bottom: 40px;
-  line-height: 1.6;
-  font-weight: 400;
+  line-height: var(--lh-body);
+  font-weight: var(--fw-regular);
 }
 
 .hero-actions {
@@ -99,8 +95,8 @@
   align-items: center;
   gap: 8px;
   color: rgba(255, 255, 255, 0.75);
-  font-weight: 500;
-  font-size: 1rem;
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-body);
   transition: color 0.3s, gap 0.3s;
 }
 
@@ -125,9 +121,9 @@
   border-radius: 9999px;
   background: var(--gradient-brand);
   color: var(--clr-white);
-  font-weight: 600;
+  font-weight: var(--fw-semibold);
   font-family: var(--ff-primary);
-  font-size: 1rem;
+  font-size: var(--fs-body);
   transition: all 0.3s ease;
   position: relative;
   z-index: 2;
@@ -217,8 +213,8 @@
 }
 
 .about-home-text p {
-  font-size: 1.125rem;
-  line-height: 1.6;
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
   color: var(--clr-neutral-500);
   margin-bottom: 20px;
 }
@@ -270,7 +266,7 @@
   align-items: center;
   gap: 6px;
   font-size: 0.6rem;
-  font-weight: 700;
+  font-weight: var(--fw-bold);
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--clr-primary-300);
@@ -283,10 +279,7 @@
 }
 
 .about-vision-card-body h4 {
-  font-size: 1rem;
-  font-weight: 600;
   color: #fff;
-  line-height: 1.3;
   margin-bottom: 16px;
 }
 
@@ -295,8 +288,8 @@
   align-items: center;
   gap: 6px;
   color: rgba(255, 255, 255, 0.7);
-  font-size: 0.85rem;
-  font-weight: 500;
+  font-size: var(--fs-small);
+  font-weight: var(--fw-medium);
   transition: gap 0.3s, color 0.3s;
 }
 
@@ -339,16 +332,14 @@
 }
 
 .about-compact-card h4 {
-  font-size: 1rem;
-  font-weight: 600;
   color: var(--clr-neutral-900);
   margin-bottom: 8px;
 }
 
 .about-compact-card p {
-  font-size: 0.875rem;
+  font-size: var(--fs-small);
   color: var(--clr-neutral-500);
-  line-height: 1.6;
+  line-height: var(--lh-body);
   margin: 0;
 }
 
@@ -376,9 +367,9 @@
 }
 
 .tech-header-right p {
-  font-size: 1.125rem;
+  font-size: var(--fs-body);
   color: var(--clr-neutral-500);
-  line-height: 1.6;
+  line-height: var(--lh-body);
   margin-bottom: 28px;
 }
 
@@ -419,9 +410,9 @@
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  font-weight: 600;
+  font-weight: var(--fw-semibold);
   color: var(--clr-neutral-900);
-  font-size: 1rem;
+  font-size: var(--fs-body);
   gap: 16px;
 }
 
@@ -436,10 +427,10 @@
   display: grid;
   grid-template-rows: 0fr;
   transition: grid-template-rows 0.35s ease;
-  font-size: 1.125rem;
-  font-weight: 400;
+  font-size: var(--fs-body);
+  font-weight: var(--fw-regular);
   color: var(--clr-neutral-500);
-  line-height: 1.6;
+  line-height: var(--lh-body);
 }
 
 .accordion-content.active {
@@ -506,23 +497,20 @@
   align-items: center;
   justify-content: center;
   color: var(--clr-primary-600);
-  font-size: 1.1rem;
+  font-size: var(--fs-body);
   margin-bottom: 24px;
   flex-shrink: 0;
 }
 
 .product-card h4 {
-  font-size: 1.125rem;
-  font-weight: 600;
   color: var(--clr-neutral-900);
   margin-bottom: 10px;
-  line-height: 1.3;
 }
 
 .product-card p {
-  font-size: 1.125rem;
+  font-size: var(--fs-body);
   color: var(--clr-neutral-500);
-  line-height: 1.6;
+  line-height: var(--lh-body);
   flex: 1;
   margin-bottom: 20px;
 }
@@ -532,8 +520,8 @@
   align-items: center;
   gap: 6px;
   color: var(--clr-primary-600);
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: var(--fs-body);
+  font-weight: var(--fw-semibold);
   transition: gap 0.3s;
 }
 
@@ -564,9 +552,9 @@
 
 
 .contact-left p {
-  font-size: 1.125rem;
+  font-size: var(--fs-body);
   color: var(--clr-neutral-500);
-  line-height: 1.65;
+  line-height: var(--lh-body);
   max-width: 38ch;
 }
 
@@ -595,7 +583,7 @@
   background: var(--clr-white);
   margin-bottom: 16px;
   font-family: var(--ff-primary);
-  font-size: 1rem;
+  font-size: var(--fs-body);
   outline: none;
   color: var(--clr-neutral-700);
   transition: border-color 0.3s;
@@ -678,8 +666,8 @@ select.form-field {
 }
 
 .video-overlay p {
-  font-weight: 600;
-  font-size: 0.9rem;
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-small);
   letter-spacing: 0.05em;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
@@ -689,9 +677,9 @@ select.form-field {
 }
 
 .testimonials-content p {
-  font-size: 1.125rem;
+  font-size: var(--fs-body);
   color: var(--clr-neutral-500);
-  line-height: 1.6;
+  line-height: var(--lh-body);
   margin-bottom: 36px;
 }
 

@@ -16,9 +16,9 @@
 
 .error-code {
     font-size: 16em;
-    font-weight: 700;
+    font-weight: var(--fw-bold);
     color: #e6e6e6; /* Very light gray for the big number */
-    line-height: 1;
+    line-height: var(--lh-heading);
     margin-bottom: -50px; /* Overlap effect if desired, or just tight spacing */
     position: relative;
     z-index: 0;
@@ -39,14 +39,13 @@
 }
 
 .error-message {
-    font-size: 2.5rem;
-    color: #212121;
+    color: var(--clr-neutral-900);
     margin-bottom: 15px;
 }
 
 .error-description {
-    color: #666;
-    font-size: 1.1rem;
+    color: var(--clr-neutral-500);
+    font-size: var(--fs-body);
     margin-bottom: 40px;
     max-width: 600px;
     margin-left: auto;
@@ -62,7 +61,7 @@
     color: white;
     padding: 14px 35px;
     border-radius: 999px;
-    font-weight: 600;
+    font-weight: var(--fw-semibold);
     text-decoration: none;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -74,7 +73,7 @@
 }
 
 .btn-icon {
-    font-size: 0.9rem;
+    font-size: var(--fs-small);
 }
 
 /* Responsive */
@@ -85,10 +84,6 @@
     .error-code {
         font-size: 10rem;
         margin-bottom: -30px;
-    }
-
-    .error-message {
-        font-size: 2rem;
     }
 
     .error-image img {

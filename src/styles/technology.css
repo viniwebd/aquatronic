@@ -25,8 +25,8 @@
 
 .overview-text-col p {
     color: var(--clr-neutral-700);
-    font-size: 1.05rem;
-    line-height: 1.75;
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
     margin-bottom: 16px;
 }
 
@@ -67,9 +67,9 @@
 
 .electrolysis-section p {
     color: var(--clr-neutral-700);
-    line-height: 1.75;
+    line-height: var(--lh-body);
     margin-bottom: 16px;
-    font-size: 1.02rem;
+    font-size: var(--fs-body);
 }
 
 .electrolysis-section .benefit-list li {
@@ -118,12 +118,12 @@
     display: flex;
     align-items: center;
     gap: 14px;
-    font-weight: 500;
-    font-size: 0.95rem;
+    font-weight: var(--fw-medium);
+    font-size: var(--fs-nav);
 }
 
 .benefit-list i {
-    font-size: 1.05rem;
+    font-size: var(--fs-body);
     flex-shrink: 0;
     width: 20px;
     text-align: center;
@@ -144,8 +144,8 @@
 }
 
 .section-header p {
-    font-size: 1.05rem;
-    line-height: 1.75;
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
     color: var(--clr-neutral-700);
 }
 
@@ -209,20 +209,19 @@
 
 .card-icon i {
     color: #fff;
-    font-size: 1.35rem;
+    font-size: var(--fs-h3);
 }
 
 .tech-card h3 {
-    font-size: 1.05rem;
-    font-weight: 600;
+    font-weight: var(--fw-semibold);
     color: var(--clr-primary-800);
-    line-height: 1.35;
+    line-height: var(--lh-heading);
 }
 
 .tech-card p {
     color: var(--clr-neutral-600);
-    font-size: 0.92rem;
-    line-height: 1.7;
+    font-size: var(--fs-small);
+    line-height: var(--lh-body);
 }
 
 /* =====================
@@ -240,9 +239,9 @@
 
 .engineering-section p {
     color: var(--clr-neutral-700);
-    line-height: 1.75;
+    line-height: var(--lh-body);
     margin-bottom: 16px;
-    font-size: 1.02rem;
+    font-size: var(--fs-body);
 }
 
 .engineering-section .benefit-list li {
@@ -287,7 +286,7 @@
     font-size: 2.5rem;
     font-weight: 900;
     color: var(--clr-neutral-200);
-    line-height: 1;
+    line-height: var(--lh-heading);
     letter-spacing: -0.03em;
 }
 

@@ -65,8 +65,27 @@
   --home-blue-gradient: var(--gradient-brand);
   --btn-gradient: var(--gradient-action);
 
-  /* Fonts */
+  /* Typography */
   --ff-primary: "DM Sans", sans-serif;
+  
+  /* Font Sizes */
+  --fs-h1: clamp(3rem, 7vw, 4.5rem);
+  --fs-h2: clamp(2rem, 3.5vw, 2.75rem);
+  --fs-h3: 1.375rem; /* 22px */
+  --fs-h4: 1.125rem; /* 18px */
+  --fs-body: 1.125rem; /* 18px */
+  --fs-small: 0.875rem; /* 14px */
+  --fs-nav: 0.95rem; /* 15.2px */
+
+  /* Font Weights */
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  /* Line Heights */
+  --lh-heading: 1.1;
+  --lh-body: 1.6;
 
   /* Spacing & Layout */
   --container-width: 1300px;
@@ -83,11 +102,11 @@
 body {
   font-family: var(--ff-primary);
   color: var(--clr-text-main);
-  line-height: 1.6;
+  line-height: var(--lh-body);
   background-color: var(--clr-white);
   -webkit-font-smoothing: antialiased;
-  font-size: 1.125rem; /* 18px */
-  font-weight: 400;
+  font-size: var(--fs-body);
+  font-weight: var(--fw-regular);
 }
 
 h1,
@@ -98,23 +117,25 @@ h5,
 h6 {
   font-family: var(--ff-primary);
   color: var(--clr-black);
-  line-height: 1.1;
-  font-weight: 600;
+  line-height: var(--lh-heading);
+  font-weight: var(--fw-semibold);
 }
 
 h1 {
-  font-size: clamp(3rem, 7vw, 4.5rem);
+  font-size: var(--fs-h1);
+  letter-spacing: -0.03em;
+  line-height: 1.05;
 }
 h2 {
-  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-size: var(--fs-h2);
   letter-spacing: -0.02em;
   color: var(--clr-neutral-900);
 }
 h3 {
-  font-size: 1.375rem; /* 22px */
+  font-size: var(--fs-h3);
 }
 h4 {
-  font-size: 1.125rem; /* 18px */
+  font-size: var(--fs-h4);
 }
 
 a {
@@ -144,14 +165,23 @@ img {
   padding: 17px 30px;
   border-radius: 9999px;
   font-family: var(--ff-primary);
-  font-weight: 600;
+  font-weight: var(--fw-semibold);
   cursor: pointer;
   transition: all 0.3s ease;
   border: none;
   background: var(--gradient-action);
   color: var(--clr-white);
   text-align: center;
-  font-size: 1.125rem; /* 18px */
+  font-size: var(--fs-body);
+}
+
+.btn-primary {
+  background: var(--gradient-action);
+  color: var(--clr-white);
+  padding: 14px 28px;
+  border-radius: 9999px;
+  font-weight: var(--fw-semibold);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .section-padding {
@@ -179,12 +209,15 @@ img {
 .section-tag {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  font-size: 0.7rem;
-  font-weight: 700;
+  gap: 12px;
+  font-size: var(--fs-body);
+  font-weight: var(--fw-bold);
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--clr-primary-500);
+  background: rgba(0, 160, 227, 0.08);
+  padding: 8px 18px;
+  border-radius: 999px;
   margin-bottom: 24px;
 }
 
