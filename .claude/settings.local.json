@@ -17,7 +17,17 @@
       "Bash(claude mcp list:*)",
       "mcp__figma__get_design_context",
       "mcp__figma__generate_figma_design",
-      "Bash(start:*)"
+      "Bash(start:*)",
+      "Bash(where claude)",
+      "Bash(/c/Users/vinim/AppData/Roaming/npm/claude mcp list)",
+      "Bash(cmd /c \"claude mcp list\")",
+      "Bash(cmd /c \"claude mcp list 2>&1\")",
+      "Bash(netstat -ano)",
+      "Bash(findstr :5173)"
     ]
-  }
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "figma"
+  ]
 }

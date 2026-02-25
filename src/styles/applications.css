@@ -1,6 +1,7 @@
 /* Applications Page Styles */
 .applications-hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://anbaragency.com.br/wp-content/uploads/2026/01/2149221193.jpg'); /* Different image for variety */
+    background-color: var(--clr-primary-800);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/img-hero-pages.png');
     background-size: cover;
     background-position: center;
     min-height: 70vh;
@@ -42,7 +43,7 @@
 .explanation-card .icon-box {
     width: 60px;
     height: 60px;
-    background: var(--clr-baby-blue);
+    background: var(--clr-primary-100);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -56,7 +57,7 @@
 
 .explanation-card .icon-box i {
     font-size: 1.5rem;
-    color: var(--clr-blue);
+    color: var(--clr-primary-500);
 }
 
 .explanation-card h3 {
@@ -90,7 +91,7 @@
 
 .btn-outline-white:hover {
     background: white;
-    color: var(--clr-blue);
+    color: var(--clr-primary-500);
 }
 
 /* Responsive */

@@ -16,8 +16,8 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: #E8F0FE;
-    color: #0853A0;
+    background: var(--clr-primary-100);
+    color: var(--clr-primary-600);
     padding: 6px 16px;
     border-radius: 999px;
     font-size: 0.9rem;
@@ -48,8 +48,8 @@
 .icon-box {
     width: 50px;
     height: 50px;
-    background: #E8F0FE;
-    color: #0853A0;
+    background: var(--clr-primary-100);
+    color: var(--clr-primary-600);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -60,7 +60,7 @@
 
 .info-item:hover .icon-box {
     transform: scale(1.1);
-    background: #0853A0;
+    background: var(--clr-primary-600);
     color: white;
 }
 
@@ -107,7 +107,7 @@
     padding: 12px 20px;
     border: 1px solid #E0E0E0;
     border-radius: 50px; /* Fully rounded for inputs */
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--ff-primary);
     font-size: 0.95rem;
     background: white;
     transition: all 0.3s ease;
@@ -121,12 +121,12 @@
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #0853A0;
-    box-shadow: 0 0 0 3px rgba(8, 83, 160, 0.1);
+    border-color: var(--clr-primary-600);
+    box-shadow: 0 0 0 3px rgba(0, 107, 163, 0.1);
 }
 
 .btn-submit {
-    background: #00d2d3; /* Cyan/Teal color from reference */
+    background: var(--gradient-action);
     color: white;
     border: none;
     padding: 15px 40px;
@@ -134,12 +134,12 @@
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
-    transition: transform 0.3s ease, background 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease;
     width: 100%;
 }
 
 .btn-submit:hover {
-    background: #01b8b9;
+    opacity: 0.9;
     transform: translateY(-2px);
 }
 
@@ -175,7 +175,7 @@
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    color: #0853A0;
+    color: var(--clr-primary-600);
     font-weight: 600;
     text-decoration: none;
     margin-top: 10px;
@@ -189,7 +189,7 @@
 .accordion-item {
     background: white;
     border: 1px solid #E0E0E0;
-    border-radius: 50px; /* Pill shape */
+    border-radius: 9999px; /* Pill shape */
     margin-bottom: 15px;
     overflow: hidden;
     transition: box-shadow 0.3s ease;
@@ -210,7 +210,7 @@
 }
 
 .accordion-header i {
-    color: #0853A0;
+    color: var(--clr-primary-600);
 }
 
 .accordion-content {

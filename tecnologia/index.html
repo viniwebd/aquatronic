@@ -6,170 +6,173 @@
     <title>Tecnologia - Aquatronic</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;0,9..40,900;1,9..40,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/src/styles/global.css">
     <link rel="stylesheet" href="/src/styles/technology.css">
 </head>
 <body>
     <site-header></site-header>
-    
+
     <main id="app">
-        <!-- Page Hero Component -->
-      <page-hero
-        title="Tecnologia que transforma o tratamento de água"
-        subtitle="Soluções avançadas em geração de cloro por eletrólise, combinando eficiência, segurança operacional e sustentabilidade para diferentes aplicações e escalas.">
-      </page-hero>
 
-        <!-- Block 1: Overview -->
-        <section class="overview-section section-padding container">
-            <div class="overview-content">
-                <h2>Tecnologia aplicada para garantir água segura</h2>
-                <p>
-                    Na Aquatronic, o tratamento de água começa com tecnologia de ponta, engenharia aplicada e processos sustentáveis. Nossos sistemas foram desenvolvidos para produzir desinfecção eficiente e contínua, reduzindo riscos operacionais, custos e impactos ambientais.
-                </p>
-                <p>
-                    Mais do que equipamentos, entregamos soluções completas, que integram tecnologia, projeto e serviços ao longo de todo o ciclo de vida do sistema.
-                </p>
-            </div>
-        </section>
+        <!-- Hero -->
+        <page-hero
+            title="Tecnologia que transforma o tratamento de água"
+            subtitle="Soluções avançadas em geração de cloro por eletrólise, combinando eficiência, segurança operacional e sustentabilidade para diferentes aplicações e escalas.">
+        </page-hero>
 
-        <!-- Block 2: Electrolysis -->
-        <section class="electrolysis-section section-padding container">
-            <div class="two-col-grid">
-                <div class="text-col">
-                    <h2>Eletrólise salina: cloro gerado no próprio local</h2>
-                    <p>
-                        A eletrólise salina é o coração da tecnologia Aquatronic. Por meio de um processo eletroquímico seguro e contínuo, nossos sistemas produzem cloro ativo diretamente no local de uso, utilizando apenas água e sal como insumos.
-                    </p>
-                    <p>
-                        Esse processo elimina a necessidade de transporte, armazenamento e manuseio de cloro químico concentrado, garantindo maior segurança e estabilidade na desinfecção da água.
-                    </p>
-                    <ul class="benefit-list">
-                        <li><i class="fas fa-check-circle"></i> Produção local e contínua de cloro ativo</li>
-                        <li><i class="fas fa-check-circle"></i> Processo eletroquímico seguro e eficiente</li>
-                        <li><i class="fas fa-check-circle"></i> Eliminação do uso de produtos químicos concentrados</li>
-                        <li><i class="fas fa-check-circle"></i> Desinfecção estável, confiável e automatizada</li>
-                    </ul>
-                </div>
-                <div class="image-col">
-                    <img src="https://kitpro.site/wateree/wp-content/uploads/sites/427/2025/08/7.jpg" alt="Processo de Eletrólise Salina">
-                </div>
-            </div>
-        </section>
-
-        <!-- Block 3: Sustainable Process -->
-        <section class="sustainable-section section-padding">
+        <!-- Block 1: Overview — split layout (texto + stats) -->
+        <section class="overview-section section-padding" aria-labelledby="overview-title">
             <div class="container">
-                <div class="section-header center-header">
-                    <h2>Tecnologia sustentável com impacto real</h2>
-                    <p>
-                        Nossas soluções foram projetadas para reduzir impactos ambientais e aumentar a segurança operacional, alinhando desempenho técnico com responsabilidade ambiental.
-                    </p>
+                <div class="overview-grid">
+                    <div class="overview-text-col">
+                        <section-tag text="Nossa Tecnologia"></section-tag>
+                        <h2 id="overview-title">Tecnologia aplicada para garantir água segura</h2>
+                        <p>Na Aquatronic, o tratamento de água começa com tecnologia de ponta, engenharia aplicada e processos sustentáveis. Nossos sistemas foram desenvolvidos para produzir desinfecção eficiente e contínua, reduzindo riscos operacionais, custos e impactos ambientais.</p>
+                        <p>Mais do que equipamentos, entregamos soluções completas, que integram tecnologia, projeto e serviços ao longo de todo o ciclo de vida do sistema.</p>
+                    </div>
+                    <div class="overview-stats-col" role="list" aria-label="Números da Aquatronic">
+                        <stat-badge value="20+" label="Anos de experiência"></stat-badge>
+                        <stat-badge value="500+" label="Projetos entregues"></stat-badge>
+                        <stat-badge value="100%" label="Produção on-site"></stat-badge>
+                    </div>
                 </div>
-                <div class="cards-grid three-col">
-                    <!-- Card 1 -->
-                    <div class="tech-card">
-                        <i class="fas fa-flask"></i>
+            </div>
+        </section>
+
+        <!-- Block 2: Electrolysis — duas colunas, bg cinza claro -->
+        <section class="electrolysis-section section-padding" aria-labelledby="electrolysis-title">
+            <div class="container">
+                <div class="two-col-grid">
+                    <div class="text-col">
+                        <section-tag text="Processo Eletroquímico"></section-tag>
+                        <h2 id="electrolysis-title">Eletrólise salina: cloro gerado no próprio local</h2>
+                        <p>A eletrólise salina é o coração da tecnologia Aquatronic. Por meio de um processo eletroquímico seguro e contínuo, nossos sistemas produzem cloro ativo diretamente no local de uso, utilizando apenas água e sal como insumos.</p>
+                        <p>Esse processo elimina a necessidade de transporte, armazenamento e manuseio de cloro químico concentrado, garantindo maior segurança e estabilidade na desinfecção da água.</p>
+                        <ul class="benefit-list" role="list">
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Produção local e contínua de cloro ativo</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Processo eletroquímico seguro e eficiente</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Eliminação do uso de produtos químicos concentrados</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Desinfecção estável, confiável e automatizada</li>
+                        </ul>
+                    </div>
+                    <div class="image-col">
+                        <img src="https://kitpro.site/wateree/wp-content/uploads/sites/427/2025/08/7.jpg"
+                             alt="Processo de eletrólise salina — geração de cloro no local de uso">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Block 3: Sustainable — 3 cards, bg branco -->
+        <section class="sustainable-section section-padding" aria-labelledby="sustainable-title">
+            <div class="container">
+                <div class="section-header">
+                    <section-tag text="Sustentabilidade"></section-tag>
+                    <h2 id="sustainable-title">Tecnologia sustentável com impacto real</h2>
+                    <p>Nossas soluções foram projetadas para reduzir impactos ambientais e aumentar a segurança operacional, alinhando desempenho técnico com responsabilidade ambiental.</p>
+                </div>
+                <div class="cards-grid three-col" role="list">
+                    <article class="tech-card" role="listitem">
+                        <div class="card-icon" aria-hidden="true"><i class="fas fa-flask"></i></div>
                         <h3>Produção local de desinfetante</h3>
                         <p>Geração de cloro diretamente no ponto de uso, eliminando transporte e estocagem de químicos perigosos.</p>
-                    </div>
-                    <!-- Card 2 -->
-                    <div class="tech-card">
-                        <i class="fas fa-shield-alt"></i>
+                    </article>
+                    <article class="tech-card" role="listitem">
+                        <div class="card-icon" aria-hidden="true"><i class="fas fa-shield-alt"></i></div>
                         <h3>Mais segurança operacional</h3>
                         <p>Redução de riscos para operadores, usuários e equipes de manutenção, com operação automatizada e controlada.</p>
-                    </div>
-                    <!-- Card 3 -->
-                    <div class="tech-card">
-                        <i class="fas fa-leaf"></i>
+                    </article>
+                    <article class="tech-card" role="listitem">
+                        <div class="card-icon" aria-hidden="true"><i class="fas fa-leaf"></i></div>
                         <h3>Menor impacto ambiental</h3>
                         <p>Processo eficiente, com menos resíduos, menor logística química e economia de recursos a médio e longo prazo.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Block 4: Engineering — duas colunas invertidas, bg cinza claro -->
+        <section class="engineering-section section-padding" aria-labelledby="engineering-title">
+            <div class="container">
+                <div class="two-col-grid reverse-mobile">
+                    <div class="image-col">
+                        <img src="https://kitpro.site/wateree/wp-content/uploads/sites/427/2025/08/9-4.jpg"
+                             alt="Equipe técnica dimensionando projeto de engenharia aplicada">
+                    </div>
+                    <div class="text-col">
+                        <section-tag text="Engenharia Aplicada"></section-tag>
+                        <h2 id="engineering-title">Engenharia aplicada para cada projeto</h2>
+                        <p>Cada sistema Aquatronic é dimensionado de acordo com a necessidade real do cliente. Nossa equipe técnica desenvolve projetos personalizados, considerando volume de água, tipo de aplicação, demanda de cloro e infraestrutura existente.</p>
+                        <p>Essa abordagem garante máxima eficiência, desempenho confiável e integração total com diferentes sistemas de tratamento de água.</p>
+                        <ul class="benefit-list" role="list">
+                            <li><i class="fas fa-ruler-combined" aria-hidden="true"></i> Sistemas dimensionados sob medida</li>
+                            <li><i class="fas fa-water" aria-hidden="true"></i> Adaptação para diferentes volumes e aplicações</li>
+                            <li><i class="fas fa-project-diagram" aria-hidden="true"></i> Integração com infraestruturas existentes</li>
+                            <li><i class="fas fa-cogs" aria-hidden="true"></i> Maior eficiência e confiabilidade operacional</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Block 4: Engineering -->
-        <section class="engineering-section section-padding container">
-            <div class="two-col-grid reverse-mobile">
-                <div class="image-col">
-                    <img src="https://kitpro.site/wateree/wp-content/uploads/sites/427/2025/08/9-4.jpg" alt="Engenharia Aplicada">
-                </div>
-                <div class="text-col">
-                    <h2>Engenharia aplicada para cada projeto</h2>
-                    <p>
-                        Cada sistema Aquatronic é dimensionado de acordo com a necessidade real do cliente. Nossa equipe técnica desenvolve projetos personalizados, considerando volume de água, tipo de aplicação, demanda de cloro e infraestrutura existente.
-                    </p>
-                    <p>
-                        Essa abordagem garante máxima eficiência, desempenho confiável e integração total com diferentes sistemas de tratamento de água.
-                    </p>
-                    <ul class="benefit-list">
-                        <li><i class="fas fa-ruler-combined"></i> Sistemas dimensionados sob medida</li>
-                        <li><i class="fas fa-water"></i> Adaptação para diferentes volumes e aplicações</li>
-                        <li><i class="fas fa-project-diagram"></i> Integração com infraestruturas existentes</li>
-                        <li><i class="fas fa-cogs"></i> Maior eficiência e confiabilidade operacional</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Block 5: Lifecycle Services -->
-        <section class="lifecycle-section section-padding container">
-            <div class="section-header center-header">
-                <h2>Tecnologia que acompanha todo o ciclo de vida</h2>
-                <p>
-                    A Aquatronic vai além da fabricação de equipamentos. Oferecemos serviços integrados que garantem operação contínua, segura e eficiente desde a instalação até o suporte permanente.
-                </p>
-            </div>
-            <div class="cards-grid four-col">
-                <!-- Card 1 -->
-                <div class="tech-card">
-                    <i class="fas fa-tools"></i>
-                    <h3>Manutenção especializada</h3>
-                    <p>Programas preventivos e corretivos para manter os sistemas sempre operando com máxima performance.</p>
-                </div>
-                <!-- Card 2 -->
-                <div class="tech-card">
-                    <i class="fas fa-box-open"></i>
-                    <h3>Locação de equipamentos</h3>
-                    <p>Soluções flexíveis para projetos temporários, emergenciais ou de curta duração.</p>
-                </div>
-                <!-- Card 3 -->
-                <div class="tech-card">
-                    <i class="fas fa-desktop"></i>
-                    <h3>Monitoramento e operação segura</h3>
-                    <p>Acompanhamento técnico para otimização de desempenho e redução de riscos operacionais.</p>
-                </div>
-                <!-- Card 4 -->
-                <div class="tech-card">
-                    <i class="fas fa-headset"></i>
-                    <h3>Suporte técnico completo</h3>
-                    <p>Assistência especializada em todas as etapas do ciclo de vida do sistema.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA Section -->
-        <section class="tech-cta section-padding full-width">
+        <!-- Block 5: Lifecycle — 4 cards numerados, bg branco -->
+        <section class="lifecycle-section section-padding" aria-labelledby="lifecycle-title">
             <div class="container">
-                <div class="cta-content">
-                    <h2>Tecnologia certa para o seu projeto de tratamento de água</h2>
-                    <p>
-                        Fale com nossos especialistas e descubra como a tecnologia Aquatronic pode transformar a eficiência, segurança e sustentabilidade do seu sistema.
-                    </p>
-                    <a href="/contato" class="btn">Falar com um especialista</a>
+                <div class="section-header">
+                    <section-tag text="Ciclo de Vida"></section-tag>
+                    <h2 id="lifecycle-title">Tecnologia que acompanha todo o ciclo de vida</h2>
+                    <p>A Aquatronic vai além da fabricação de equipamentos. Oferecemos serviços integrados que garantem operação contínua, segura e eficiente desde a instalação até o suporte permanente.</p>
+                </div>
+                <div class="cards-grid four-col" role="list">
+                    <article class="tech-card numbered-card" role="listitem">
+                        <span class="card-number" aria-hidden="true">01</span>
+                        <div class="card-icon" aria-hidden="true"><i class="fas fa-tools"></i></div>
+                        <h3>Manutenção especializada</h3>
+                        <p>Programas preventivos e corretivos para manter os sistemas sempre operando com máxima performance.</p>
+                    </article>
+                    <article class="tech-card numbered-card" role="listitem">
+                        <span class="card-number" aria-hidden="true">02</span>
+                        <div class="card-icon" aria-hidden="true"><i class="fas fa-box-open"></i></div>
+                        <h3>Locação de equipamentos</h3>
+                        <p>Soluções flexíveis para projetos temporários, emergenciais ou de curta duração.</p>
+                    </article>
+                    <article class="tech-card numbered-card" role="listitem">
+                        <span class="card-number" aria-hidden="true">03</span>
+                        <div class="card-icon" aria-hidden="true"><i class="fas fa-desktop"></i></div>
+                        <h3>Monitoramento e operação segura</h3>
+                        <p>Acompanhamento técnico para otimização de desempenho e redução de riscos operacionais.</p>
+                    </article>
+                    <article class="tech-card numbered-card" role="listitem">
+                        <span class="card-number" aria-hidden="true">04</span>
+                        <div class="card-icon" aria-hidden="true"><i class="fas fa-headset"></i></div>
+                        <h3>Suporte técnico completo</h3>
+                        <p>Assistência especializada em todas as etapas do ciclo de vida do sistema.</p>
+                    </article>
                 </div>
             </div>
         </section>
+
+        <!-- CTA -->
+        <cta-banner
+            heading="Tecnologia certa para o seu projeto de tratamento de água"
+            description="Fale com nossos especialistas e descubra como a tecnologia Aquatronic pode transformar a eficiência, segurança e sustentabilidade do seu sistema."
+            primary-text="Falar com um especialista"
+            primary-href="/contato"
+            secondary-text="Conhecer produtos"
+            secondary-href="/produtos">
+        </cta-banner>
 
     </main>
 
     <site-footer></site-footer>
 
-    <script type="module" src="/src/main.ts"></script>
     <script type="module" src="/src/components/SiteHeader.ts"></script>
     <script type="module" src="/src/components/SiteFooter.ts"></script>
     <script type="module" src="/src/components/PageHero.ts"></script>
+    <script type="module" src="/src/components/SectionTag.ts"></script>
+    <script type="module" src="/src/components/StatBadge.ts"></script>
+    <script type="module" src="/src/components/CtaBanner.ts"></script>
 </body>
 </html>

@@ -1,29 +1,76 @@
 :root {
-  /* System Colors */
+  /* ── Primary Scale ── */
+  --clr-primary-100: #c7edff;
+  --clr-primary-200: #8dd8ff;
+  --clr-primary-300: #4dbef0;
+  --clr-primary-400: #00a0e3;
+  --clr-primary-500: #0080c0;
+  --clr-primary-600: #006ba3;
+  --clr-primary-700: #114973;
+  --clr-primary-800: #0c3455;
+  --clr-primary-900: #071e35;
+
+  /* ── Neutral Scale ── */
+  --clr-neutral-100: #dfe7ef;
+  --clr-neutral-200: #c2d0dc;
+  --clr-neutral-300: #96aabb;
+  --clr-neutral-400: #6b8399;
+  --clr-neutral-500: #4d6578;
+  --clr-neutral-600: #3a4f62;
+  --clr-neutral-700: #2c3d4e;
+  --clr-neutral-800: #1e2d3b;
+  --clr-neutral-900: #131e28;
+
+  /* ── Feedback Colors ── */
+  --clr-red: #ef4444;
+  --clr-red-subtle: rgba(251, 55, 72, 0.1);
+  --clr-yellow: #f59e0b;
+  --clr-yellow-subtle: rgba(255, 219, 67, 0.1);
+  --clr-green-100: #86edac;
+  --clr-green: #22c55e;
+  --clr-green-subtle: rgba(31, 193, 107, 0.1);
+
+  /* ── White Opacities ── */
+  --clr-white: #ffffff;
+  --clr-white-80: rgba(255, 255, 255, 0.8);
+  --clr-white-60: rgba(255, 255, 255, 0.6);
+  --clr-white-40: rgba(255, 255, 255, 0.4);
+  --clr-white-20: rgba(255, 255, 255, 0.2);
+  --clr-white-10: rgba(255, 255, 255, 0.1);
+
+  /* ── Black Opacities ── */
+  --clr-black: #000000;
+  --clr-black-80: rgba(0, 0, 0, 0.8);
+  --clr-black-60: rgba(0, 0, 0, 0.6);
+  --clr-black-40: rgba(0, 0, 0, 0.4);
+  --clr-black-20: rgba(0, 0, 0, 0.2);
+  --clr-black-10: rgba(0, 0, 0, 0.1);
+  --clr-black-05: rgba(0, 0, 0, 0.05);
+
+  /* ── Legacy (manter compatibilidade) ── */
   --clr-primary: #212121;
   --clr-secondary: #54595f;
   --clr-text: #7a7a7a;
   --clr-accent: #61ce70;
-
-  /* Custom Colors */
   --clr-cyan: #33d3cd;
-  --clr-white: #ffffff;
   --clr-blue: #0181fe;
-  --clr-black: #000000;
   --clr-baby-blue: #e9f4ff;
-  --clr-yellow: #f3b61a;
   --clr-light-grey: #f3f3f3;
   --clr-text-main: #000000;
   --clr-bg-blue-light: #009FE31A;
-  --home-blue-gradient: linear-gradient(135deg, #0853A0, #009FE3);
-  --btn-gradient: linear-gradient(135deg, #1e6bff, #3fa9ff);
+  --gradient-brand: linear-gradient(135deg, var(--clr-primary-700), var(--clr-primary-400));
+  --gradient-action: linear-gradient(135deg, var(--clr-primary-600), var(--clr-primary-300));
+
+  /* ── Legacy aliases (não usar em código novo) ── */
+  --home-blue-gradient: var(--gradient-brand);
+  --btn-gradient: var(--gradient-action);
 
   /* Fonts */
-  --ff-primary: "Poppins", sans-serif;
+  --ff-primary: "DM Sans", sans-serif;
 
   /* Spacing & Layout */
   --container-width: 1300px;
-  --section-padding: 80px 0;
+  --section-padding: 100px 0;
 }
 
 /* Base Styles */
@@ -59,7 +106,9 @@ h1 {
   font-size: clamp(3rem, 7vw, 4.5rem);
 }
 h2 {
-  font-size: 2rem; /* 32px */
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  letter-spacing: -0.02em;
+  color: var(--clr-neutral-900);
 }
 h3 {
   font-size: 1.375rem; /* 22px */
@@ -99,14 +148,14 @@ img {
   cursor: pointer;
   transition: all 0.3s ease;
   border: none;
-  background: linear-gradient(223deg, var(--clr-blue), var(--clr-cyan));
+  background: var(--gradient-action);
   color: var(--clr-white);
   text-align: center;
   font-size: 1.125rem; /* 18px */
 }
 
 .section-padding {
-  padding: 100px 0;
+  padding: var(--section-padding);
 }
 
 @media (max-width: 1024px) {
@@ -124,4 +173,26 @@ img {
 .btn:hover {
   filter: brightness(1.1);
   transform: translateY(-2px);
+}
+
+/* ── Section Tag Component ── */
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--clr-primary-500);
+  margin-bottom: 24px;
+}
+
+.section-tag::before {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 2px;
+  background: currentColor;
+  flex-shrink: 0;
 }

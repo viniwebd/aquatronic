@@ -17,7 +17,7 @@ export class SiteFooter extends HTMLElement {
         :host {
           display: block;
           width: 100%;
-          background: var(--home-blue-gradient);
+          background: var(--gradient-brand);
           color: var(--clr-white);
           padding: 80px 0 40px;
           margin-top: 40px;
@@ -31,7 +31,7 @@ export class SiteFooter extends HTMLElement {
           content: '';
           position: absolute;
           top: 0; left: 0; right: 0; bottom: 0;
-          background-image: url('https://anbaragency.com.br/wp-content/uploads/2026/01/11-3.jpg');
+          background-image: url('/images/img-footer.png');
           background-size: cover;
           background-position: center;
           opacity: 0.15;

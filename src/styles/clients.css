@@ -2,7 +2,8 @@
 
 /* Hero */
 .clients-hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://anbaragency.com.br/wp-content/uploads/2026/01/2149129524.jpg'); /* Different image */
+    background-color: var(--clr-primary-800);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/img-hero-pages.png');
     background-size: cover;
     background-position: center;
     min-height: 70vh;
@@ -24,7 +25,7 @@
 
 /* Highlight Cards (Reusing .tech-card) */
 .highlight-card .icon-header {
-    color: var(--clr-blue);
+    color: var(--clr-primary-500);
     font-size: 2.5rem; /* Larger icon for highlights */
     margin-bottom: 20px;
 }
@@ -51,7 +52,7 @@
     font-size: 1.5rem;
     margin-bottom: 30px;
     padding-bottom: 20px;
-    border-bottom: 2px solid var(--clr-blue);
+    border-bottom: 2px solid var(--clr-primary-500);
 }
 
 .case-block {
@@ -80,7 +81,7 @@
 }
 
 .results-box h4 {
-    color: var(--clr-blue);
+    color: var(--clr-primary-500);
     font-size: 1.1rem;
     margin-bottom: 15px;
     font-weight: 700;
@@ -105,7 +106,7 @@
     font-weight: 900;
     position: absolute;
     left: 0;
-    color: var(--clr-blue);
+    color: var(--clr-primary-500);
 }
 
 /* Clients Grid */
@@ -130,14 +131,14 @@
 }
 
 .client-logo:hover {
-    border-color: var(--clr-blue);
-    color: var(--clr-blue);
+    border-color: var(--clr-primary-500);
+    color: var(--clr-primary-500);
     transform: translateY(-5px);
 }
 
 /* CTA */
 .clients-cta {
-    background: linear-gradient(135deg, var(--clr-primary) 0%, var(--clr-blue) 100%);
+    background: var(--gradient-brand);
     text-align: center;
     color: white;
 }
@@ -163,7 +164,7 @@
 
 .btn-outline-white:hover {
     background: white;
-    color: var(--clr-blue);
+    color: var(--clr-primary-500);
 }
 
 /* Responsive */

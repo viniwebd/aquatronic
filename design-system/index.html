@@ -1,0 +1,1478 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design System — Aquatronic</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/src/styles/global.css">
+  <script type="module" src="/src/main.ts"></script>
+  <script type="module" src="/src/components/SiteHeader.ts"></script>
+  <script type="module" src="/src/components/SiteFooter.ts"></script>
+  <script type="module" src="/src/components/PageHero.ts"></script>
+  <script type="module" src="/src/components/SpecialButton.ts"></script>
+  <script type="module" src="/src/components/SiteButton.ts"></script>
+  <script type="module" src="/src/components/ContactButton.ts"></script>
+  <script type="module" src="/src/components/SectionTag.ts"></script>
+  <style>
+    /* ── Layout ── */
+    .ds-page {
+      background: #f8f9fa;
+      min-height: 100vh;
+    }
+
+    .ds-topbar {
+      background: #0f172a;
+      color: #fff;
+      padding: 18px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+    }
+
+    .ds-topbar-title {
+      font-family: var(--ff-primary);
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .ds-topbar-badge {
+      background: var(--clr-blue);
+      color: #fff;
+      font-size: 0.7rem;
+      padding: 2px 8px;
+      border-radius: 99px;
+      font-weight: 500;
+    }
+
+    .ds-nav {
+      display: flex;
+      gap: 24px;
+    }
+
+    .ds-nav a {
+      color: rgba(255,255,255,0.65);
+      font-size: 0.85rem;
+      text-decoration: none;
+      font-family: var(--ff-primary);
+      transition: color 0.2s;
+    }
+
+    .ds-nav a:hover { color: #fff; }
+
+    .ds-body {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      min-height: calc(100vh - 58px);
+    }
+
+    /* ── Sidebar ── */
+    .ds-sidebar {
+      background: #fff;
+      border-right: 1px solid #e5e7eb;
+      padding: 32px 0;
+      position: sticky;
+      top: 58px;
+      height: calc(100vh - 58px);
+      overflow-y: auto;
+    }
+
+    .ds-sidebar-group {
+      margin-bottom: 8px;
+    }
+
+    .ds-sidebar-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #9ca3af;
+      padding: 8px 24px 4px;
+      font-family: var(--ff-primary);
+    }
+
+    .ds-sidebar a {
+      display: block;
+      padding: 8px 24px;
+      font-size: 0.875rem;
+      color: #374151;
+      text-decoration: none;
+      font-family: var(--ff-primary);
+      border-left: 3px solid transparent;
+      transition: all 0.15s;
+    }
+
+    .ds-sidebar a:hover {
+      background: #f0f7ff;
+      color: var(--clr-blue);
+      border-left-color: var(--clr-blue);
+    }
+
+    /* ── Main Content ── */
+    .ds-main {
+      padding: 48px 56px;
+      max-width: 1100px;
+    }
+
+    /* ── Section ── */
+    .ds-section {
+      margin-bottom: 80px;
+      scroll-margin-top: 80px;
+    }
+
+    .ds-section-header {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 32px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid #e5e7eb;
+    }
+
+    .ds-section-title {
+      font-family: var(--ff-primary);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin: 0;
+    }
+
+    .ds-section-tag {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #6b7280;
+      background: #f3f4f6;
+      padding: 2px 10px;
+      border-radius: 99px;
+      font-family: var(--ff-primary);
+    }
+
+    .ds-subsection {
+      margin-bottom: 48px;
+    }
+
+    .ds-subsection-title {
+      font-family: var(--ff-primary);
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #6b7280;
+      margin: 0 0 16px;
+    }
+
+    /* ── Preview Card ── */
+    .ds-preview {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .ds-preview-canvas {
+      padding: 40px;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .ds-preview-canvas--dark {
+      background: #0f172a;
+    }
+
+    .ds-preview-canvas--grid {
+      background: #f8f9fa;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 16px;
+      padding: 32px;
+    }
+
+    .ds-preview-footer {
+      border-top: 1px solid #e5e7eb;
+      padding: 12px 20px;
+      background: #f8f9fa;
+      font-family: monospace;
+      font-size: 0.78rem;
+      color: #6b7280;
+    }
+
+    /* ── Color Scale ── */
+    .color-scale-group {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 16px;
+    }
+
+    .color-scale-label {
+      padding: 10px 16px;
+      background: #f8f9fa;
+      border-bottom: 1px solid #e5e7eb;
+      font-family: var(--ff-primary);
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #374151;
+    }
+
+    .color-scale-row {
+      display: flex;
+      overflow-x: auto;
+    }
+
+    .color-scale-item {
+      flex: 1;
+      min-width: 80px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .color-scale-item + .color-scale-item {
+      border-left: 1px solid rgba(0,0,0,0.06);
+    }
+
+    .color-scale-swatch {
+      height: 72px;
+    }
+
+    .color-scale-info {
+      padding: 6px 8px;
+      border-top: 1px solid rgba(0,0,0,0.06);
+    }
+
+    .color-scale-step {
+      font-family: var(--ff-primary);
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: #374151;
+      display: block;
+    }
+
+    .color-scale-hex {
+      font-family: monospace;
+      font-size: 0.65rem;
+      color: #9ca3af;
+      display: block;
+    }
+
+    /* ── Opacity Row ── */
+    .opacity-row {
+      display: flex;
+      overflow-x: auto;
+    }
+
+    .opacity-item {
+      flex: 1;
+      min-width: 80px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .opacity-item + .opacity-item {
+      border-left: 1px solid rgba(0,0,0,0.06);
+    }
+
+    .opacity-swatch {
+      height: 72px;
+      position: relative;
+    }
+
+    .opacity-checker {
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(45deg, #ccc 25%, transparent 25%),
+                        linear-gradient(-45deg, #ccc 25%, transparent 25%),
+                        linear-gradient(45deg, transparent 75%, #ccc 75%),
+                        linear-gradient(-45deg, transparent 75%, #ccc 75%);
+      background-size: 10px 10px;
+      background-position: 0 0, 0 5px, 5px -5px, -5px 0px;
+    }
+
+    .opacity-overlay {
+      position: absolute;
+      inset: 0;
+    }
+
+    .opacity-info {
+      padding: 6px 8px;
+      border-top: 1px solid rgba(0,0,0,0.06);
+    }
+
+    .opacity-step {
+      font-family: var(--ff-primary);
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: #374151;
+      display: block;
+    }
+
+    .opacity-value {
+      font-family: monospace;
+      font-size: 0.65rem;
+      color: #9ca3af;
+      display: block;
+    }
+
+    /* ── Color Token (legacy flat) ── */
+    .color-token {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .color-swatch {
+      width: 100%;
+      height: 80px;
+      border-radius: 8px;
+      border: 1px solid rgba(0,0,0,0.06);
+      position: relative;
+    }
+
+    .color-token-info {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .color-token-name {
+      font-family: var(--ff-primary);
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #1f2937;
+    }
+
+    .color-token-var {
+      font-family: monospace;
+      font-size: 0.72rem;
+      color: #6b7280;
+    }
+
+    .color-token-hex {
+      font-family: monospace;
+      font-size: 0.72rem;
+      color: #9ca3af;
+    }
+
+    /* ── Gradient Swatches ── */
+    .gradient-token {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .gradient-swatch {
+      width: 100%;
+      height: 80px;
+      border-radius: 8px;
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+
+    /* ── Typography ── */
+    .type-row {
+      display: flex;
+      align-items: baseline;
+      gap: 24px;
+      padding: 24px 0;
+      border-bottom: 1px solid #f3f4f6;
+    }
+
+    .type-row:last-child { border-bottom: none; }
+
+    .type-meta {
+      min-width: 120px;
+      font-family: monospace;
+      font-size: 0.78rem;
+      color: #6b7280;
+      flex-shrink: 0;
+    }
+
+    .type-meta strong {
+      display: block;
+      font-size: 0.85rem;
+      color: #374151;
+      margin-bottom: 2px;
+    }
+
+    .type-sample { flex: 1; }
+
+    /* ── Spacing ── */
+    .spacing-row {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 12px 0;
+      border-bottom: 1px solid #f3f4f6;
+      font-family: var(--ff-primary);
+    }
+
+    .spacing-row:last-child { border-bottom: none; }
+
+    .spacing-bar-wrap {
+      width: 220px;
+      display: flex;
+      align-items: center;
+    }
+
+    .spacing-bar {
+      height: 20px;
+      background: var(--gradient-brand);
+      border-radius: 4px;
+      opacity: 0.8;
+    }
+
+    .spacing-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #374151;
+      min-width: 80px;
+    }
+
+    .spacing-value {
+      font-family: monospace;
+      font-size: 0.78rem;
+      color: #6b7280;
+    }
+
+    /* ── Button Grid ── */
+    .btn-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 32px;
+      padding: 40px;
+    }
+
+    .btn-item {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .btn-item-label {
+      font-family: var(--ff-primary);
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #6b7280;
+    }
+
+    /* ── Component Preview ── */
+    .component-preview {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 32px;
+    }
+
+    .component-preview-label {
+      background: #f8f9fa;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 10px 20px;
+      font-family: monospace;
+      font-size: 0.78rem;
+      color: #6b7280;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .component-preview-tag {
+      font-family: monospace;
+      font-size: 0.7rem;
+      background: #e5e7eb;
+      color: #374151;
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+
+    .component-preview-body {
+      padding: 0;
+    }
+
+    .component-preview-body--padded {
+      padding: 40px;
+    }
+
+    /* ── Annotations Helper ── */
+    .ds-note {
+      background: #fffbeb;
+      border: 1px solid #fcd34d;
+      border-radius: 8px;
+      padding: 14px 18px;
+      font-family: var(--ff-primary);
+      font-size: 0.85rem;
+      color: #92400e;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      margin-top: 16px;
+    }
+
+    .ds-note i { margin-top: 2px; flex-shrink: 0; }
+  </style>
+</head>
+<body class="ds-page">
+
+  <!-- Top Bar -->
+  <div class="ds-topbar">
+    <div class="ds-topbar-title">
+      <i class="fas fa-swatchbook"></i>
+      Aquatronic — Design System
+      <span class="ds-topbar-badge">v1.0 · Revisão</span>
+    </div>
+    <nav class="ds-nav">
+      <a href="#colors">Cores</a>
+      <a href="#typography">Tipografia</a>
+      <a href="#spacing">Espaçamento</a>
+      <a href="#buttons">Botões</a>
+      <a href="#components">Componentes</a>
+    </nav>
+  </div>
+
+  <div class="ds-body">
+
+    <!-- Sidebar -->
+    <aside class="ds-sidebar">
+      <div class="ds-sidebar-group">
+        <div class="ds-sidebar-label">Fundação</div>
+        <a href="#colors">Paleta de Cores</a>
+        <a href="#gradients">Gradientes</a>
+        <a href="#typography">Tipografia</a>
+        <a href="#spacing">Espaçamento & Layout</a>
+      </div>
+      <div class="ds-sidebar-group">
+        <div class="ds-sidebar-label">Elementos</div>
+        <a href="#buttons">Botões — special-button</a>
+        <a href="#btn-site">site-button</a>
+        <a href="#btn-contact">contact-button</a>
+      </div>
+      <div class="ds-sidebar-group">
+        <div class="ds-sidebar-label">Componentes</div>
+        <a href="#comp-header">Header</a>
+        <a href="#comp-hero">Page Hero</a>
+        <a href="#comp-footer">Footer</a>
+        <a href="#comp-site-button">site-button</a>
+        <a href="#comp-contact-button">contact-button</a>
+        <a href="#comp-section-tag">section-tag</a>
+      </div>
+    </aside>
+
+    <!-- Content -->
+    <main class="ds-main">
+
+      <!-- ══════════════════════════════════════
+           CORES
+      ══════════════════════════════════════ -->
+      <section class="ds-section" id="colors">
+        <div class="ds-section-header">
+          <h2 class="ds-section-title">Paleta de Cores</h2>
+          <span class="ds-section-tag">Design Tokens</span>
+        </div>
+
+        <!-- Primary Scale -->
+        <div class="ds-subsection">
+          <p class="ds-subsection-title">Primary</p>
+          <div class="color-scale-group">
+            <div class="color-scale-row">
+              <div class="color-scale-item">
+                <div class="color-scale-swatch" style="background:#c7edff;"></div>
+                <div class="color-scale-info">
+                  <span class="color-scale-step">100</span>
+                  <span class="color-scale-hex">#c7edff</span>
+                </div>
+              </div>
+              <div class="color-scale-item">
+                <div class="color-scale-swatch" style="background:#8dd8ff;"></div>
+                <div class="color-scale-info">
+                  <span class="color-scale-step">200</span>
+                  <span class="color-scale-hex">#8dd8ff</span>
+                </div>
+              </div>
+              <div class="color-scale-item">
+                <div class="color-scale-swatch" style="background:#4dbef0;"></div>
+                <div class="color-scale-info">
+                  <span class="color-scale-step">300</span>
+                  <span class="color-scale-hex">#4dbef0</span>
+                </div>
+              </div>
+              <div class="color-scale-item">
+                <div class="color-scale-swatch" style="background:#00a0e3;"></div>
+                <div class="color-scale-info">
+                  <span class="color-scale-step">400</span>
+                  <span class="color-scale-hex">#00a0e3</span>
+                </div>
+              </div>
+              <div class="color-scale-item">
+                <div class="color-scale-swatch" style="background:#0080c0;"></div>
+                <div class="color-scale-info">
+                  <span class="color-scale-step">500</span>
+                  <span class="color-scale-hex">#0080c0</span>
+                </div>
+              </div>
+              <div class="color-scale-item">
+                <div class="color-scale-swatch" style="background:#006ba3;"></div>
+                <div class="color-scale-info">
+                  <span class="color-scale-step">600</span>
+                  <span class="color-scale-hex">#006ba3</span>
+                </div>
+              </div>
+              <div class="color-scale-item">
+                <div class="color-scale-swatch" style="background:#114973;"></div>
+                <div class="color-scale-info">
+                  <span class="color-scale-step">700</span>
+                  <span class="color-scale-hex">#114973</span>
+                </div>
+              </div>
+              <div class="color-scale-item">
+                <div class="color-scale-swatch" style="background:#0c3455;"></div>
+                <div class="color-scale-info">
+                  <span class="color-scale-step">800</span>
+                  <span class="color-scale-hex">#0c3455</span>
+                </div>
+              </div>
+              <div class="color-scale-item">
+                <div class="color-scale-swatch" style="background:#071e35;"></div>
+                <div class="color-scale-info">
+                  <span class="color-scale-step">900</span>
+                  <span class="color-scale-hex">#071e35</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Neutral Scale -->
+        <div class="ds-subsection">
+          <p class="ds-subsection-title">Neutral</p>
+          <div class="color-scale-group">
+            <div class="color-scale-row">
+              <div class="color-scale-item">
+                <div class="color-scale-swatch" style="background:#dfe7ef;"></div>
+                <div class="color-scale-info">
+                  <span class="color-scale-step">100</span>
+                  <span class="color-scale-hex">#dfe7ef</span>
+                </div>
+              </div>
+              <div class="color-scale-item">
+                <div class="color-scale-swatch" style="background:#c2d0dc;"></div>
+                <div class="color-scale-info">
+                  <span class="color-scale-step">200</span>
+                  <span class="color-scale-hex">#c2d0dc</span>
+                </div>
+              </div>
+              <div class="color-scale-item">
+                <div class="color-scale-swatch" style="background:#96aabb;"></div>
+                <div class="color-scale-info">
+                  <span class="color-scale-step">300</span>
+                  <span class="color-scale-hex">#96aabb</span>
+                </div>
+              </div>
+              <div class="color-scale-item">
+                <div class="color-scale-swatch" style="background:#6b8399;"></div>
+                <div class="color-scale-info">
+                  <span class="color-scale-step">400</span>
+                  <span class="color-scale-hex">#6b8399</span>
+                </div>
+              </div>
+              <div class="color-scale-item">
+                <div class="color-scale-swatch" style="background:#4d6578;"></div>
+                <div class="color-scale-info">
+                  <span class="color-scale-step">500</span>
+                  <span class="color-scale-hex">#4d6578</span>
+                </div>
+              </div>
+              <div class="color-scale-item">
+                <div class="color-scale-swatch" style="background:#3a4f62;"></div>
+                <div class="color-scale-info">
+                  <span class="color-scale-step">600</span>
+                  <span class="color-scale-hex">#3a4f62</span>
+                </div>
+              </div>
+              <div class="color-scale-item">
+                <div class="color-scale-swatch" style="background:#2c3d4e;"></div>
+                <div class="color-scale-info">
+                  <span class="color-scale-step">700</span>
+                  <span class="color-scale-hex">#2c3d4e</span>
+                </div>
+              </div>
+              <div class="color-scale-item">
+                <div class="color-scale-swatch" style="background:#1e2d3b;"></div>
+                <div class="color-scale-info">
+                  <span class="color-scale-step">800</span>
+                  <span class="color-scale-hex">#1e2d3b</span>
+                </div>
+              </div>
+              <div class="color-scale-item">
+                <div class="color-scale-swatch" style="background:#131e28;"></div>
+                <div class="color-scale-info">
+                  <span class="color-scale-step">900</span>
+                  <span class="color-scale-hex">#131e28</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feedback Colors -->
+        <div class="ds-subsection">
+          <p class="ds-subsection-title">Feedback</p>
+          <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:16px;">
+
+            <div class="color-scale-group">
+              <div class="color-scale-label">Red</div>
+              <div class="color-scale-row">
+                <div class="color-scale-item">
+                  <div class="color-scale-swatch" style="background:#ef4444;"></div>
+                  <div class="color-scale-info">
+                    <span class="color-scale-step">--clr-red</span>
+                    <span class="color-scale-hex">#ef4444</span>
+                  </div>
+                </div>
+                <div class="color-scale-item">
+                  <div class="color-scale-swatch" style="background:rgba(251,55,72,0.1);"></div>
+                  <div class="color-scale-info">
+                    <span class="color-scale-step">--clr-red-subtle</span>
+                    <span class="color-scale-hex">rgba · 10%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="color-scale-group">
+              <div class="color-scale-label">Yellow</div>
+              <div class="color-scale-row">
+                <div class="color-scale-item">
+                  <div class="color-scale-swatch" style="background:#f59e0b;"></div>
+                  <div class="color-scale-info">
+                    <span class="color-scale-step">--clr-yellow</span>
+                    <span class="color-scale-hex">#f59e0b</span>
+                  </div>
+                </div>
+                <div class="color-scale-item">
+                  <div class="color-scale-swatch" style="background:rgba(255,219,67,0.1);"></div>
+                  <div class="color-scale-info">
+                    <span class="color-scale-step">--clr-yellow-subtle</span>
+                    <span class="color-scale-hex">rgba · 10%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="color-scale-group">
+              <div class="color-scale-label">Green</div>
+              <div class="color-scale-row">
+                <div class="color-scale-item">
+                  <div class="color-scale-swatch" style="background:#86edac;"></div>
+                  <div class="color-scale-info">
+                    <span class="color-scale-step">--clr-green-100</span>
+                    <span class="color-scale-hex">#86edac</span>
+                  </div>
+                </div>
+                <div class="color-scale-item">
+                  <div class="color-scale-swatch" style="background:#22c55e;"></div>
+                  <div class="color-scale-info">
+                    <span class="color-scale-step">--clr-green</span>
+                    <span class="color-scale-hex">#22c55e</span>
+                  </div>
+                </div>
+                <div class="color-scale-item">
+                  <div class="color-scale-swatch" style="background:rgba(31,193,107,0.1);"></div>
+                  <div class="color-scale-info">
+                    <span class="color-scale-step">--clr-green-subtle</span>
+                    <span class="color-scale-hex">rgba · 10%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- White Opacities -->
+        <div class="ds-subsection">
+          <p class="ds-subsection-title">White — Opacidades</p>
+          <div class="color-scale-group">
+            <div class="opacity-row" style="background:#0f172a;">
+              <div class="opacity-item">
+                <div class="opacity-swatch">
+                  <div class="opacity-checker"></div>
+                  <div class="opacity-overlay" style="background:rgba(255,255,255,1);"></div>
+                </div>
+                <div class="opacity-info" style="background:#0f172a; border-top-color:rgba(255,255,255,0.1);">
+                  <span class="opacity-step" style="color:#fff;">100%</span>
+                  <span class="opacity-value" style="color:rgba(255,255,255,0.5);">--clr-white</span>
+                </div>
+              </div>
+              <div class="opacity-item">
+                <div class="opacity-swatch">
+                  <div class="opacity-checker"></div>
+                  <div class="opacity-overlay" style="background:rgba(255,255,255,0.8);"></div>
+                </div>
+                <div class="opacity-info" style="background:#0f172a; border-top-color:rgba(255,255,255,0.1);">
+                  <span class="opacity-step" style="color:#fff;">80%</span>
+                  <span class="opacity-value" style="color:rgba(255,255,255,0.5);">--clr-white-80</span>
+                </div>
+              </div>
+              <div class="opacity-item">
+                <div class="opacity-swatch">
+                  <div class="opacity-checker"></div>
+                  <div class="opacity-overlay" style="background:rgba(255,255,255,0.6);"></div>
+                </div>
+                <div class="opacity-info" style="background:#0f172a; border-top-color:rgba(255,255,255,0.1);">
+                  <span class="opacity-step" style="color:#fff;">60%</span>
+                  <span class="opacity-value" style="color:rgba(255,255,255,0.5);">--clr-white-60</span>
+                </div>
+              </div>
+              <div class="opacity-item">
+                <div class="opacity-swatch">
+                  <div class="opacity-checker"></div>
+                  <div class="opacity-overlay" style="background:rgba(255,255,255,0.4);"></div>
+                </div>
+                <div class="opacity-info" style="background:#0f172a; border-top-color:rgba(255,255,255,0.1);">
+                  <span class="opacity-step" style="color:#fff;">40%</span>
+                  <span class="opacity-value" style="color:rgba(255,255,255,0.5);">--clr-white-40</span>
+                </div>
+              </div>
+              <div class="opacity-item">
+                <div class="opacity-swatch">
+                  <div class="opacity-checker"></div>
+                  <div class="opacity-overlay" style="background:rgba(255,255,255,0.2);"></div>
+                </div>
+                <div class="opacity-info" style="background:#0f172a; border-top-color:rgba(255,255,255,0.1);">
+                  <span class="opacity-step" style="color:#fff;">20%</span>
+                  <span class="opacity-value" style="color:rgba(255,255,255,0.5);">--clr-white-20</span>
+                </div>
+              </div>
+              <div class="opacity-item">
+                <div class="opacity-swatch">
+                  <div class="opacity-checker"></div>
+                  <div class="opacity-overlay" style="background:rgba(255,255,255,0.1);"></div>
+                </div>
+                <div class="opacity-info" style="background:#0f172a; border-top-color:rgba(255,255,255,0.1);">
+                  <span class="opacity-step" style="color:#fff;">10%</span>
+                  <span class="opacity-value" style="color:rgba(255,255,255,0.5);">--clr-white-10</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Black Opacities -->
+        <div class="ds-subsection">
+          <p class="ds-subsection-title">Black — Opacidades</p>
+          <div class="color-scale-group">
+            <div class="opacity-row" style="background:#f8f9fa;">
+              <div class="opacity-item">
+                <div class="opacity-swatch">
+                  <div class="opacity-checker"></div>
+                  <div class="opacity-overlay" style="background:rgba(0,0,0,1);"></div>
+                </div>
+                <div class="opacity-info">
+                  <span class="opacity-step">100%</span>
+                  <span class="opacity-value">--clr-black</span>
+                </div>
+              </div>
+              <div class="opacity-item">
+                <div class="opacity-swatch">
+                  <div class="opacity-checker"></div>
+                  <div class="opacity-overlay" style="background:rgba(0,0,0,0.8);"></div>
+                </div>
+                <div class="opacity-info">
+                  <span class="opacity-step">80%</span>
+                  <span class="opacity-value">--clr-black-80</span>
+                </div>
+              </div>
+              <div class="opacity-item">
+                <div class="opacity-swatch">
+                  <div class="opacity-checker"></div>
+                  <div class="opacity-overlay" style="background:rgba(0,0,0,0.6);"></div>
+                </div>
+                <div class="opacity-info">
+                  <span class="opacity-step">60%</span>
+                  <span class="opacity-value">--clr-black-60</span>
+                </div>
+              </div>
+              <div class="opacity-item">
+                <div class="opacity-swatch">
+                  <div class="opacity-checker"></div>
+                  <div class="opacity-overlay" style="background:rgba(0,0,0,0.4);"></div>
+                </div>
+                <div class="opacity-info">
+                  <span class="opacity-step">40%</span>
+                  <span class="opacity-value">--clr-black-40</span>
+                </div>
+              </div>
+              <div class="opacity-item">
+                <div class="opacity-swatch">
+                  <div class="opacity-checker"></div>
+                  <div class="opacity-overlay" style="background:rgba(0,0,0,0.2);"></div>
+                </div>
+                <div class="opacity-info">
+                  <span class="opacity-step">20%</span>
+                  <span class="opacity-value">--clr-black-20</span>
+                </div>
+              </div>
+              <div class="opacity-item">
+                <div class="opacity-swatch">
+                  <div class="opacity-checker"></div>
+                  <div class="opacity-overlay" style="background:rgba(0,0,0,0.1);"></div>
+                </div>
+                <div class="opacity-info">
+                  <span class="opacity-step">10%</span>
+                  <span class="opacity-value">--clr-black-10</span>
+                </div>
+              </div>
+              <div class="opacity-item">
+                <div class="opacity-swatch">
+                  <div class="opacity-checker"></div>
+                  <div class="opacity-overlay" style="background:rgba(0,0,0,0.05);"></div>
+                </div>
+                <div class="opacity-info">
+                  <span class="opacity-step">5%</span>
+                  <span class="opacity-value">--clr-black-05</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ══════════════════════════════════════
+           GRADIENTES
+      ══════════════════════════════════════ -->
+      <section class="ds-section" id="gradients">
+        <div class="ds-section-header">
+          <h2 class="ds-section-title">Gradientes</h2>
+          <span class="ds-section-tag">Design Tokens</span>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+
+          <div class="color-scale-group">
+            <div class="color-scale-label">Brand — Fundos, Hero, Footer</div>
+            <div style="height:100px; background:linear-gradient(135deg, #114973, #00a0e3);"></div>
+            <div style="padding:14px 16px; display:flex; flex-direction:column; gap:4px;">
+              <span style="font-family:var(--ff-primary); font-size:0.8rem; font-weight:700; color:#0f172a;">--gradient-brand</span>
+              <span style="font-family:monospace; font-size:0.72rem; color:#6b7280;">135deg · primary-700 → primary-400</span>
+              <span style="font-family:monospace; font-size:0.68rem; color:#9ca3af;">#114973 → #00a0e3</span>
+            </div>
+            <div style="display:flex; border-top:1px solid #e5e7eb;">
+              <div style="flex:1; height:24px; background:#114973;"></div>
+              <div style="flex:1; height:24px; background:#006ba3;"></div>
+              <div style="flex:1; height:24px; background:#0080c0;"></div>
+              <div style="flex:1; height:24px; background:#00a0e3;"></div>
+            </div>
+            <div style="display:flex; border-top:1px solid #e5e7eb;">
+              <span style="flex:1; font-family:monospace; font-size:0.6rem; color:#9ca3af; padding:4px 6px;">700</span>
+              <span style="flex:1; font-family:monospace; font-size:0.6rem; color:#9ca3af; padding:4px 6px;">600</span>
+              <span style="flex:1; font-family:monospace; font-size:0.6rem; color:#9ca3af; padding:4px 6px;">500</span>
+              <span style="flex:1; font-family:monospace; font-size:0.6rem; color:#9ca3af; padding:4px 6px;">400</span>
+            </div>
+          </div>
+
+          <div class="color-scale-group">
+            <div class="color-scale-label">Action — Botões, CTAs</div>
+            <div style="height:100px; background:linear-gradient(135deg, #006ba3, #4dbef0);"></div>
+            <div style="padding:14px 16px; display:flex; flex-direction:column; gap:4px;">
+              <span style="font-family:var(--ff-primary); font-size:0.8rem; font-weight:700; color:#0f172a;">--gradient-action</span>
+              <span style="font-family:monospace; font-size:0.72rem; color:#6b7280;">135deg · primary-600 → primary-300</span>
+              <span style="font-family:monospace; font-size:0.68rem; color:#9ca3af;">#006ba3 → #4dbef0</span>
+            </div>
+            <div style="display:flex; border-top:1px solid #e5e7eb;">
+              <div style="flex:1; height:24px; background:#006ba3;"></div>
+              <div style="flex:1; height:24px; background:#0080c0;"></div>
+              <div style="flex:1; height:24px; background:#00a0e3;"></div>
+              <div style="flex:1; height:24px; background:#4dbef0;"></div>
+            </div>
+            <div style="display:flex; border-top:1px solid #e5e7eb;">
+              <span style="flex:1; font-family:monospace; font-size:0.6rem; color:#9ca3af; padding:4px 6px;">600</span>
+              <span style="flex:1; font-family:monospace; font-size:0.6rem; color:#9ca3af; padding:4px 6px;">500</span>
+              <span style="flex:1; font-family:monospace; font-size:0.6rem; color:#9ca3af; padding:4px 6px;">400</span>
+              <span style="flex:1; font-family:monospace; font-size:0.6rem; color:#9ca3af; padding:4px 6px;">300</span>
+            </div>
+          </div>
+
+        </div>
+        <div class="ds-preview-footer" style="background:#fff; border:1px solid #e5e7eb; border-radius:8px; margin-top:12px;">
+          As variáveis legadas <code>--home-blue-gradient</code> e <code>--btn-gradient</code> agora são aliases de <code>--gradient-brand</code> e <code>--gradient-action</code>. Use as novas em código novo.
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════
+           TIPOGRAFIA
+      ══════════════════════════════════════ -->
+      <section class="ds-section" id="typography">
+        <div class="ds-section-header">
+          <h2 class="ds-section-title">Tipografia</h2>
+          <span class="ds-section-tag">Design Tokens</span>
+        </div>
+
+        <!-- Fonte -->
+        <div class="ds-subsection">
+          <p class="ds-subsection-title">Fonte</p>
+          <div class="color-scale-group">
+            <div class="color-scale-label">--ff-primary · Google Fonts</div>
+            <div style="padding:28px 24px; display:flex; align-items:baseline; gap:24px; border-bottom:1px solid #e5e7eb;">
+              <span style="font-family:var(--ff-primary); font-size:2.5rem; font-weight:700; color:#0f172a; line-height:1;">DM Sans</span>
+              <span style="font-family:monospace; font-size:0.78rem; color:#9ca3af;">DM Sans · variable font · Google Fonts</span>
+            </div>
+            <div style="display:flex; gap:0; border-bottom:1px solid #e5e7eb;">
+              <div style="flex:1; padding:16px 20px; border-right:1px solid #e5e7eb;">
+                <span style="font-family:var(--ff-primary); font-size:1rem; font-weight:400; color:#374151; display:block;">Regular</span>
+                <span style="font-family:monospace; font-size:0.65rem; color:#9ca3af;">400</span>
+              </div>
+              <div style="flex:1; padding:16px 20px; border-right:1px solid #e5e7eb;">
+                <span style="font-family:var(--ff-primary); font-size:1rem; font-weight:500; color:#374151; display:block;">Medium</span>
+                <span style="font-family:monospace; font-size:0.65rem; color:#9ca3af;">500</span>
+              </div>
+              <div style="flex:1; padding:16px 20px; border-right:1px solid #e5e7eb;">
+                <span style="font-family:var(--ff-primary); font-size:1rem; font-weight:600; color:#374151; display:block;">SemiBold</span>
+                <span style="font-family:monospace; font-size:0.65rem; color:#9ca3af;">600</span>
+              </div>
+              <div style="flex:1; padding:16px 20px;">
+                <span style="font-family:var(--ff-primary); font-size:1rem; font-weight:700; color:#374151; display:block;">Bold</span>
+                <span style="font-family:monospace; font-size:0.65rem; color:#9ca3af;">700</span>
+              </div>
+            </div>
+            <div style="padding:16px 24px; background:#f8f9fa;">
+              <span style="font-family:var(--ff-primary); font-size:0.95rem; color:#6b7280; letter-spacing:0.04em;">ABCDEFGHIJKLMNOPQRSTUVWXYZ · abcdefghijklmnopqrstuvwxyz · 0123456789</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Escala de Títulos -->
+        <div class="ds-subsection">
+          <p class="ds-subsection-title">Escala de Títulos</p>
+          <div class="color-scale-group">
+            <div class="color-scale-label">Headings · weight 600 · line-height 1.1</div>
+
+            <div style="display:flex; align-items:center; padding:20px 24px; border-bottom:1px solid #e5e7eb; gap:24px;">
+              <div style="min-width:140px; display:flex; flex-direction:column; gap:2px;">
+                <span style="font-family:var(--ff-primary); font-size:0.72rem; font-weight:700; color:#374151;">H1</span>
+                <span style="font-family:monospace; font-size:0.65rem; color:#9ca3af;">clamp(3rem, 7vw, 4.5rem)</span>
+              </div>
+              <h1 style="margin:0; font-size:clamp(2rem, 5vw, 3.5rem);">Aquatronic Brasil</h1>
+            </div>
+
+            <div style="display:flex; align-items:center; padding:20px 24px; border-bottom:1px solid #e5e7eb; gap:24px;">
+              <div style="min-width:140px; display:flex; flex-direction:column; gap:2px;">
+                <span style="font-family:var(--ff-primary); font-size:0.72rem; font-weight:700; color:#374151;">H2</span>
+                <span style="font-family:monospace; font-size:0.65rem; color:#9ca3af;">2rem · 32px</span>
+              </div>
+              <h2 style="margin:0;">Tecnologia em Eletrólise</h2>
+            </div>
+
+            <div style="display:flex; align-items:center; padding:20px 24px; border-bottom:1px solid #e5e7eb; gap:24px;">
+              <div style="min-width:140px; display:flex; flex-direction:column; gap:2px;">
+                <span style="font-family:var(--ff-primary); font-size:0.72rem; font-weight:700; color:#374151;">H3</span>
+                <span style="font-family:monospace; font-size:0.65rem; color:#9ca3af;">1.375rem · 22px</span>
+              </div>
+              <h3 style="margin:0;">Tratamento de Água</h3>
+            </div>
+
+            <div style="display:flex; align-items:center; padding:20px 24px; gap:24px;">
+              <div style="min-width:140px; display:flex; flex-direction:column; gap:2px;">
+                <span style="font-family:var(--ff-primary); font-size:0.72rem; font-weight:700; color:#374151;">H4</span>
+                <span style="font-family:monospace; font-size:0.65rem; color:#9ca3af;">1.125rem · 18px</span>
+              </div>
+              <h4 style="margin:0;">Soluções sustentáveis</h4>
+            </div>
+          </div>
+        </div>
+
+        <!-- Corpo de Texto -->
+        <div class="ds-subsection">
+          <p class="ds-subsection-title">Corpo de Texto</p>
+          <div class="color-scale-group">
+            <div class="color-scale-label">Body · line-height 1.6</div>
+
+            <div style="display:flex; align-items:flex-start; padding:20px 24px; border-bottom:1px solid #e5e7eb; gap:24px;">
+              <div style="min-width:140px; display:flex; flex-direction:column; gap:2px; padding-top:2px;">
+                <span style="font-family:var(--ff-primary); font-size:0.72rem; font-weight:700; color:#374151;">Body</span>
+                <span style="font-family:monospace; font-size:0.65rem; color:#9ca3af;">1.125rem · 18px</span>
+                <span style="font-family:monospace; font-size:0.65rem; color:#9ca3af;">weight 400</span>
+              </div>
+              <p style="margin:0; font-size:1.125rem; color:var(--clr-text-main); line-height:1.6; flex:1;">
+                Soluções completas em tratamento e desinfecção de água por eletrólise, unindo tecnologia, engenharia aplicada e sustentabilidade para garantir água segura em todo o Brasil.
+              </p>
+            </div>
+
+            <div style="display:flex; align-items:flex-start; padding:20px 24px; border-bottom:1px solid #e5e7eb; gap:24px;">
+              <div style="min-width:140px; display:flex; flex-direction:column; gap:2px; padding-top:2px;">
+                <span style="font-family:var(--ff-primary); font-size:0.72rem; font-weight:700; color:#374151;">Small</span>
+                <span style="font-family:monospace; font-size:0.65rem; color:#9ca3af;">0.875rem · 14px</span>
+                <span style="font-family:monospace; font-size:0.65rem; color:#9ca3af;">weight 400</span>
+              </div>
+              <p style="margin:0; font-size:0.875rem; color:var(--clr-text); line-height:1.6; flex:1;">
+                Texto secundário, legendas e informações de suporte ao conteúdo principal.
+              </p>
+            </div>
+
+            <div style="display:flex; align-items:center; padding:20px 24px; gap:24px;">
+              <div style="min-width:140px; display:flex; flex-direction:column; gap:2px;">
+                <span style="font-family:var(--ff-primary); font-size:0.72rem; font-weight:700; color:#374151;">Nav Link</span>
+                <span style="font-family:monospace; font-size:0.65rem; color:#9ca3af;">0.95rem</span>
+                <span style="font-family:monospace; font-size:0.65rem; color:#9ca3af;">weight 500</span>
+              </div>
+              <span style="font-size:0.95rem; font-weight:500; color:var(--clr-secondary);">Início · Empresa · Soluções · Contato</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════
+           ESPAÇAMENTO
+      ══════════════════════════════════════ -->
+      <section class="ds-section" id="spacing">
+        <div class="ds-section-header">
+          <h2 class="ds-section-title">Espaçamento & Layout</h2>
+          <span class="ds-section-tag">Design Tokens</span>
+        </div>
+
+        <div class="ds-subsection">
+          <p class="ds-subsection-title">Container & Seções</p>
+          <div class="ds-preview">
+            <div class="ds-preview-canvas" style="flex-direction:column; align-items:stretch; padding:24px 32px; gap:0;">
+
+              <div class="spacing-row">
+                <span class="spacing-label">Container</span>
+                <div class="spacing-bar-wrap">
+                  <div class="spacing-bar" style="width:100%;"></div>
+                </div>
+                <span class="spacing-value">--container-width · max 1300px · padding 0 20px</span>
+              </div>
+
+              <div class="spacing-row">
+                <span class="spacing-label">Section</span>
+                <div class="spacing-bar-wrap">
+                  <div class="spacing-bar" style="width:100px;"></div>
+                </div>
+                <span class="spacing-value">--section-padding · 100px 0 → 60px (tablet) → 60px 20px (mobile)</span>
+              </div>
+
+              <div class="spacing-row">
+                <span class="spacing-label">.section-padding</span>
+                <div class="spacing-bar-wrap">
+                  <div class="spacing-bar" style="width:100px;"></div>
+                </div>
+                <span class="spacing-value">usa var(--section-padding) — fonte de verdade é o token acima</span>
+              </div>
+
+              <div class="spacing-row">
+                <span class="spacing-label">Footer</span>
+                <div class="spacing-bar-wrap">
+                  <div class="spacing-bar" style="width:80px;"></div>
+                </div>
+                <span class="spacing-value">padding-top 80px · margin-top 40px</span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="ds-subsection">
+          <p class="ds-subsection-title">Breakpoints</p>
+          <div class="ds-preview">
+            <div class="ds-preview-canvas" style="flex-direction:column; align-items:stretch; padding:24px 32px; gap:0;">
+              <div class="spacing-row">
+                <span class="spacing-label">Desktop</span>
+                <div class="spacing-bar-wrap"><div class="spacing-bar" style="width:160px; background:var(--clr-primary-700);"></div></div>
+                <span class="spacing-value">≥ 1025px</span>
+              </div>
+              <div class="spacing-row">
+                <span class="spacing-label">Tablet</span>
+                <div class="spacing-bar-wrap"><div class="spacing-bar" style="width:100px; background:var(--clr-primary-400);"></div></div>
+                <span class="spacing-value">≤ 1024px</span>
+              </div>
+              <div class="spacing-row">
+                <span class="spacing-label">Mobile</span>
+                <div class="spacing-bar-wrap"><div class="spacing-bar" style="width:60px; background:var(--clr-primary-300);"></div></div>
+                <span class="spacing-value">≤ 768px</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════
+           BOTÕES
+      ══════════════════════════════════════ -->
+      <section class="ds-section" id="buttons">
+        <div class="ds-section-header">
+          <h2 class="ds-section-title">Botões</h2>
+          <span class="ds-section-tag">Componente</span>
+        </div>
+
+        <!-- SpecialButton variants -->
+        <div class="ds-subsection">
+          <p class="ds-subsection-title">&lt;special-button&gt; — Variantes</p>
+          <div class="ds-preview">
+            <div class="btn-grid">
+
+              <div class="btn-item">
+                <span class="btn-item-label">Primary (padrão)</span>
+                <special-button variant="primary" text="Saiba Mais"></special-button>
+                <code style="font-size:0.72rem; color:#6b7280;">variant="primary"</code>
+              </div>
+
+              <div class="btn-item">
+                <span class="btn-item-label">Secondary</span>
+                <special-button variant="secondary" text="Ver Produtos"></special-button>
+                <code style="font-size:0.72rem; color:#6b7280;">variant="secondary"</code>
+              </div>
+
+              <div class="btn-item">
+                <span class="btn-item-label">Outline</span>
+                <special-button variant="outline" text="Fale Conosco"></special-button>
+                <code style="font-size:0.72rem; color:#6b7280;">variant="outline"</code>
+              </div>
+
+              <div class="btn-item">
+                <span class="btn-item-label">Ghost</span>
+                <special-button variant="ghost" text="Cancelar"></special-button>
+                <code style="font-size:0.72rem; color:#6b7280;">variant="ghost"</code>
+              </div>
+
+              <div class="btn-item">
+                <span class="btn-item-label">Icon (animated)</span>
+                <special-button text="Solicitar Orçamento" icon="fas fa-arrow-right"></special-button>
+                <code style="font-size:0.72rem; color:#6b7280;">icon="fas fa-arrow-right"</code>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- site-button -->
+        <div class="ds-subsection" id="btn-site">
+          <p class="ds-subsection-title">&lt;site-button&gt; — Botão Global</p>
+          <div class="ds-preview">
+            <div class="ds-preview-canvas">
+              <site-button text="Saiba Mais" href="#"></site-button>
+              <site-button text="Ver Produtos" href="#"></site-button>
+            </div>
+            <div class="ds-preview-footer">background: var(--gradient-action) · padding 17px 30px · border-radius 9999px · attrs: text, href</div>
+          </div>
+        </div>
+
+        <!-- contact-button -->
+        <div class="ds-subsection" id="btn-contact">
+          <p class="ds-subsection-title">&lt;contact-button&gt; — Botão de Contato</p>
+          <div class="ds-preview">
+            <div class="ds-preview-canvas" style="gap:24px; flex-wrap:wrap;">
+              <div style="display:flex; flex-direction:column; gap:8px; align-items:flex-start;">
+                <span style="font-family:var(--ff-primary); font-size:0.72rem; font-weight:600; text-transform:uppercase; letter-spacing:0.5px; color:#6b7280;">Padrão (header transparente)</span>
+                <contact-button text="Contato" href="#"></contact-button>
+              </div>
+              <div style="display:flex; flex-direction:column; gap:8px; align-items:flex-start;">
+                <span style="font-family:var(--ff-primary); font-size:0.72rem; font-weight:600; text-transform:uppercase; letter-spacing:0.5px; color:#6b7280;">Invertido (header sólido)</span>
+                <div style="background:var(--clr-primary-700); padding:12px 16px; border-radius:8px;">
+                  <contact-button text="Contato" href="#" inverted></contact-button>
+                </div>
+              </div>
+            </div>
+            <div class="ds-preview-footer">Padrão: clr-primary-500 · Invertido: clr-white + clr-primary-500 · attrs: text, href, inverted</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════
+           COMPONENTES
+      ══════════════════════════════════════ -->
+      <section class="ds-section" id="components">
+        <div class="ds-section-header">
+          <h2 class="ds-section-title">Componentes</h2>
+          <span class="ds-section-tag">Web Components</span>
+        </div>
+
+        <!-- Header -->
+        <div class="ds-subsection" id="comp-header">
+          <p class="ds-subsection-title">&lt;site-header&gt;</p>
+          <div class="component-preview">
+            <div class="component-preview-label">
+              <span>site-header · Header principal do site</span>
+              <span class="component-preview-tag">sticky · backdrop-blur</span>
+            </div>
+            <div class="component-preview-body">
+              <site-header></site-header>
+            </div>
+          </div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:16px;">
+            <div class="ds-preview">
+              <div class="component-preview-label"><span>Estado: Transparente (homepage scroll topo)</span></div>
+              <div class="ds-preview-canvas ds-preview-canvas--dark" style="height:80px; padding:20px;">
+                <div style="background:rgba(255,255,255,0.2); backdrop-filter:blur(10px); padding:12px 24px; border-radius:8px; color:#fff; font-family:var(--ff-primary); font-size:0.85rem;">
+                  background: rgba(255,255,255,0.2) + backdrop-blur
+                </div>
+              </div>
+            </div>
+            <div class="ds-preview">
+              <div class="component-preview-label"><span>Estado: Sólido (páginas internas + scroll)</span></div>
+              <div class="ds-preview-canvas" style="height:80px; padding:20px; background:#0181fe;">
+                <div style="color:#fff; font-family:var(--ff-primary); font-size:0.85rem;">background: --clr-blue · classe .header-solid</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Page Hero -->
+        <div class="ds-subsection" id="comp-hero">
+          <p class="ds-subsection-title">&lt;page-hero&gt;</p>
+          <div class="component-preview">
+            <div class="component-preview-label">
+              <span>page-hero · Hero de páginas internas</span>
+              <span class="component-preview-tag">attrs: title, subtitle</span>
+            </div>
+            <div class="component-preview-body">
+              <page-hero title="Título da Página" subtitle="Descrição da página interna para contextualizar o conteúdo a seguir."></page-hero>
+            </div>
+          </div>
+          <div class="ds-note">
+            <i class="fas fa-info-circle"></i>
+            <span>Background: imagem externa (anbaragency.com.br) com overlay azul <strong>#0853A0</strong> a 63% de opacidade. Altura fixa de <strong>40vh</strong>.</span>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="ds-subsection" id="comp-footer">
+          <p class="ds-subsection-title">&lt;site-footer&gt;</p>
+          <div class="component-preview">
+            <div class="component-preview-label">
+              <span>site-footer · Rodapé do site</span>
+              <span class="component-preview-tag">grid 4 colunas → 2 (mobile)</span>
+            </div>
+            <div class="component-preview-body">
+              <site-footer></site-footer>
+            </div>
+          </div>
+        </div>
+
+        <!-- site-button -->
+        <div class="ds-subsection" id="comp-site-button">
+          <p class="ds-subsection-title">&lt;site-button&gt;</p>
+          <div class="component-preview">
+            <div class="component-preview-label">
+              <span>site-button · Botão de ação principal</span>
+              <span class="component-preview-tag">attrs: text, href</span>
+            </div>
+            <div class="component-preview-body--padded" style="padding:40px; display:flex; gap:16px; flex-wrap:wrap;">
+              <site-button text="Saiba Mais" href="#"></site-button>
+              <site-button text="Solicitar Orçamento" href="#"></site-button>
+            </div>
+          </div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:16px;">
+            <div class="ds-preview">
+              <div class="component-preview-label"><span>Background</span></div>
+              <div class="ds-preview-canvas" style="height:60px;">
+                <div style="height:32px; width:180px; border-radius:9999px; background:var(--gradient-action);"></div>
+              </div>
+              <div class="ds-preview-footer">var(--gradient-action) · primary-600 → primary-300</div>
+            </div>
+            <div class="ds-preview">
+              <div class="component-preview-label"><span>Hover</span></div>
+              <div class="ds-preview-canvas" style="height:60px;">
+                <div style="height:32px; width:180px; border-radius:9999px; background:var(--gradient-action); filter:brightness(1.1); transform:translateY(-2px);"></div>
+              </div>
+              <div class="ds-preview-footer">filter: brightness(1.1) + translateY(-2px)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- contact-button -->
+        <div class="ds-subsection" id="comp-contact-button">
+          <p class="ds-subsection-title">&lt;contact-button&gt;</p>
+          <div class="component-preview">
+            <div class="component-preview-label">
+              <span>contact-button · Botão de contato do header</span>
+              <span class="component-preview-tag">attrs: text, href, inverted</span>
+            </div>
+            <div class="component-preview-body--padded" style="padding:40px; display:flex; gap:24px; flex-wrap:wrap; align-items:center;">
+              <div style="display:flex; flex-direction:column; gap:8px; align-items:flex-start;">
+                <span style="font-family:var(--ff-primary); font-size:0.72rem; color:#6b7280;">Padrão</span>
+                <contact-button text="Contato" href="#"></contact-button>
+              </div>
+              <div style="display:flex; flex-direction:column; gap:8px; align-items:flex-start;">
+                <span style="font-family:var(--ff-primary); font-size:0.72rem; color:#6b7280;">Invertido</span>
+                <div style="background:var(--clr-primary-700); padding:10px 16px; border-radius:8px;">
+                  <contact-button text="Contato" href="#" inverted></contact-button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:16px;">
+            <div class="ds-preview">
+              <div class="component-preview-label"><span>Estado: Padrão (header transparente)</span></div>
+              <div class="ds-preview-canvas ds-preview-canvas--dark" style="height:80px; padding:20px;">
+                <div style="background:var(--clr-primary-500); color:var(--clr-white); padding:8px 24px; border-radius:100px; font-family:var(--ff-primary); font-size:0.95rem; font-weight:600;">Contato</div>
+              </div>
+              <div class="ds-preview-footer">background: var(--clr-primary-500)</div>
+            </div>
+            <div class="ds-preview">
+              <div class="component-preview-label"><span>Estado: Invertido (header sólido)</span></div>
+              <div class="ds-preview-canvas" style="height:80px; padding:20px; background:var(--clr-primary-700);">
+                <div style="background:var(--clr-white); color:var(--clr-primary-500); padding:8px 24px; border-radius:100px; font-family:var(--ff-primary); font-size:0.95rem; font-weight:600;">Contato</div>
+              </div>
+              <div class="ds-preview-footer">background: var(--clr-white) · color: var(--clr-primary-500)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- section-tag -->
+        <div class="ds-subsection" id="comp-section-tag">
+          <p class="ds-subsection-title">&lt;section-tag&gt;</p>
+          <div class="component-preview">
+            <div class="component-preview-label">
+              <span>section-tag · Tag de seção acima de títulos</span>
+              <span class="component-preview-tag">attrs: text, icon (opcional)</span>
+            </div>
+            <div class="component-preview-body--padded" style="padding:40px; display:flex; flex-direction:column; gap:32px; align-items:flex-start;">
+              <div style="display:flex; flex-direction:column; gap:6px;">
+                <span style="font-family:var(--ff-primary); font-size:0.72rem; color:#6b7280;">Sem ícone (padrão)</span>
+                <section-tag text="Nossa História"></section-tag>
+              </div>
+              <div style="display:flex; flex-direction:column; gap:6px;">
+                <span style="font-family:var(--ff-primary); font-size:0.72rem; color:#6b7280;">Com ícone FontAwesome</span>
+                <section-tag text="Nossa Tecnologia" icon="fas fa-bolt"></section-tag>
+              </div>
+              <div style="display:flex; flex-direction:column; gap:6px;">
+                <span style="font-family:var(--ff-primary); font-size:0.72rem; color:#6b7280;">Contexto real (abaixo da tag vem o título)</span>
+                <div>
+                  <section-tag text="Propósito &amp; Direção"></section-tag>
+                  <h2 style="margin:0; font-size:1.75rem;">O que nos move e para onde vamos</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="margin-top:16px; font-family:var(--ff-primary); font-size:0.8rem; color:#6b7280; line-height:1.6;">
+            Estilos em <code>global.css</code> → <code>.section-tag</code> e <code>.section-tag::before</code><br>
+            Atributos: <code>text</code> (obrigatório) · <code>icon</code> (classe FontAwesome, opcional)
+          </div>
+        </div>
+
+      </section>
+
+    </main>
+  </div>
+
+</body>
+</html>

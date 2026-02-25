@@ -1,6 +1,7 @@
 /* Products Page Styles */
 .products-hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://anbaragency.com.br/wp-content/uploads/2026/01/2544.jpg');
+    background-color: var(--clr-primary-800);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/img-hero-pages.png');
     background-size: cover;
     background-position: center;
     min-height: 70vh;
@@ -25,9 +26,9 @@
 
 .tab-btn {
     padding: 15px 40px;
-    border: 2px solid var(--clr-blue);
+    border: 2px solid var(--clr-primary-500);
     background: transparent;
-    color: var(--clr-blue);
+    color: var(--clr-primary-500);
     border-radius: 999px;
     font-family: var(--ff-primary);
     font-weight: 600;
@@ -41,7 +42,7 @@
 }
 
 .tab-btn.active {
-    background-color: var(--clr-blue);
+    background-color: var(--clr-primary-500);
     color: white;
     box-shadow: 0 10px 20px rgba(1, 129, 254, 0.2);
 }
@@ -92,7 +93,7 @@
     margin-bottom: 25px;
     font-size: 1.25rem;
     color: var(--clr-primary);
-    border-left: 4px solid var(--clr-blue);
+    border-left: 4px solid var(--clr-primary-500);
     padding-left: 15px;
 }
 
@@ -127,12 +128,12 @@
 
 .btn-outline {
     background: transparent;
-    border: 2px solid var(--clr-blue);
-    color: var(--clr-blue);
+    border: 2px solid var(--clr-primary-500);
+    color: var(--clr-primary-500);
 }
 
 .btn-outline:hover {
-    background: var(--clr-blue);
+    background: var(--clr-primary-500);
     color: white;
 }
 
@@ -166,7 +167,7 @@
 
 .support-list i {
     font-size: 1.5rem;
-    color: var(--clr-blue);
+    color: var(--clr-primary-500);
 }
 
 /* CTA */

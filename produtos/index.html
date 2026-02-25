@@ -6,7 +6,7 @@
     <title>Produtos - Aquatronic</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;0,9..40,900;1,9..40,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/src/styles/global.css">
     <link rel="stylesheet" href="/src/styles/technology.css"> <!-- Reusing tech-card styles -->
@@ -241,20 +241,15 @@
             </div>
         </section>
 
-        <!-- CTA Section -->
-        <section class="products-cta section-padding full-width">
-            <div class="container">
-                <div class="cta-content">
-                    <h2>Encontre a solução ideal para o seu projeto</h2>
-                    <p>
-                        Nossa equipe está pronta para ajudar você a escolher o sistema mais adequado para sua aplicação, garantindo eficiência, segurança e sustentabilidade.
-                    </p>
-                    <div class="cta-actions">
-                        <a href="/contato" class="btn">Falar com um especialista</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <!-- CTA -->
+        <cta-banner
+            heading="Encontre a solução ideal para o seu projeto"
+            description="Nossa equipe está pronta para ajudar você a escolher o sistema mais adequado para sua aplicação, garantindo eficiência, segurança e sustentabilidade."
+            primary-text="Falar com um especialista"
+            primary-href="/contato"
+            secondary-text="Ver aplicações"
+            secondary-href="/aplicacoes">
+        </cta-banner>
 
     </main>
 
@@ -264,7 +259,8 @@
     <script type="module" src="/src/components/SiteHeader.ts"></script>
     <script type="module" src="/src/components/SiteFooter.ts"></script>
     <script type="module" src="/src/components/PageHero.ts"></script>
-    
+    <script type="module" src="/src/components/CtaBanner.ts"></script>
+
     <!-- Inline script for Tabs to ensure it works immediately on this page -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {

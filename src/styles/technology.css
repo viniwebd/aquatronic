@@ -1,116 +1,170 @@
-/* Technology Page Styles */
+/* ============================================================
+   Technology Page Styles
+   Ritmo de seção: branco → cinza-claro → branco → cinza-claro → branco → gradient-brand
+   ============================================================ */
 
-/* Hero Section */
-.tech-hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://anbaragency.com.br/wp-content/uploads/2026/01/2547.jpg');
-    background-size: cover;
-    background-position: center;
-    min-height: 70vh;
-    display: flex;
+/* =====================
+   OVERVIEW SECTION
+   Branco, layout split: texto esquerda / stats direita
+   ===================== */
+
+.overview-section {
+    background: #fff;
+}
+
+.overview-grid {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 80px;
     align-items: center;
-    text-align: center;
-    color: white;
 }
 
-.hero-content {
-    max-width: 900px;
-    margin: 0 auto;
+.overview-text-col h2 {
+    margin: 20px 0 24px;
 }
 
-.hero-content h1 {
-    color: white;
-    font-size: 3.5rem;
-    margin-bottom: 25px;
-    line-height: 1.2;
+.overview-text-col p {
+    color: var(--clr-neutral-700);
+    font-size: 1.05rem;
+    line-height: 1.75;
+    margin-bottom: 16px;
 }
 
-.hero-subtitle {
-    font-size: 1.25rem;
-    margin-bottom: 40px;
-    opacity: 0.9;
-    line-height: 1.6;
+.overview-stats-col {
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid var(--clr-neutral-200);
+    padding-left: 56px;
 }
 
-/* Overview Section */
-.overview-content {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
+.overview-stats-col stat-badge {
+    display: block;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--clr-neutral-200);
 }
 
-.overview-content h2 {
-    margin-bottom: 25px;
+.overview-stats-col stat-badge:first-child {
+    padding-top: 0;
 }
 
-.overview-content p {
-    margin-bottom: 20px;
-    color: var(--clr-text);
+.overview-stats-col stat-badge:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
 }
 
-/* Two Column Grid (Shared) */
+/* =====================
+   ELECTROLYSIS SECTION
+   Cinza claro, duas colunas
+   ===================== */
+
+.electrolysis-section {
+    background: var(--clr-neutral-100);
+}
+
+.electrolysis-section h2 {
+    margin: 20px 0 24px;
+}
+
+.electrolysis-section p {
+    color: var(--clr-neutral-700);
+    line-height: 1.75;
+    margin-bottom: 16px;
+    font-size: 1.02rem;
+}
+
+.electrolysis-section .benefit-list li {
+    color: var(--clr-neutral-800);
+}
+
+.electrolysis-section .benefit-list i {
+    color: var(--clr-primary-500);
+}
+
+.electrolysis-section .image-col img {
+    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.1);
+}
+
+/* =====================
+   TWO-COLUMN GRID (shared)
+   ===================== */
+
 .two-col-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    gap: 80px;
     align-items: center;
 }
 
-.two-col-grid h2 {
-    margin-bottom: 25px;
-}
-
-.two-col-grid p {
-    margin-bottom: 20px;
-    color: var(--clr-text);
-}
-
 .image-col img {
-    border-radius: 30px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    border-radius: 20px;
+    display: block;
 }
 
-/* Benefit List */
+/* =====================
+   BENEFIT LIST (shared)
+   ===================== */
+
 .benefit-list {
-    margin-top: 30px;
+    list-style: none;
+    padding: 0;
+    margin-top: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .benefit-list li {
     display: flex;
     align-items: center;
-    gap: 15px;
-    margin-bottom: 15px;
-    color: var(--clr-primary);
+    gap: 14px;
     font-weight: 500;
+    font-size: 0.95rem;
 }
 
 .benefit-list i {
-    color: var(--clr-blue);
-    font-size: 1.2rem;
-}
-
-/* Sustainable Section */
-.sustainable-section {
-    background-color: var(--clr-bg-blue-light);
-}
-
-.center-header {
+    font-size: 1.05rem;
+    flex-shrink: 0;
+    width: 20px;
     text-align: center;
-    max-width: 800px;
-    margin: 0 auto 60px;
 }
 
-.center-header h2 {
-    margin-bottom: 20px;
+/* =====================
+   SECTION HEADER (shared, centrado)
+   ===================== */
+
+.section-header {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 56px;
 }
 
-.center-header p {
-    color: var(--clr-text);
+.section-header h2 {
+    margin: 20px 0 18px;
 }
 
-/* Cards Grid */
+.section-header p {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--clr-neutral-700);
+}
+
+/* =====================
+   SUSTAINABLE SECTION
+   Branco, 3 cards
+   ===================== */
+
+.sustainable-section {
+    background: #fff;
+}
+
+/* =====================
+   CARDS GRID (shared)
+   ===================== */
+
 .cards-grid {
     display: grid;
-    gap: 30px;
+    gap: 24px;
 }
 
 .three-col {
@@ -121,96 +175,202 @@
     grid-template-columns: repeat(4, 1fr);
 }
 
-/* Tech Card (Standard Component) */
-.tech-card {
-    background: white;
-    padding: 40px 30px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    height: 100%;
-    transition: transform 0.3s ease;
-    text-align: center; /* Per guideline: center or left */
-}
+/* =====================
+   TECH CARD (base compartilhada)
+   ===================== */
 
-/* Note: Guideline says alignment central or left. Overview/Lifecycle are center aligned in structure. */
+.tech-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 36px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    border: 1px solid var(--clr-neutral-200);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
 
 .tech-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
 }
 
-.tech-card i {
-    font-size: 2.5rem;
-    color: var(--clr-blue);
-    margin-bottom: 25px;
-    display: inline-block;
+/* Caixa de ícone — padrão único em todos os cards */
+.card-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: var(--gradient-action);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.card-icon i {
+    color: #fff;
+    font-size: 1.35rem;
 }
 
 .tech-card h3 {
-    font-size: 1.25rem; /* H3 size approx */
-    margin-bottom: 15px;
-    color: var(--clr-primary);
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--clr-primary-800);
+    line-height: 1.35;
 }
 
 .tech-card p {
-    color: var(--clr-text);
-    font-size: 0.95rem;
-    line-height: 1.6;
+    color: var(--clr-neutral-600);
+    font-size: 0.92rem;
+    line-height: 1.7;
 }
 
-/* CTA Section */
-.tech-cta.full-width {
-    background-color: var(--clr-bg-blue-light);
-    text-align: center;
+/* =====================
+   ENGINEERING SECTION
+   Cinza claro, duas colunas invertidas
+   ===================== */
+
+.engineering-section {
+    background: var(--clr-neutral-100);
 }
 
-.cta-content {
-    max-width: 800px;
-    margin: 0 auto;
+.engineering-section h2 {
+    margin: 20px 0 24px;
 }
 
-.cta-content h2 {
-    margin-bottom: 20px;
+.engineering-section p {
+    color: var(--clr-neutral-700);
+    line-height: 1.75;
+    margin-bottom: 16px;
+    font-size: 1.02rem;
 }
 
-.cta-content p {
-    margin-bottom: 40px;
-    font-size: 1.2rem;
-    color: var(--clr-text);
+.engineering-section .benefit-list li {
+    color: var(--clr-neutral-800);
 }
 
-/* Responsive */
+.engineering-section .benefit-list i {
+    color: var(--clr-primary-500);
+}
+
+.engineering-section .image-col img {
+    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.1);
+}
+
+/* =====================
+   LIFECYCLE SECTION
+   Branco, 4 cards numerados
+   ===================== */
+
+.lifecycle-section {
+    background: #fff;
+}
+
+/* Card numerado — mantém a base do .tech-card,
+   adiciona número decorativo e linha de acento no topo */
+.numbered-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.numbered-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--gradient-action);
+}
+
+.card-number {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--clr-neutral-200);
+    line-height: 1;
+    letter-spacing: -0.03em;
+}
+
+/* CTA Section — estilos encapsulados no componente <cta-banner> */
+
+/* =====================
+   RESPONSIVE — TABLET (≤ 1024px)
+   ===================== */
+
 @media (max-width: 1024px) {
-    .hero-content h1 {
-        font-size: 3rem;
+    .overview-grid {
+        grid-template-columns: 1fr 240px;
+        gap: 48px;
     }
 
-    .cards-grid.three-col,
-    .cards-grid.four-col {
+    .two-col-grid {
+        gap: 48px;
+    }
+
+    .three-col {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .four-col {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
+/* =====================
+   RESPONSIVE — MOBILE (≤ 768px)
+   ===================== */
+
 @media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 2.5rem;
+    .overview-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .overview-stats-col {
+        border-left: none;
+        border-top: 1px solid var(--clr-neutral-200);
+        padding-left: 0;
+        padding-top: 32px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .overview-stats-col stat-badge {
+        padding: 0;
+        border-bottom: none;
+        flex: 1;
+        text-align: center;
+    }
+
+    .overview-stats-col stat-badge:not(:last-child) {
+        border-right: 1px solid var(--clr-neutral-200);
+        padding-right: 16px;
     }
 
     .two-col-grid {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 36px;
     }
 
     .reverse-mobile {
         display: flex;
         flex-direction: column-reverse;
     }
-    
-    .cards-grid.three-col,
-    .cards-grid.four-col {
+
+    .three-col,
+    .four-col {
         grid-template-columns: 1fr;
     }
 
     .tech-card {
-        padding: 30px 20px;
+        padding: 28px 22px;
+    }
+
+    .card-number {
+        font-size: 2rem;
+    }
+
+    .section-header {
+        margin-bottom: 40px;
     }
 }

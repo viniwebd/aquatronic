@@ -43,7 +43,7 @@ export class SpecialButton extends HTMLElement {
           outline: none;
           cursor: pointer;
           text-decoration: none;
-          font-family: "Poppins", sans-serif;
+          font-family: "DM Sans", sans-serif;
           font-weight: 600;
           -webkit-user-select: none;
           user-select: none;
@@ -68,8 +68,8 @@ export class SpecialButton extends HTMLElement {
           display: block;
           padding: 14px 40px;
           border-radius: 100px;
-          background: linear-gradient(135deg, #0853A0, #009FE3);
-          color: #ffffff;
+          background: var(--gradient-action);
+          color: var(--clr-white);
           font-size: 1rem;
           white-space: nowrap;
           transition:
@@ -87,8 +87,8 @@ export class SpecialButton extends HTMLElement {
           width: 50px;
           height: 50px;
           border-radius: 50%;
-          background: linear-gradient(135deg, #0853A0, #009FE3);
-          color: #ffffff;
+          background: var(--gradient-action);
+          color: var(--clr-white);
           font-size: 0.9rem;
           transition:
             transform 0.5s cubic-bezier(0.23, 1, 0.32, 1),
@@ -104,7 +104,7 @@ export class SpecialButton extends HTMLElement {
         .btn--icon:hover .btn__text {
           padding-right: 80px;
           margin-right: -50px;
-          background: #0853A0;
+          background: var(--clr-primary-700);
         }
 
         .btn--icon:hover .btn__icon {
@@ -126,48 +126,48 @@ export class SpecialButton extends HTMLElement {
         }
 
         .btn--primary {
-          background: linear-gradient(135deg, #0853A0, #009FE3);
-          color: #ffffff;
+          background: var(--gradient-action);
+          color: var(--clr-white);
         }
 
         .btn--primary:hover {
-          box-shadow: 0 8px 24px rgba(8, 83, 160, 0.3);
+          box-shadow: 0 8px 24px rgba(0, 107, 163, 0.3);
         }
 
         .btn--secondary {
-          background: #54595f;
-          color: #ffffff;
+          background: var(--clr-neutral-600);
+          color: var(--clr-white);
         }
 
         .btn--secondary:hover {
-          box-shadow: 0 8px 24px rgba(84, 89, 95, 0.25);
+          box-shadow: 0 8px 24px rgba(58, 79, 98, 0.25);
         }
 
         .btn--outline {
           background: transparent;
-          color: #0853A0;
-          border: 2px solid #0853A0;
+          color: var(--clr-primary-700);
+          border: 2px solid var(--clr-primary-700);
         }
 
         .btn--outline:hover {
-          background: #0853A0;
-          color: #ffffff;
+          background: var(--clr-primary-700);
+          color: var(--clr-white);
         }
 
         .btn--ghost {
           background: transparent;
-          color: #212121;
+          color: var(--clr-text-main);
         }
 
         .btn--ghost:hover {
-          background: rgba(0, 159, 227, 0.1);
+          background: var(--clr-bg-blue-light);
         }
 
         /* ── Responsive ── */
         @media (min-width: 768px) {
           .btn {
           margin: 0;
-          margin-top: 16px !important;
+          margin-top: 16px;
           }
 
           .btn__text {
@@ -183,6 +183,7 @@ export class SpecialButton extends HTMLElement {
             padding-right: 90px;
             margin-right: -55px;
           }
+
 
           .btn--simple {
             padding: 18px 36px;

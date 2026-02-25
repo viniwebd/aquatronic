@@ -6,7 +6,7 @@
     <title>Aplicações - Aquatronic</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;0,9..40,900;1,9..40,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/src/styles/global.css">
     <link rel="stylesheet" href="/src/styles/technology.css"> <!-- Reusing tech-card styles -->
@@ -96,21 +96,15 @@
             </div>
         </section>
 
-        <!-- CTA Section -->
-        <section class="applications-cta section-padding full-width">
-            <div class="container">
-                <div class="cta-content">
-                    <h2>A solução certa para a sua aplicação</h2>
-                    <p>
-                        Fale com nossos especialistas e descubra como a tecnologia Aquatronic pode ser aplicada de forma eficiente e sustentável ao seu projeto.
-                    </p>
-                    <div class="cta-actions">
-                        <a href="/tecnologia" class="btn btn-outline-white">Ver casos reais</a>
-                        <a href="/contato" class="btn">Fazer uma simulação</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <!-- CTA -->
+        <cta-banner
+            heading="A solução certa para a sua aplicação"
+            description="Fale com nossos especialistas e descubra como a tecnologia Aquatronic pode ser aplicada de forma eficiente e sustentável ao seu projeto."
+            primary-text="Fazer uma simulação"
+            primary-href="/contato"
+            secondary-text="Ver casos reais"
+            secondary-href="/tecnologia">
+        </cta-banner>
 
     </main>
 
@@ -120,5 +114,6 @@
     <script type="module" src="/src/components/SiteHeader.ts"></script>
     <script type="module" src="/src/components/SiteFooter.ts"></script>
     <script type="module" src="/src/components/PageHero.ts"></script>
+    <script type="module" src="/src/components/CtaBanner.ts"></script>
 </body>
 </html>

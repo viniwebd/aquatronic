@@ -6,7 +6,7 @@
     <title>Clientes e Cases - Aquatronic</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;0,9..40,900;1,9..40,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/src/styles/global.css">
     <link rel="stylesheet" href="/src/styles/technology.css"> <!-- Reusing tech-card styles -->
@@ -147,21 +147,15 @@
             </div>
         </section>
 
-        <!-- CTA Section -->
-        <section class="clients-cta section-padding full-width">
-            <div class="container">
-                <div class="cta-content">
-                    <h2>Leve uma solução comprovada para o seu projeto</h2>
-                    <p>
-                        Fale com nossos especialistas e descubra como a experiência da Aquatronic pode gerar resultados reais, seguros e sustentáveis para o seu sistema de tratamento de água.
-                    </p>
-                    <div class="cta-actions">
-                        <a href="/contato" class="btn">Quero uma solução como essa</a>
-                        <a href="/contato" class="btn btn-outline-white">Falar com um especialista</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <!-- CTA -->
+        <cta-banner
+            heading="Leve uma solução comprovada para o seu projeto"
+            description="Fale com nossos especialistas e descubra como a experiência da Aquatronic pode gerar resultados reais, seguros e sustentáveis para o seu sistema de tratamento de água."
+            primary-text="Quero uma solução como essa"
+            primary-href="/contato"
+            secondary-text="Falar com um especialista"
+            secondary-href="/contato">
+        </cta-banner>
 
     </main>
 
@@ -171,5 +165,6 @@
     <script type="module" src="/src/components/SiteHeader.ts"></script>
     <script type="module" src="/src/components/SiteFooter.ts"></script>
     <script type="module" src="/src/components/PageHero.ts"></script>
+    <script type="module" src="/src/components/CtaBanner.ts"></script>
 </body>
 </html>

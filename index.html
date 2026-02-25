@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;0,9..40,900;1,9..40,400&display=swap"
       rel="stylesheet"
     />
     <link
@@ -16,36 +16,41 @@
     />
     <link rel="stylesheet" href="/src/styles/global.css" />
     <link rel="stylesheet" href="/src/styles/home.css" />
-    <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+    <script
+      src="https://mcp.figma.com/mcp/html-to-design/capture.js"
+      async
+    ></script>
   </head>
   <body>
     <site-header></site-header>
 
     <main id="app">
-      <!-- Hero Section -->
+      <!-- ── Hero Section ── -->
       <section class="hero-section" id="hero">
         <div class="container hero-content-wrapper">
           <h1 class="hero-title">
-            Tecnologia que transforma o<br />tratamento de água
+            Tecnologia que<br />transforma o<br />tratamento de água
           </h1>
           <p class="hero-subtitle">
             Soluções completas de desinfecção por eletrólise, garantindo água
             segura para empresas, comunidades e projetos de grande porte.
           </p>
-
           <div class="hero-actions">
             <special-button
               text="Conheça nossas soluções"
               href="#solucoes"
               icon="fas fa-arrow-right"
             ></special-button>
+            <a href="/sobre-nos" class="hero-secondary-link">
+              Sobre a Aquatronic <i class="fas fa-arrow-right"></i>
+            </a>
           </div>
         </div>
       </section>
 
-      <!-- Logo Carousel -->
+      <!-- ── Logo Carousel ── -->
       <section class="carousel-section">
-        <div class="container carousel-container">
+        <div class="carousel-container">
           <div class="swiper logo-swiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
@@ -83,73 +88,76 @@
         </div>
       </section>
 
-      <!-- Mission Section -->
-      <section class="mission-section container">
-        <div class="mission-left">
-          <div class="hero-tag"><i class="fab fa-diaspora"></i> Sobre nós</div>
-          <h3>
-            A Aquatronic integra tecnologia, engenharia aplicada e
-            sustentabilidade para oferecer soluções completas em tratamento de
-            água.
-          </h3>
-          <p>
-            Nossas soluções foram desenvolvidas para oferecer desinfecção
-            eficiente, segura e sustentável, integrando tecnologia de ponta,
-            projetos personalizados e serviços especializados.
-          </p>
-        </div>
-
-        <div class="mission-right">
-          <div class="mission-card">
-            <div
-              class="mission-card-inner"
-              style="
-                background-image: url(&quot;https://anbaragency.com.br/wp-content/uploads/2026/01/2547.jpg&quot;);
-              "
-            >
-              <span class="btn-special-icon mission-card-icon"
-                ><i class="fas fa-arrow-right"></i
-              ></span>
-            </div>
-            <h4>Nossa Visão</h4>
+      <!-- ── About Section ── -->
+      <section class="about-home-section">
+        <div class="container about-home-grid">
+          <div class="about-home-text">
+            <section-tag text="Sobre a Aquatronic"></section-tag>
+            <h2>
+              Integramos tecnologia, engenharia e sustentabilidade no tratamento
+              de água
+            </h2>
             <p>
-              Ser referência nacional em soluções sustentáveis para o tratamento
-              de água.
+              A Aquatronic nasceu da necessidade de oferecer soluções mais
+              seguras, eficientes e sustentáveis. Desenvolvemos tecnologias que
+              eliminam o uso de produtos químicos perigosos, tornando a
+              desinfecção mais simples e acessível.
             </p>
-            <a href="#" class="mission-card-link"
-              >Leia mais <i class="fas fa-chevron-right"></i
-            ></a>
+            <p>
+              Ao longo de mais de duas décadas, crescemos e nos consolidamos
+              como referência nacional em sistemas de eletrólise salina — desde
+              piscinas residenciais até grandes estações de tratamento e
+              projetos de saneamento.
+            </p>
+            <div class="about-home-actions">
+              <special-button
+                text="Conheça nossa história"
+                href="/sobre-nos"
+                icon="fas fa-arrow-right"
+              ></special-button>
+            </div>
           </div>
 
-          <div class="mission-right-stack">
-            <div class="mission-card mission-card--compact">
-              <div class="mission-card-row">
-                <img
-                  src="https://anbaragency.com.br/wp-content/uploads/2026/01/2547.jpg"
-                  class="mission-card-thumb"
-                  alt="Mission"
-                />
-                <div>
-                  <h4>Nossa Missão</h4>
-                  <p>
-                    Desenvolver soluções completas de tratamento de água com
-                    tecnologia e engenharia aplicada.
-                  </p>
+          <div class="about-home-visual">
+            <div class="about-mission-cards">
+              <!-- Grande: Nossa Visão -->
+              <div class="about-vision-card">
+                <div class="about-vision-card-bg"></div>
+                <div class="about-vision-card-overlay">
+                  <div class="about-vision-card-tag">
+                    <i class="fas fa-eye"></i> Nossa Visão
+                  </div>
+                  <div class="about-vision-card-body">
+                    <h4>
+                      Ser referência nacional em soluções sustentáveis para o
+                      tratamento de água.
+                    </h4>
+                    <a href="/sobre-nos" class="about-vision-link"
+                      >Leia mais <i class="fas fa-chevron-right"></i
+                    ></a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="mission-card mission-card--compact">
-              <div class="mission-card-row">
-                <img
-                  src="https://anbaragency.com.br/wp-content/uploads/2026/01/2547.jpg"
-                  class="mission-card-thumb"
-                  alt="Values"
-                />
-                <div>
-                  <h4>Valores</h4>
+              <!-- Stack: Missão + Valores -->
+              <div class="about-compact-stack">
+                <div class="about-compact-card">
+                  <div class="about-compact-icon">
+                    <i class="fas fa-bullseye"></i>
+                  </div>
+                  <h4>Nossa Missão</h4>
                   <p>
-                    Gerar valor para clientes, comunidades e meio ambiente por
-                    meio de soluções sustentáveis.
+                    Desenvolver soluções completas de tratamento com tecnologia
+                    e engenharia aplicada.
+                  </p>
+                </div>
+                <div class="about-compact-card">
+                  <div class="about-compact-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <h4>Nossos Valores</h4>
+                  <p>
+                    Sustentabilidade, segurança, inovação e compromisso em cada
+                    projeto.
                   </p>
                 </div>
               </div>
@@ -158,30 +166,26 @@
         </div>
       </section>
 
-      <!-- Technology Section (Nested Accordion) -->
+      <!-- ── Technology Section ── -->
       <section class="tech-section" id="tecnologia">
         <div class="container">
           <div class="tech-header">
             <div class="tech-header-left">
-              <div class="hero-tag">
-                <i class="fab fa-diaspora"></i> Nosso trabalho
-              </div>
+              <section-tag text="Nossa Tecnologia"></section-tag>
               <h2>
                 Tecnologia, engenharia e sustentabilidade aplicadas ao
                 tratamento de água
               </h2>
             </div>
-
             <div class="tech-header-right">
               <p>
                 Nossas soluções foram desenvolvidas para oferecer desinfecção
                 eficiente, segura e sustentável, integrando tecnologia de ponta,
                 projetos personalizados e serviços especializados.
               </p>
-
               <special-button
                 text="Conheça nossa tecnologia"
-                href="#tecnologia"
+                href="/tecnologia"
                 icon="fas fa-arrow-right"
               ></special-button>
             </div>
@@ -191,8 +195,8 @@
             <div class="tech-image-col">
               <div class="tech-image-wrapper">
                 <img
-                  src="https://anbaragency.com.br/wp-content/uploads/2026/01/Imagem-do-WhatsApp-de-2025-07-29-as-13.20.07_49be265d.jpg"
-                  alt="Tech"
+                  src="/images/img-hero-pages.png"
+                  alt="Tecnologia Aquatronic"
                 />
               </div>
             </div>
@@ -212,11 +216,6 @@
                         concentrados e garantindo desinfecção contínua e
                         confiável.
                       </p>
-                      <img
-                        src="https://anbaragency.com.br/wp-content/uploads/2026/01/Imagem-do-WhatsApp-de-2025-07-29-as-13.20.07_49be265d.jpg"
-                        class="accordion-detail-img"
-                        alt="Detail"
-                      />
                     </div>
                   </div>
                 </div>
@@ -232,11 +231,6 @@
                         logísticos, menor impacto ambiental e economia
                         operacional a médio e longo prazo.
                       </p>
-                      <img
-                        src="https://anbaragency.com.br/wp-content/uploads/2026/01/Imagem-do-WhatsApp-de-2025-07-29-as-13.20.07_49be265d.jpg"
-                        class="accordion-detail-img"
-                        alt="Detail"
-                      />
                     </div>
                   </div>
                 </div>
@@ -252,15 +246,9 @@
                         cliente, adaptáveis a diferentes volumes, aplicações e
                         infraestruturas.
                       </p>
-                      <img
-                        src="https://anbaragency.com.br/wp-content/uploads/2026/01/Imagem-do-WhatsApp-de-2025-07-29-as-13.20.07_49be265d.jpg"
-                        class="accordion-detail-img"
-                        alt="Detail"
-                      />
                     </div>
                   </div>
                 </div>
-
                 <div class="accordion-item">
                   <div class="accordion-header">
                     <span>Serviços Integrados ao Ciclo de Vida</span>
@@ -273,11 +261,6 @@
                         monitoramento e suporte completo em todas as etapas do
                         sistema.
                       </p>
-                      <img
-                        src="https://anbaragency.com.br/wp-content/uploads/2026/01/Imagem-do-WhatsApp-de-2025-07-29-as-13.20.07_49be265d.jpg"
-                        class="accordion-detail-img"
-                        alt="Detail"
-                      />
                     </div>
                   </div>
                 </div>
@@ -287,50 +270,36 @@
         </div>
       </section>
 
-      <!-- Products Section -->
-      <section class="container section-padding">
-        <div class="products-header">
-          <div class="products-header-left">
-            <div class="hero-tag">
-              <i class="fab fa-diaspora"></i> Produtos e aplicações
+      <!-- ── Products Section ── -->
+      <section class="products-section section-padding" id="solucoes">
+        <div class="container">
+          <div class="products-header">
+            <div class="products-header-left">
+              <section-tag text="Produtos & Aplicações"></section-tag>
+              <h2>Soluções completas para diferentes aplicações</h2>
             </div>
-            <h2>Soluções completas para diferentes aplicações</h2>
+            <div class="products-header-right">
+              <special-button
+                text="Falar com especialista"
+                href="/contato"
+                icon="fas fa-arrow-right"
+              ></special-button>
+            </div>
           </div>
-          <div class="products-header-right">
-            <special-button
-              text="Falar com especialista"
-              href="#contato"
-              icon="fas fa-arrow-right"
-            ></special-button>
-          </div>
-        </div>
 
-        <div class="products-grid">
-          <div
-            class="products-grid-overlay"
-            style="
-              background-image: url(&quot;https://anbaragency.com.br/wp-content/uploads/2026/01/11-3.jpg&quot;);
-            "
-          ></div>
-
-          <div class="mission-card product-card">
-            <div class="product-card-body">
-              <div class="product-card-icon">
-                <i class="fas fa-bolt"></i>
-              </div>
+          <div class="products-grid">
+            <div class="product-card">
+              <div class="product-card-icon"><i class="fas fa-bolt"></i></div>
               <h4>Geradores de Cloro</h4>
               <p>
                 Produção segura e contínua de desinfetante no próprio local, com
                 alta eficiência e redução de custos operacionais.
               </p>
+              <a href="/produtos" class="product-card-link"
+                >Leia mais <i class="fas fa-chevron-right"></i
+              ></a>
             </div>
-            <a href="#" class="product-card-link"
-              >Leia mais <i class="fas fa-chevron-right"></i
-            ></a>
-          </div>
-
-          <div class="mission-card product-card">
-            <div class="product-card-body">
+            <div class="product-card">
               <div class="product-card-icon">
                 <i class="fas fa-industry"></i>
               </div>
@@ -339,152 +308,58 @@
                 Soluções para saneamento básico, indústrias, piscinas, projetos
                 comerciais e institucionais.
               </p>
+              <a href="/aplicacoes" class="product-card-link"
+                >Ver aplicações <i class="fas fa-chevron-right"></i
+              ></a>
             </div>
-            <a href="#" class="product-card-link"
-              >Ver aplicações <i class="fas fa-chevron-right"></i
-            ></a>
-          </div>
-
-          <div class="mission-card product-card">
-            <div class="product-card-body">
-              <div class="product-card-icon">
-                <i class="fas fa-truck"></i>
-              </div>
+            <div class="product-card">
+              <div class="product-card-icon"><i class="fas fa-truck"></i></div>
               <h4>Locação de Equipamentos</h4>
               <p>
                 Soluções flexíveis para projetos temporários ou demandas
                 específicas, com suporte técnico completo.
               </p>
+              <a href="/servicos" class="product-card-link"
+                >Saber mais <i class="fas fa-chevron-right"></i
+              ></a>
             </div>
-            <a href="#" class="product-card-link"
-              >Saber mais <i class="fas fa-chevron-right"></i
-            ></a>
-          </div>
-
-          <div class="mission-card product-card">
-            <div class="product-card-body">
-              <div class="product-card-icon">
-                <i class="fas fa-wrench"></i>
-              </div>
+            <div class="product-card">
+              <div class="product-card-icon"><i class="fas fa-wrench"></i></div>
               <h4>Serviços de Manutenção</h4>
               <p>
                 Programas de manutenção preventiva e corretiva para máxima
                 performance e confiabilidade.
               </p>
-            </div>
-            <a href="#" class="product-card-link"
-              >Saber mais <i class="fas fa-chevron-right"></i
-            ></a>
-          </div>
-        </div>
-      </section>
-
-      <!-- Stats Section -->
-      <section class="stats-floating">
-        <div class="container stats-content">
-          <h4 class="stats-title">
-            Mais de duas décadas transformando o tratamento de água no Brasil
-          </h4>
-          <div class="counter-section">
-            <span class="counter-number" id="water-counter">0</span>
-            <p class="stats-subtitle-number">bilhões de litros</p>
-          </div>
-          <p class="stats-subtitle">
-            Tecnologia aplicada em projetos de grande impacto social, ambiental
-            e operacional, contribuindo diretamente para a qualidade da água em
-            diversas regiões do país
-          </p>
-
-          <special-button
-            text="Conheça nossos projetos"
-            href="#projetos"
-            icon="fas fa-arrow-right"
-          ></special-button>
-        </div>
-      </section>
-
-      <!-- Contact Form Section -->
-      <section class="container section-padding" id="contato">
-        <div class="contact-header">
-          <div class="contact-header-left">
-            <div class="hero-tag"><i class="fab fa-diaspora"></i> Contato</div>
-            <h2>Vamos encontrar a melhor solução para o seu projeto</h2>
-          </div>
-          <div class="contact-header-right">
-            <p>
-              Nossa equipe está pronta para entender sua necessidade, indicar a
-              tecnologia ideal e acompanhar seu projeto do início à operação.
-            </p>
-          </div>
-        </div>
-
-        <div class="contact-wrapper">
-          <div class="contact-left">
-            <div class="contact-image-box">
-              <div
-                class="contact-image-overlay"
-                style="
-                  background-image: url(&quot;https://anbaragency.com.br/wp-content/uploads/2026/01/11-3.jpg&quot;);
-                "
-              ></div>
-              <img
-                src="https://anbaragency.com.br/wp-content/uploads/2026/01/Frame-1707478822.png"
-                class="contact-image-main"
-                alt="Contact Image"
-              />
-            </div>
-          </div>
-
-          <div class="contact-right">
-            <div class="contact-form-container">
-              <form id="contact-form">
-                <div class="form-row">
-                  <input
-                    type="text"
-                    placeholder="Nome"
-                    class="form-field"
-                    required
-                  />
-                  <input
-                    type="text"
-                    placeholder="Empresa"
-                    class="form-field"
-                    required
-                  />
-                </div>
-                <div class="form-row">
-                  <input
-                    type="email"
-                    placeholder="Email"
-                    class="form-field"
-                    required
-                  />
-                  <input
-                    type="tel"
-                    placeholder="Telefone"
-                    class="form-field"
-                    required
-                  />
-                </div>
-                <select class="form-field">
-                  <option>Selecione o projeto</option>
-                  <option>Geradores de Cloro</option>
-                  <option>Manutenção</option>
-                  <option>Locação</option>
-                </select>
-                <textarea placeholder="Mensagem" class="form-field"></textarea>
-                <special-button
-                  text="Enviar"
-                  type="submit"
-                  icon="fas fa-arrow-right"
-                ></special-button>
-              </form>
+              <a href="/servicos" class="product-card-link"
+                >Saber mais <i class="fas fa-chevron-right"></i
+              ></a>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Testimonials Section -->
+      <!-- ── Contact Section ── -->
+      <section class="contact-section section-padding" id="contato">
+        <div class="container">
+          <div class="contact-wrapper">
+            <div class="contact-left">
+              <section-tag text="Contato"></section-tag>
+              <h2>Vamos encontrar a melhor solução para o seu projeto</h2>
+              <p>
+                Nossa equipe está pronta para entender sua necessidade, indicar
+                a tecnologia ideal e acompanhar seu projeto do início à
+                operação.
+              </p>
+            </div>
+
+            <div class="contact-right">
+              <contact-form></contact-form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Testimonials Section ── -->
       <section class="testimonials-section section-padding">
         <div class="container">
           <div class="testimonials-wrapper">
@@ -497,7 +372,7 @@
                   <p>Assista ao vídeo</p>
                 </div>
                 <img
-                  src="https://anbaragency.com.br/wp-content/uploads/2026/01/Imagem-do-WhatsApp-de-2025-07-29-as-13.20.07_49be265d.jpg"
+                  src="/images/img-hero-pages.png"
                   alt="Video Placeholder"
                   class="video-thumb"
                 />
@@ -505,19 +380,16 @@
             </div>
 
             <div class="testimonials-content">
-              <div class="hero-tag">
-                <i class="fas fa-star"></i> Depoimentos
-              </div>
-              <h2>Confiança Construída Com Resultados</h2>
+              <section-tag text="Depoimentos"></section-tag>
+              <h2>Confiança construída com resultados</h2>
               <p>
                 Projetos desenvolvidos com foco em eficiência, segurança
                 operacional e impacto positivo para clientes e comunidades.
               </p>
-
               <div class="testimonials-actions">
                 <special-button
                   text="Conheça nossos projetos"
-                  href="#projetos"
+                  href="/clientes-e-cases"
                   icon="fas fa-arrow-right"
                 ></special-button>
               </div>
@@ -526,44 +398,8 @@
         </div>
       </section>
 
-      <!-- FAQ Section -->
-      <section class="container section-padding">
-        <div class="faq-layout">
-          <div class="faq-header">
-            <div class="hero-tag"><i class="fab fa-diaspora"></i> FAQ</div>
-            <h2>Dúvidas frequentes sobre nossas soluções</h2>
-          </div>
-
-          <div class="faq-container">
-            <div class="accordion faq-accordion">
-              <div class="accordion-item">
-                <div class="accordion-header">
-                  <span>Como funciona a eletrólise salina?</span>
-                  <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="accordion-content">
-                  <p>
-                    A eletrólise salina gera cloro a partir do sal comum
-                    dissolvido na água, um processo seguro e ecológico.
-                  </p>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <div class="accordion-header">
-                  <span>Quais são as principais vantagens?</span>
-                  <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="accordion-content">
-                  <p>
-                    Economia, segurança operacional, eliminação de logística de
-                    químicos e sustentabilidade.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <!-- ── FAQ Section ── -->
+      <faq-accordion></faq-accordion>
     </main>
 
     <site-footer></site-footer>
@@ -572,5 +408,8 @@
     <script type="module" src="/src/components/SiteHeader.ts"></script>
     <script type="module" src="/src/components/SiteFooter.ts"></script>
     <script type="module" src="/src/components/SpecialButton.ts"></script>
+    <script type="module" src="/src/components/SectionTag.ts"></script>
+    <script type="module" src="/src/components/ContactForm.ts"></script>
+    <script type="module" src="/src/components/FaqAccordion.ts"></script>
   </body>
 </html>

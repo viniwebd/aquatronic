@@ -30,7 +30,7 @@ export class SiteHeader extends HTMLElement {
         }
 
         :host(.header-solid) {
-          background-color: var(--clr-blue);
+          background-color: var(--clr-primary-500);
           backdrop-filter: none;
           -webkit-backdrop-filter: none;
           box-shadow: 0 4px 20px rgba(0,0,0,0.1);
@@ -103,7 +103,7 @@ export class SiteHeader extends HTMLElement {
         }
 
         nav a:hover, nav li:hover > a {
-          color: var(--clr-blue);
+          color: var(--clr-primary-400);
         }
 
         :host(.header-solid) nav a:hover,
@@ -113,13 +113,13 @@ export class SiteHeader extends HTMLElement {
 
         nav a i {
           font-size: 0.8rem;
-          color: #999;
+          color: var(--clr-neutral-400);
           transition: transform 0.3s;
         }
 
         nav li:hover > a i {
           transform: rotate(180deg);
-          color: var(--clr-blue);
+          color: var(--clr-primary-400);
         }
 
         :host(.header-solid) nav li:hover > a i {
@@ -143,7 +143,7 @@ export class SiteHeader extends HTMLElement {
           opacity: 0;
           visibility: hidden;
           transition: all 0.2s ease;
-          border: 1px solid rgba(1, 129, 254, 0.2);
+          border: 1px solid rgba(0, 128, 192, 0.2);
         }
 
         nav li:hover .dropdown {
@@ -163,7 +163,7 @@ export class SiteHeader extends HTMLElement {
           padding: 8px 15px;
           border-radius: 8px;
           white-space: nowrap;
-          color: #444;
+          color: var(--clr-neutral-700);
           width: 100%;
           box-sizing: border-box;
           display: block;
@@ -171,15 +171,15 @@ export class SiteHeader extends HTMLElement {
         }
 
         .dropdown a:hover {
-          background-color: #f5f9ff;
-          color: var(--clr-blue);
+          background-color: var(--clr-primary-100);
+          color: var(--clr-primary-400);
         }
 
         /* Nested menu items styles */
         .dropdown-subtitle {
           font-size: 0.75rem;
           text-transform: uppercase;
-          color: #999;
+          color: var(--clr-neutral-400);
           font-weight: 600;
           letter-spacing: 0.5px;
           margin: 10px 15px 5px;
@@ -189,7 +189,7 @@ export class SiteHeader extends HTMLElement {
         .nested-item {
           padding-left: 25px !important;
           font-size: 0.85rem !important;
-          color: #666 !important;
+          color: var(--clr-neutral-500) !important;
         }
 
         /* Actions */
@@ -200,10 +200,10 @@ export class SiteHeader extends HTMLElement {
         }
 
         .btn-contato {
-          background: var(--clr-blue);
+          background: var(--clr-primary-500);
           color: var(--clr-white);
           padding: 8px 24px;
-          border-radius: 100px;
+          border-radius: 9999px;
           font-weight: 600;
           font-size: 0.95rem;
           text-decoration: none;
@@ -211,14 +211,14 @@ export class SiteHeader extends HTMLElement {
         }
 
         .btn-contato:hover {
-          background: #2563EB;
+          background: var(--clr-primary-400);
           transform: translateY(-2px);
-          box-shadow: 0 5px 15px rgba(59, 130, 246, 0.3);
+          box-shadow: 0 5px 15px rgba(0, 128, 192, 0.3);
         }
 
         :host(.header-solid) .btn-contato {
           background: var(--clr-white);
-          color: var(--clr-blue);
+          color: var(--clr-primary-500);
         }
 
         :host(.header-solid) .btn-contato:hover {
@@ -315,14 +315,14 @@ export class SiteHeader extends HTMLElement {
           display: block;
           padding: 12px 25px 12px 40px;
           text-decoration: none;
-          color: #444;
+          color: var(--clr-neutral-700);
           font-size: 0.95rem;
           border-top: 1px solid #f9f9f9;
         }
-        
+
         .mobile-nested {
             padding-left: 55px;
-            color: #666;
+            color: var(--clr-neutral-500);
             font-size: 0.9rem;
         }
 

@@ -20,6 +20,7 @@ export default defineConfig({
         applications: resolve(__dirname, 'aplicacoes/index.html'),
         services: resolve(__dirname, 'servicos/index.html'),
         clients: resolve(__dirname, 'clientes-e-cases/index.html'),
+        designSystem: resolve(__dirname, 'design-system/index.html'),
         notFound: resolve(__dirname, '404.html'),
       },
     },
@@ -39,14 +40,15 @@ export default defineConfig({
             '/tecnologia',
             '/aplicacoes',
             '/contato',
-            '/clientes-e-cases'
+            '/clientes-e-cases',
+            '/design-system'
           ];
           
-          // Check if the request matches a folder route
-          if (url && routes.some(route => url.startsWith(route))) {
+          // Check if the request matches a folder route (but not a specific file)
+          if (url && routes.some(route => url === route || url === route + '/' || url === route + '/index.html')) {
             const folderPath = url.split('/')[1];
             const indexPath = resolve(__dirname, folderPath, 'index.html');
-            
+
             if (fs.existsSync(indexPath)) {
               req.url = `/${folderPath}/index.html`;
             }

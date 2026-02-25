@@ -21,7 +21,8 @@ export class PageHero extends HTMLElement {
       <style>
         .about-hero {
           align-content: center;
-          background-image: url('https://anbaragency.com.br/wp-content/uploads/2026/01/Imagem-do-WhatsApp-de-2025-07-29-as-11.24.39_f8d1f833.jpg');
+          background-color: var(--clr-primary-800);
+          background-image: url('/images/img-hero-pages.png');
           background-position: bottom;
           background-size: cover;
           position: relative;
@@ -34,7 +35,7 @@ export class PageHero extends HTMLElement {
           content: '';
           position: absolute;
           top: 0; left: 0; right: 0; bottom: 0;
-          background: #0853A0;
+          background: var(--clr-primary-600);
           opacity: 0.63;
           z-index: 1;
         }
