@@ -85,7 +85,7 @@ export class FaqAccordion extends HTMLElement {
     const heading =
       this.getAttribute('heading') || 'Dúvidas frequentes sobre nossas soluções';
 
-    const left  = ITEMS.slice(0, 7);
+    const left = ITEMS.slice(0, 7);
     const right = ITEMS.slice(7, 14);
 
     const renderItems = (items: typeof ITEMS) =>
@@ -113,12 +113,12 @@ export class FaqAccordion extends HTMLElement {
       <style>
         :host {
           display: block;
-          font-family: var(--ff-primary, "DM Sans", sans-serif);
+          font-family: var(--ff-primary);
         }
 
         /* ── Container ── */
         .inner {
-          max-width: var(--container-width, 1300px);
+          max-width: var(--container-width);
           margin: 0 auto;
           padding: 100px 20px;
         }
@@ -127,12 +127,15 @@ export class FaqAccordion extends HTMLElement {
         .section-tag {
           display: inline-flex;
           align-items: center;
-          gap: 10px;
-          font-size: 0.7rem;
-          font-weight: 700;
+          gap: 12px;
+          font-size: var(--fs-small);
+          font-weight: var(--fw-bold);
           letter-spacing: 0.2em;
           text-transform: uppercase;
-          color: var(--clr-primary-500, #0080c0);
+          color: var(--clr-primary-500);
+          padding: 8px 18px;
+          border-radius: 999px;
+          margin-bottom: 24px;
         }
 
         .section-tag::before {
@@ -155,10 +158,10 @@ export class FaqAccordion extends HTMLElement {
         }
 
         h2 {
-          font-size: clamp(1.75rem, 3vw, 2.5rem);
-          font-weight: 700;
-          color: var(--clr-neutral-900, #131e28);
-          line-height: 1.15;
+          font-size: var(--fs-h2);
+          font-weight: var(--fw-semibold);
+          color: var(--clr-neutral-900);
+          line-height: var(--lh-heading);
           letter-spacing: -0.02em;
           max-width: 36ch;
           margin: 0;
@@ -180,20 +183,20 @@ export class FaqAccordion extends HTMLElement {
 
         /* ── Accordion item — card style ── */
         .item {
-          background: #fff;
-          border: 1.5px solid var(--clr-neutral-100, #dfe7ef);
+          background: var(--clr-white);
+          border: 1.5px solid var(--clr-neutral-100);
           border-radius: 16px;
           overflow: hidden;
           transition: border-color 0.2s ease, box-shadow 0.2s ease;
         }
 
         .item:hover {
-          border-color: var(--clr-neutral-200, #c2d0dc);
-          box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+          border-color: var(--clr-neutral-200);
+          box-shadow: 0 4px 16px var(--clr-black-05);
         }
 
         .item.is-open {
-          border-color: var(--clr-primary-200, #8dd8ff);
+          border-color: var(--clr-primary-200);
           box-shadow: 0 4px 20px rgba(0, 128, 192, 0.08);
         }
 
@@ -210,20 +213,20 @@ export class FaqAccordion extends HTMLElement {
           cursor: pointer;
           text-align: left;
           font-family: inherit;
-          font-size: 1rem;
-          font-weight: 600;
-          color: var(--clr-neutral-800, #1e2d3b);
+          font-size: var(--fs-body);
+          font-weight: var(--fw-semibold);
+          color: var(--clr-neutral-800);
           transition: color 0.2s ease;
         }
 
         .item-header:focus-visible {
-          outline: 2px solid var(--clr-primary-500, #0080c0);
+          outline: 2px solid var(--clr-primary-500);
           outline-offset: -2px;
           border-radius: 14px;
         }
 
         .item.is-open .item-header {
-          color: var(--clr-primary-600, #006ba3);
+          color: var(--clr-primary-600);
         }
 
         /* ── Chevron ── */
@@ -231,7 +234,7 @@ export class FaqAccordion extends HTMLElement {
           flex-shrink: 0;
           width: 16px;
           height: 16px;
-          color: var(--clr-primary-500, #0080c0);
+          color: var(--clr-primary-500);
           transition: transform 0.3s ease;
         }
 
@@ -251,9 +254,9 @@ export class FaqAccordion extends HTMLElement {
         }
 
         .item-body-inner p {
-          font-size: 1rem;
-          color: var(--clr-neutral-500, #4d6578);
-          line-height: 1.7;
+          font-size: var(--fs-body);
+          color: var(--clr-neutral-500);
+          line-height: var(--lh-body);
           padding: 0 20px 18px;
           margin: 0;
         }
