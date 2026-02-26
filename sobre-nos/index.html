@@ -1,244 +1,284 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sobre Nós - Aquatronic</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;0,9..40,900;1,9..40,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="/src/styles/global.css">
-    <link rel="stylesheet" href="/src/styles/about.css">
-    <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;0,9..40,900;1,9..40,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/src/styles/global.css" />
+    <link rel="stylesheet" href="/src/styles/about.css" />
+    <script
+      src="https://mcp.figma.com/mcp/html-to-design/capture.js"
+      async
+    ></script>
+  </head>
+  <body>
     <site-header></site-header>
 
     <main id="app">
+      <!-- Hero Section -->
+      <page-hero
+        title="Sobre a Aquatronic"
+        subtitle="Há mais de duas décadas desenvolvendo tecnologia, engenharia e sustentabilidade aplicadas ao tratamento de água no Brasil."
+      >
+      </page-hero>
 
-        <!-- Hero Section -->
-        <page-hero
-            title="Sobre a Aquatronic"
-            subtitle="Há mais de duas décadas desenvolvendo tecnologia, engenharia e sustentabilidade aplicadas ao tratamento de água no Brasil.">
-        </page-hero>
+      <!-- Mission / Vision / Values — 3 Cards -->
+      <section class="mv-section">
+        <div class="container">
+          <div class="mv-header">
+            <div>
+              <section-tag text="Propósito &amp; Direção"></section-tag>
+              <h2>O que nos move<br />e para onde vamos</h2>
+            </div>
+            <p class="mv-header-note">
+              Cada projeto que entregamos carrega nossa visão de futuro e nossa
+              missão de tornar o tratamento de água mais seguro e sustentável.
+            </p>
+          </div>
 
-        <!-- Mission / Vision / Values — 3 Cards -->
-        <section class="mv-section">
-            <div class="container">
-                <div class="mv-header">
-                    <div>
-                        <section-tag text="Propósito &amp; Direção"></section-tag>
-                        <h2>O que nos move<br>e para onde vamos</h2>
-                    </div>
-                    <p class="mv-header-note">
-                        Cada projeto que entregamos carrega nossa visão de futuro e nossa missão de tornar o tratamento de água mais seguro e sustentável.
+          <div class="mv-cards">
+            <!-- Visão -->
+            <div class="mv-card mv-card--vision">
+              <div class="mv-card-bg"></div>
+              <div class="mv-card-overlay">
+                <div class="mv-card-tag">
+                  <i class="fas fa-eye"></i> Nossa Visão
+                </div>
+                <div class="mv-card-body">
+                  <h3>
+                    Ser referência nacional em soluções sustentáveis para o
+                    tratamento de água.
+                  </h3>
+                  <p>
+                    Liderança em inovação, qualidade e compromisso com a saúde
+                    pública e o meio ambiente.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Missão -->
+            <div class="mv-card mv-card--mission">
+              <div class="mv-card-bg"></div>
+              <div class="mv-card-overlay">
+                <div class="mv-card-tag">
+                  <i class="fas fa-bullseye"></i> Nossa Missão
+                </div>
+                <div class="mv-card-body">
+                  <h3>
+                    Desenvolver soluções completas de tratamento de água com
+                    tecnologia e engenharia aplicada.
+                  </h3>
+                  <p>
+                    Gerando valor para clientes, comunidades e o meio ambiente
+                    por meio de soluções sustentáveis.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Valores -->
+            <div class="mv-card mv-card--values">
+              <div class="mv-card-bg"></div>
+              <div class="mv-card-overlay">
+                <div class="mv-card-tag">
+                  <i class="fas fa-star"></i> Nossos Valores
+                </div>
+                <div class="mv-card-body">
+                  <h3>Princípios que guiam cada projeto e decisão.</h3>
+                  <p>
+                    Sustentabilidade, segurança, inovação e compromisso formam a
+                    base de tudo que desenvolvemos.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats Section -->
+      <section class="stats-section">
+        <div class="container">
+          <div class="stats-inner">
+            <div class="stat-item">
+              <div class="stat-number">20+</div>
+              <div class="stat-label">Anos de experiência no mercado</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">500+</div>
+              <div class="stat-label">Projetos implementados</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">1B+</div>
+              <div class="stat-label">Litros de água tratada</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- History Section -->
+      <section class="history-section">
+        <div class="container">
+          <div class="history-grid">
+            <div class="history-text">
+              <section-tag text="Nossa História"></section-tag>
+              <h2>
+                Mais de duas décadas transformando o tratamento de água no
+                Brasil
+              </h2>
+              <p>
+                A Aquatronic nasceu da necessidade de oferecer soluções mais
+                seguras, eficientes e sustentáveis para o tratamento de água.
+                Desde o início, nossa missão foi desenvolver tecnologias que
+                eliminem o uso de produtos químicos perigosos, tornando a
+                desinfecção mais simples e acessível.
+              </p>
+              <p>
+                Ao longo dos anos, crescemos e nos consolidamos como referência
+                nacional em sistemas de eletrólise salina, atendendo projetos de
+                diferentes portes — desde piscinas residenciais até grandes
+                estações de tratamento e projetos de saneamento básico.
+              </p>
+              <div class="history-actions">
+                <special-button
+                  text="Conheça nossas soluções"
+                  href="/aplicacoes"
+                  icon="fas fa-arrow-right"
+                ></special-button>
+              </div>
+            </div>
+
+            <div class="history-visual">
+              <div class="history-img-frame">
+                <img src="/images/img-hero-pages.png" alt="Equipe Aquatronic" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Values Section -->
+      <section class="values-section">
+        <div class="container">
+          <div class="values-layout">
+            <div class="values-image-col">
+              <div class="values-img-frame">
+                <img src="/images/img-footer.png" alt="Valores Aquatronic" />
+              </div>
+            </div>
+
+            <div class="values-text-col">
+              <section-tag text="Nossos Valores"></section-tag>
+              <h2>Princípios que guiam cada projeto e decisão</h2>
+
+              <ul class="values-list">
+                <li class="value-item">
+                  <div class="value-icon">
+                    <i class="fas fa-leaf"></i>
+                  </div>
+                  <div class="value-content">
+                    <strong>Sustentabilidade</strong>
+                    <p>
+                      Desenvolvemos soluções que reduzem o impacto ambiental e
+                      promovem o uso responsável dos recursos hídricos.
                     </p>
-                </div>
-
-                <div class="mv-cards">
-                    <!-- Visão -->
-                    <div class="mv-card mv-card--vision">
-                        <div class="mv-card-bg"></div>
-                        <div class="mv-card-overlay">
-                            <div class="mv-card-tag">
-                                <i class="fas fa-eye"></i> Nossa Visão
-                            </div> 
-                            <div class="mv-card-body">
-                                <h3>Ser referência nacional em soluções sustentáveis para o tratamento de água.</h3>
-                                <p>Liderança em inovação, qualidade e compromisso com a saúde pública e o meio ambiente.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Missão -->
-                    <div class="mv-card mv-card--mission">
-                        <div class="mv-card-bg"></div>
-                        <div class="mv-card-overlay">
-                            <div class="mv-card-tag">
-                                <i class="fas fa-bullseye"></i> Nossa Missão
-                            </div>
-                            <div class="mv-card-body">
-                                <h3>Desenvolver soluções completas de tratamento de água com tecnologia e engenharia aplicada.</h3>
-                                <p>Gerando valor para clientes, comunidades e o meio ambiente por meio de soluções sustentáveis.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Valores -->
-                    <div class="mv-card mv-card--values">
-                        <div class="mv-card-bg"></div>
-                        <div class="mv-card-overlay">
-                            <div class="mv-card-tag">
-                                <i class="fas fa-star"></i> Nossos Valores
-                            </div>
-                            <div class="mv-card-body">
-                                <h3>Princípios que guiam cada projeto e decisão.</h3>
-                                <p>Sustentabilidade, segurança, inovação e compromisso formam a base de tudo que desenvolvemos.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                  </div>
+                </li>
+                <li class="value-item">
+                  <div class="value-icon">
+                    <i class="fas fa-shield-alt"></i>
+                  </div>
+                  <div class="value-content">
+                    <strong>Segurança</strong>
+                    <p>
+                      Eliminamos o manuseio de produtos químicos concentrados,
+                      protegendo operadores e comunidades.
+                    </p>
+                  </div>
+                </li>
+                <li class="value-item">
+                  <div class="value-icon">
+                    <i class="fas fa-cogs"></i>
+                  </div>
+                  <div class="value-content">
+                    <strong>Inovação</strong>
+                    <p>
+                      Investimos continuamente em pesquisa e desenvolvimento
+                      para oferecer sempre a melhor tecnologia disponível.
+                    </p>
+                  </div>
+                </li>
+                <li class="value-item">
+                  <div class="value-icon">
+                    <i class="fas fa-handshake"></i>
+                  </div>
+                  <div class="value-content">
+                    <strong>Compromisso</strong>
+                    <p>
+                      Acompanhamos cada projeto do início ao fim, garantindo
+                      suporte técnico completo em todas as etapas.
+                    </p>
+                  </div>
+                </li>
+              </ul>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <!-- Stats Section -->
-        <section class="stats-section">
-            <div class="container">
-                <div class="stats-inner">
-                    <div class="stat-item">
-                        <div class="stat-number">20+</div>
-                        <div class="stat-label">Anos de experiência no mercado</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">500+</div>
-                        <div class="stat-label">Projetos implementados</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">1B+</div>
-                        <div class="stat-label">Litros de água tratada</div>
-                    </div>
-                </div>
+      <!-- Technology Section -->
+      <section class="technology-section">
+        <div class="container">
+          <div class="tech-header">
+            <div class="tech-header-left">
+              <section-tag text="Nossa Tecnologia"></section-tag>
+              <h2>Eletrólise salina: tecnologia limpa e eficiente</h2>
             </div>
-        </section>
-
-        <!-- History Section -->
-        <section class="history-section">
-            <div class="container">
-                <div class="history-grid">
-                    <div class="history-text">
-                        <div class="history-number" aria-hidden="true">20</div>
-                        <section-tag text="Nossa História"></section-tag>
-                        <h2>Mais de duas décadas transformando o tratamento de água no Brasil</h2>
-                        <p>
-                            A Aquatronic nasceu da necessidade de oferecer soluções mais seguras, eficientes e sustentáveis para o tratamento de água. Desde o início, nossa missão foi desenvolver tecnologias que eliminem o uso de produtos químicos perigosos, tornando a desinfecção mais simples e acessível.
-                        </p>
-                        <p>
-                            Ao longo dos anos, crescemos e nos consolidamos como referência nacional em sistemas de eletrólise salina, atendendo projetos de diferentes portes — desde piscinas residenciais até grandes estações de tratamento e projetos de saneamento básico.
-                        </p>
-                        <div class="history-actions">
-                            <special-button
-                                text="Conheça nossas soluções"
-                                href="/aplicacoes"
-                                icon="fas fa-arrow-right"
-                            ></special-button>
-                        </div>
-                    </div>
-
-                    <div class="history-visual">
-                        <div class="history-img-frame">
-                            <img src="/images/img-hero-pages.png" alt="Equipe Aquatronic" />
-                        </div>
-                    </div>
-                </div>
+            <div class="tech-header-right">
+              <p>
+                Nossa tecnologia principal — a eletrólise salina — gera cloro
+                diretamente no ponto de uso, a partir de água e sal. Isso
+                elimina riscos logísticos, reduz custos e garante desinfecção
+                contínua e confiável.
+              </p>
             </div>
-        </section>
+          </div>
 
-        <!-- Values Section -->
-        <section class="values-section">
-            <div class="container">
-                <div class="values-layout">
-                    <div class="values-image-col">
-                        <div class="values-img-frame">
-                            <img src="/images/img-footer.png" alt="Valores Aquatronic" />
-                        </div>
-                    </div>
-
-                    <div class="values-text-col">
-                        <section-tag text="Nossos Valores"></section-tag>
-                        <h2>Princípios que guiam cada projeto e decisão</h2>
-
-                        <ul class="values-list">
-                            <li class="value-item">
-                                <div class="value-icon">
-                                    <i class="fas fa-leaf"></i>
-                                </div>
-                                <div class="value-content">
-                                    <strong>Sustentabilidade</strong>
-                                    <p>Desenvolvemos soluções que reduzem o impacto ambiental e promovem o uso responsável dos recursos hídricos.</p>
-                                </div>
-                            </li>
-                            <li class="value-item">
-                                <div class="value-icon">
-                                    <i class="fas fa-shield-alt"></i>
-                                </div>
-                                <div class="value-content">
-                                    <strong>Segurança</strong>
-                                    <p>Eliminamos o manuseio de produtos químicos concentrados, protegendo operadores e comunidades.</p>
-                                </div>
-                            </li>
-                            <li class="value-item">
-                                <div class="value-icon">
-                                    <i class="fas fa-cogs"></i>
-                                </div>
-                                <div class="value-content">
-                                    <strong>Inovação</strong>
-                                    <p>Investimos continuamente em pesquisa e desenvolvimento para oferecer sempre a melhor tecnologia disponível.</p>
-                                </div>
-                            </li>
-                            <li class="value-item">
-                                <div class="value-icon">
-                                    <i class="fas fa-handshake"></i>
-                                </div>
-                                <div class="value-content">
-                                    <strong>Compromisso</strong>
-                                    <p>Acompanhamos cada projeto do início ao fim, garantindo suporte técnico completo em todas as etapas.</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Technology Section -->
-        <section class="technology-section">
-            <div class="container">
-                <div class="tech-header">
-                    <div class="tech-header-left">
-                        <section-tag text="Nossa Tecnologia"></section-tag>
-                        <h2>Eletrólise salina: tecnologia limpa e eficiente</h2>
-                    </div>
-                    <div class="tech-header-right">
-                        <p>
-                            Nossa tecnologia principal — a eletrólise salina — gera cloro diretamente no ponto de uso, a partir de água e sal. Isso elimina riscos logísticos, reduz custos e garante desinfecção contínua e confiável.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="tech-bento">
-                    <div class="tech-card">
-                        <div class="tech-card-icon">
-                            <i class="fas fa-bolt"></i>
-                        </div>
-                        <h4>Geração Local</h4>
-                        <p>Produção do desinfetante no próprio local de uso, sem transporte de químicos perigosos.</p>
-                    </div>
-                    <div class="tech-card">
-                        <div class="tech-card-icon">
-                            <i class="fas fa-recycle"></i>
-                        </div>
-                        <h4>Processo Sustentável</h4>
-                        <p>Menor impacto ambiental e economia operacional a médio e longo prazo.</p>
-                    </div>
-                    <div class="tech-card">
-                        <div class="tech-card-icon">
-                            <i class="fas fa-sliders-h"></i>
-                        </div>
-                        <h4>Projetos Personalizados</h4>
-                        <p>Sistemas dimensionados conforme a necessidade de cada cliente e aplicação.</p>
-                    </div>
-                    <div class="tech-card">
-                        <div class="tech-card-icon">
-                            <i class="fas fa-headset"></i>
-                        </div>
-                        <h4>Suporte Completo</h4>
-                        <p>Manutenção, monitoramento e suporte técnico em todas as etapas do ciclo de vida.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+          <div class="tech-bento">
+            <tech-card
+              icon="fas fa-bolt"
+              title="Geração Local"
+              description="Produção do desinfetante no próprio local de uso, sem transporte de químicos perigosos.">
+            </tech-card>
+            <tech-card
+              icon="fas fa-recycle"
+              title="Processo Sustentável"
+              description="Menor impacto ambiental e economia operacional a médio e longo prazo.">
+            </tech-card>
+            <tech-card
+              icon="fas fa-sliders-h"
+              title="Projetos Personalizados"
+              description="Sistemas dimensionados conforme a necessidade de cada cliente e aplicação.">
+            </tech-card>
+            <tech-card
+              icon="fas fa-headset"
+              title="Suporte Completo"
+              description="Manutenção, monitoramento e suporte técnico em todas as etapas do ciclo de vida.">
+            </tech-card>
+          </div>
+        </div>
+      </section>
     </main>
 
     <site-footer></site-footer>
@@ -249,5 +289,6 @@
     <script type="module" src="/src/components/SpecialButton.ts"></script>
     <script type="module" src="/src/components/PageHero.ts"></script>
     <script type="module" src="/src/components/SectionTag.ts"></script>
-</body>
+    <script type="module" src="/src/components/TechCard.ts"></script>
+  </body>
 </html>

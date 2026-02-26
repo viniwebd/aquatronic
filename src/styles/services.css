@@ -1,127 +1,210 @@
-/* Services Page Styles */
+/* ============================================================
+   SERVIÇOS — Services Page Styles
+   ============================================================ */
 
-/* Hero (Uses same base structure as Technology/Products/Applications) */
-.services-hero {
-    background-color: var(--clr-primary-800);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/img-hero-pages.png');
-    background-size: cover;
-    background-position: center;
-    min-height: 70vh;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    color: white;
-}
-
-/* Intro Section */
-.intro-section .center-header {
-    max-width: 900px;
-}
-
-/* Background Utility */
+/* ── Background Utility ── */
 .bg-light {
     background-color: var(--clr-bg-blue-light);
 }
 
-/* Explanation Cards (Reusing style from Applications page) */
-.explanation-card {
-    background: white;
-    padding: 40px 30px;
-    border-radius: 20px;
-    text-align: center;
+/* ── Services Section Header (2-column split) ── */
+.services-section-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: end;
+    margin-bottom: 52px;
+}
+
+.services-header-left h2 {
+    margin-top: 16px;
+}
+
+.services-header-right p {
+    font-size: var(--fs-body);
+    color: var(--clr-neutral-500);
+    line-height: var(--lh-body);
+    text-align: right;
+}
+
+/* ── How It Works — Process Flow ── */
+.how-it-works-section {
+    background: #fff;
+}
+
+.how-it-works-section .container > h2 {
+    margin-top: 16px;
+    margin-bottom: 72px;
+}
+
+/* Process flow wrapper */
+.process-flow {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+    height: 280px;
+}
+
+/* Wave SVG overlay */
+.process-wave {
+    position: absolute;
+    inset: 0;
+    width: 100%;
     height: 100%;
-    border: 1px solid rgba(0,0,0,0.05);
-    transition: transform 0.3s ease;
+    pointer-events: none;
+    z-index: 1;
 }
 
-.explanation-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+/* Individual step column */
+.process-step {
+    position: relative;
+    height: 280px;
 }
 
-.explanation-card.highlight {
-    background: #f0f7ff;
-    border-color: rgba(1, 129, 254, 0.1);
+/* ── Step Text — all at the bottom ── */
+.step-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0 20px;
+    z-index: 3;
 }
 
-.explanation-card .icon-box {
-    width: 60px;
-    height: 60px;
-    background: var(--clr-primary-100);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 25px;
+.step-text h3 {
+    font-size: var(--fs-h3);
+    font-weight: var(--fw-semibold);
+    color: var(--clr-neutral-900);
+    margin-bottom: 10px;
 }
 
-.explanation-card.highlight .icon-box {
-    background: white;
-}
-
-.explanation-card .icon-box i {
-    font-size: var(--fs-h4);
-    color: var(--clr-primary-500);
-}
-
-.explanation-card h3 {
-    margin-bottom: 15px;
-    color: var(--clr-primary);
-}
-
-.explanation-card p {
-    font-size: var(--fs-nav);
-    color: var(--clr-text);
+.step-text p {
+    font-size: var(--fs-small);
+    color: var(--clr-neutral-500);
     line-height: var(--lh-body);
 }
 
-/* CTA Actions */
-.cta-actions {
+/* ── Step Icon Node — left-aligned with text ── */
+.step-node {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 20px;               /* default: steps 2 & 3 — icon at top (wave peak) */
     display: flex;
+    justify-content: flex-start;   /* align icon to the left edge of the card */
+    padding-left: 20px;            /* matches text left padding */
+    z-index: 3;
+}
+
+.step-icon-circle {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: #fff;
+    border: 1.5px solid rgba(0, 128, 192, 0.2);
+    box-shadow: 0 4px 24px rgba(0, 128, 192, 0.16);
+    display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 20px;
+    flex-shrink: 0;
 }
 
-.btn-outline-white {
-    background: transparent;
-    border: 2px solid white;
-    color: white;
-    padding: 17px 30px;
-    border-radius: 9999px;
-    font-weight: var(--fw-semibold);
-    transition: all 0.3s ease;
-    text-decoration: none;
-    display: inline-block;
+.step-icon-circle i {
+    font-size: 1.35rem;
+    background: var(--gradient-action);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
-.btn-outline-white:hover {
-    background: white;
-    color: var(--clr-primary-500);
+/* ── Ghost Numbers — próximo ao texto ── */
+.step-ghost-num {
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    font-size: clamp(8rem, 11vw, 11rem);
+    font-weight: 900;
+    line-height: 0.85;
+    letter-spacing: -0.04em;
+    color: rgba(0, 128, 192, 0.05);
+    user-select: none;
+    pointer-events: none;
+    z-index: 0;
 }
 
-.services-cta {
-    background: var(--clr-bg-blue-light);
-    text-align: center;
-}
+/* ── Responsive ── */
 
-.cta-content h2 {
-    margin-bottom: 20px;
-}
-
-.cta-content p {
-    margin-bottom: 40px;
-    font-size: var(--fs-body);
-    color: var(--clr-text);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .cta-actions {
-        flex-direction: column;
-        align-items: stretch;
+/* Tablet */
+@media (max-width: 1024px) {
+    .services-section-header {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
-    
-    .btn-outline-white {
-        text-align: center;
+
+    /* Switch to vertical timeline */
+    .process-flow {
+        grid-template-columns: 1fr;
+        height: auto;
+        gap: 0;
+    }
+
+    .process-wave {
+        display: none;
+    }
+
+    .process-step,
+    .process-step.process-step--flip {
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 28px 0;
+        border-bottom: 1px solid var(--clr-neutral-200);
+    }
+
+    .process-step:last-child {
+        border-bottom: none;
+    }
+
+    /* Ícone do step 1 à esquerda (ordem invertida no HTML) */
+    .process-step[data-step="1"] .step-node {
+        order: -1;
+    }
+
+    /* Reset absolute positioning */
+    .step-text,
+    .step-node {
+        position: static;
+        padding: 0;
+    }
+
+    .step-node {
+        justify-content: flex-start;
+        width: auto;
+        flex-shrink: 0;
+    }
+
+    .step-icon-circle {
+        width: 52px;
+        height: 52px;
+    }
+
+    .step-ghost-num {
+        display: none;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .how-it-works-section .container > h2 {
+        margin-bottom: 48px;
+    }
+
+    .process-step,
+    .process-step.process-step--flip {
+        padding: 24px 0;
+        gap: 16px;
     }
 }

@@ -1,106 +1,177 @@
-/* Applications Page Styles */
-.applications-hero {
-    background-color: var(--clr-primary-800);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/img-hero-pages.png');
-    background-size: cover;
-    background-position: center;
-    min-height: 70vh;
-    display: flex;
-    align-items: center;
+/* ============================================================
+   Applications Page — Redesign
+   ============================================================ */
+
+/* ── Section ── */
+.applications-section {
+    background: #fff;
+}
+
+.app-section-header {
     text-align: center;
-    color: white;
+    max-width: 680px;
+    margin: 0 auto 64px;
 }
 
-/* Intro Section */
-.intro-section .center-header {
-    max-width: 900px;
+.app-section-header h2 {
+    margin-bottom: 16px;
 }
 
-.applications-grid-section {
-    background-color: var(--clr-bg-blue-light);
-}
-
-.explanation-card {
-    background: white;
-    padding: 40px 30px;
-    border-radius: 20px;
-    text-align: center;
-    height: 100%;
-    border: 1px solid rgba(0,0,0,0.05);
-    transition: transform 0.3s ease;
-}
-
-.explanation-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-}
-
-.explanation-card.highlight {
-    background: #f0f7ff;
-    border-color: rgba(1, 129, 254, 0.1);
-}
-
-.explanation-card .icon-box {
-    width: 60px;
-    height: 60px;
-    background: var(--clr-primary-100);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 25px;
-}
-
-.explanation-card.highlight .icon-box {
-    background: white;
-}
-
-.explanation-card .icon-box i {
-    font-size: var(--fs-h4);
-    color: var(--clr-primary-500);
-}
-
-.explanation-card h3 {
-    margin-bottom: 15px;
-    color: var(--clr-primary);
-}
-
-.explanation-card p {
-    font-size: var(--fs-nav);
-    color: var(--clr-text);
+.app-section-header p {
+    color: var(--clr-neutral-600);
+    font-size: var(--fs-body);
     line-height: var(--lh-body);
 }
 
-/* CTA Actions */
-.cta-actions {
+/* ── Cards list ── */
+.app-cards-list {
     display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+/* ── Card ── */
+.app-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 20px;
+    border: 1px solid var(--clr-neutral-200);
+    background: #fff;
+    min-height: 420px;
+    overflow: hidden;
+}
+
+/* Content column */
+.app-card__content {
+    padding: 56px 52px;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     gap: 20px;
+    background: #fff;
 }
 
-.btn-outline-white {
-    background: transparent;
-    border: 2px solid white;
-    color: white;
-    padding: 17px 30px;
-    border-radius: 9999px;
-    font-weight: var(--fw-semibold);
-    transition: all 0.3s ease;
+.app-card__content p {
+    color: var(--clr-neutral-600);
+    font-size: var(--fs-nav);
+    line-height: var(--lh-body);
 }
 
-.btn-outline-white:hover {
-    background: white;
-    color: var(--clr-primary-500);
+/* ── Carousel wrapper ── */
+.app-card__carousel-wrap {
+    padding: 5px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .cta-actions {
-        flex-direction: column;
-        align-items: stretch;
+/* ── Carousel ── */
+.app-carousel {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    height: 100%;
+    min-height: 320px;
+    cursor: grab;
+    user-select: none;
+}
+
+.app-carousel:active {
+    cursor: grabbing;
+}
+
+.app-carousel__track {
+    display: flex;
+    height: 100%;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.app-carousel__slide {
+    flex: 0 0 100%;
+    height: 100%;
+}
+
+.app-carousel__slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+/* Bullets — inside the image, at the bottom */
+.app-carousel__bullets {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 7px;
+    z-index: 10;
+}
+
+.app-carousel__bullet {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.45);
+    border: 1.5px solid rgba(255, 255, 255, 0.85);
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    padding: 0;
+    flex-shrink: 0;
+}
+
+.app-carousel__bullet.active {
+    background: #fff;
+    transform: scale(1.25);
+}
+
+/* ── Reverse: carousel left, content right ── */
+.app-card--reverse .app-card__carousel-wrap {
+    order: -1;
+}
+
+/* ── Responsive — Tablet ── */
+@media (max-width: 1024px) {
+    .app-card__content {
+        padding: 44px 36px;
     }
-    
-    .btn-outline-white {
-        text-align: center;
+}
+
+/* ── Responsive — Mobile ── */
+@media (max-width: 768px) {
+    /* Remove horizontal padding duplicado — container já tem padding: 0 20px */
+    .applications-section.section-padding {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .app-card {
+        grid-template-columns: 1fr;
+    }
+
+    .app-card__carousel-wrap {
+        min-height: 260px;
+    }
+
+    .app-carousel {
+        min-height: 260px;
+    }
+
+    .app-card--reverse .app-card__carousel-wrap {
+        order: 0;
+    }
+
+    .app-card__content {
+        padding: 36px 24px;
+        gap: 16px;
+    }
+
+    .app-cards-list {
+        gap: 20px;
+    }
+
+    .app-section-header {
+        margin-bottom: 48px;
     }
 }

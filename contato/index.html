@@ -1,85 +1,98 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contato - Aquatronic</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;0,9..40,900;1,9..40,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="/src/styles/global.css">
-    <link rel="stylesheet" href="/src/styles/contact.css">
-    <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;0,9..40,900;1,9..40,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/src/styles/global.css" />
+    <link rel="stylesheet" href="/src/styles/contact.css" />
+  </head>
+  <body>
     <site-header></site-header>
-    
+
     <main id="app">
-        <!-- Contact Hero Section -->
-        <section class="contact-section container">
-            <div class="contact-grid">
-                <!-- Left Column: Info -->
-                <div class="contact-info">
-                    <div class="section-tag">
-                        <i class="fab fa-diaspora"></i> Entre em Contato
-                    </div>
-                    <h1>Diga Olá e Converse Conosco!</h1>
-                    <p class="contact-description">
-                        Estamos prontos para atender sua demanda. Entre em contato por telefone, email ou visite nosso escritório.
-                    </p>
-                    
-                    <div class="info-item">
-                        <div class="icon-box">
-                            <i class="fas fa-phone-alt"></i>
-                        </div>
-                        <div class="info-content">
-                            <h4>Ligue Para Nós!</h4>
-                            <p>(+55) 11 1234-5678</p>
-                        </div>
-                    </div>
+      <!-- Page Hero -->
+      <page-hero
+        title="Fale com a nossa equipe"
+        subtitle="Nossa equipe técnica está pronta para orientar, dimensionar e acompanhar o seu projeto de tratamento de água."
+      ></page-hero>
 
-                    <div class="info-item">
-                        <div class="icon-box">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="info-content">
-                            <h4>Envie um Email</h4>
-                            <p>contato@aquatronic.com.br</p>
-                        </div>
-                    </div>
+      <!-- Contact Section -->
+      <section class="contact-section section-padding">
+        <div class="container">
+          <div class="contact-grid">
+            <!-- Left Column: Info -->
+            <div class="contact-info">
+              <section-tag text="Entre em contato"></section-tag>
+              <h2>Vamos encontrar a melhor solução para o seu projeto</h2>
+              <p class="contact-description">
+                Entre em contato para receber orientação especializada, solicitar
+                uma proposta ou discutir como nossas soluções podem atender o
+                seu projeto.
+              </p>
 
-                    <div class="info-item">
-                        <div class="icon-box">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="info-content">
-                            <h4>Visite-nos</h4>
-                            <p>Av. Paulista, 1000 - São Paulo, SP</p>
-                        </div>
-                    </div>
+              <div class="info-item">
+                <div class="icon-box">
+                  <i class="fas fa-phone-alt"></i>
                 </div>
+                <div class="info-content">
+                  <h4>Telefone</h4>
+                  <p>(+55) 11 1234-5678</p>
+                </div>
+              </div>
 
-                <!-- Right Column: Form -->
-                <contact-form></contact-form>
+              <div class="info-item">
+                <div class="icon-box">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="info-content">
+                  <h4>E-mail</h4>
+                  <p>contato@aquatronic.com.br</p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="icon-box">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="info-content">
+                  <h4>Endereço</h4>
+                  <p>Av. Paulista, 1000 — São Paulo, SP</p>
+                </div>
+              </div>
             </div>
-        </section>
 
-        <!-- Map Section -->
-        <section class="map-section">
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.197585671694!2d-46.652156685022066!3d-23.56134888468297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%201000%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001310-100!5e0!3m2!1spt-BR!2sbr!4v1689625482654!5m2!1spt-BR!2sbr" 
-                width="100%" 
-                height="450" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-        </section>
+            <!-- Right Column: Form (component) -->
+            <contact-form></contact-form>
+          </div>
+        </div>
+      </section>
 
-        <!-- FAQ Section -->
-        <faq-accordion heading="Perguntas frequentes"></faq-accordion>
+      <!-- Map Section -->
+      <section class="map-section">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.197585671694!2d-46.652156685022066!3d-23.56134888468297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%201000%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001310-100!5e0!3m2!1spt-BR!2sbr!4v1689625482654!5m2!1spt-BR!2sbr"
+          width="100%"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </section>
+
+      <!-- FAQ -->
+      <faq-accordion heading="Perguntas frequentes"></faq-accordion>
     </main>
 
     <site-footer></site-footer>
@@ -87,7 +100,9 @@
     <script type="module" src="/src/main.ts"></script>
     <script type="module" src="/src/components/SiteHeader.ts"></script>
     <script type="module" src="/src/components/SiteFooter.ts"></script>
+    <script type="module" src="/src/components/PageHero.ts"></script>
+    <script type="module" src="/src/components/SectionTag.ts"></script>
     <script type="module" src="/src/components/ContactForm.ts"></script>
     <script type="module" src="/src/components/FaqAccordion.ts"></script>
-</body>
+  </body>
 </html>

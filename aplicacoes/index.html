@@ -9,89 +9,161 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;0,9..40,900;1,9..40,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/src/styles/global.css">
-    <link rel="stylesheet" href="/src/styles/technology.css"> <!-- Reusing tech-card styles -->
     <link rel="stylesheet" href="/src/styles/applications.css">
 </head>
 <body>
     <site-header></site-header>
-    
+
     <main id="app">
-        <!-- Page Hero Component -->
+        <!-- Page Hero -->
         <page-hero
             title="Tecnologia Aquatronic aplicada a diferentes contextos"
             subtitle="Soluções flexíveis e escaláveis para garantir desinfecção eficiente, segura e sustentável em diferentes aplicações de tratamento de água.">
-        </page-hero>    
+        </page-hero>
 
-        <!-- Block 2: Intro -->
-        <section class="intro-section section-padding container">
-            <div class="center-header">
-                <h2>Soluções que se adaptam à sua realidade</h2>
-                <p>
-                    As tecnologias Aquatronic foram desenvolvidas para operar com eficiência em diferentes contextos, volumes de água e níveis de exigência operacional.
-                    <br>
-                    Independentemente da aplicação, nossos sistemas garantem desinfecção contínua, segurança para operadores e redução de custos operacionais.
-                </p>
-            </div>
-        </section>
-
-        <!-- Block 3: Applications Grid -->
-        <section id="aplicacoes" class="applications-grid-section section-padding">
+        <!-- Applications Section -->
+        <section id="aplicacoes" class="applications-section section-padding">
             <div class="container">
-                <div class="cards-grid four-col">
-                    <!-- Card 1 -->
-                    <div class="tech-card">
-                        <i class="fas fa-water"></i>
-                        <h3>Saneamento Básico</h3>
-                        <p>Soluções ideais para estações de tratamento de água e projetos públicos que exigem confiabilidade, operação contínua e conformidade com padrões de potabilidade.</p>
-                    </div>
-                    <!-- Card 2 -->
-                    <div class="tech-card">
-                        <i class="fas fa-swimming-pool"></i>
-                        <h3>Piscinas e Lazer</h3>
-                        <p>Sistemas automatizados que mantêm níveis estáveis de desinfecção, reduzindo odores, irritações e o uso excessivo de produtos químicos.</p>
-                    </div>
-                    <!-- Card 3 -->
-                    <div class="tech-card">
-                        <i class="fas fa-industry"></i>
-                        <h3>Indústrias e Processos</h3>
-                        <p>Tratamento de água para processos industriais, reutilização e apoio ao consumo, com foco em eficiência, segurança e sustentabilidade operacional.</p>
-                    </div>
-                    <!-- Card 4 -->
-                    <div class="tech-card">
-                        <i class="fas fa-hotel"></i>
-                        <h3>Projetos Comerciais e Institucionais</h3>
-                        <p>Soluções para hotéis, clubes, hospitais, condomínios e grandes empreendimentos que priorizam qualidade da água e segurança para usuários.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- Block 4: Explanation Block -->
-        <section class="explanation-section section-padding container">
-            <div class="cards-grid three-col">
-                <!-- Card 1 -->
-                <div class="explanation-card">
-                    <div class="icon-box">
-                        <i class="fas fa-exclamation-circle"></i>
-                    </div>
-                    <h3>O desafio</h3>
-                    <p>Cada aplicação apresenta desafios específicos, como variação de volume, demanda de cloro, segurança operacional e custos de manutenção.</p>
+                <div class="app-section-header">
+                    <h2>Soluções que se adaptam à sua realidade</h2>
+                    <p>As tecnologias Aquatronic foram desenvolvidas para operar com eficiência em diferentes contextos, volumes de água e níveis de exigência operacional.</p>
                 </div>
-                <!-- Card 2 -->
-                <div class="explanation-card highlight">
-                    <div class="icon-box">
-                        <i class="fas fa-check-circle"></i>
+
+                <div class="app-cards-list">
+
+                    <!-- Card 1: Saneamento Básico -->
+                    <div class="app-card">
+                        <div class="app-card__content">
+                            <section-tag text="Saneamento Básico"></section-tag>
+                            <h3>Desinfecção confiável para ETAs e projetos públicos</h3>
+                            <p>Sistemas projetados para estações de tratamento de água (ETAs), abastecimento municipal e projetos públicos. Garantem desinfecção contínua com conformidade às normas vigentes, operação segura sem manipulação de cloro gasoso e redução significativa de custos operacionais a longo prazo.</p>
+                        </div>
+                        <div class="app-card__carousel-wrap">
+                            <div class="app-carousel" data-carousel>
+                                <div class="app-carousel__track">
+                                    <div class="app-carousel__slide">
+                                        <img src="/images/img-hero-section.png" alt="Saneamento Básico">
+                                    </div>
+                                    <div class="app-carousel__slide">
+                                        <img src="/images/img-hero-pages.png" alt="Saneamento Básico">
+                                    </div>
+                                    <div class="app-carousel__slide">
+                                        <img src="/images/img-bg-for-cards-produtos-e-aplicacoes-home-page.png" alt="Saneamento Básico">
+                                    </div>
+                                    <div class="app-carousel__slide">
+                                        <img src="/images/img-footer.png" alt="Saneamento Básico">
+                                    </div>
+                                </div>
+                                <div class="app-carousel__bullets">
+                                    <button class="app-carousel__bullet active" aria-label="Slide 1"></button>
+                                    <button class="app-carousel__bullet" aria-label="Slide 2"></button>
+                                    <button class="app-carousel__bullet" aria-label="Slide 3"></button>
+                                    <button class="app-carousel__bullet" aria-label="Slide 4"></button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <h3>A solução Aquatronic</h3>
-                    <p>A Aquatronic utiliza tecnologia de eletrólise salina e engenharia aplicada para dimensionar sistemas sob medida, garantindo desinfecção eficiente e contínua.</p>
-                </div>
-                <!-- Card 3 -->
-                <div class="explanation-card">
-                    <div class="icon-box">
-                        <i class="fas fa-hand-holding-water"></i>
+
+                    <!-- Card 2: Piscinas e Lazer (carousel à esquerda) -->
+                    <div class="app-card app-card--reverse">
+                        <div class="app-card__content">
+                            <section-tag text="Piscinas e Lazer"></section-tag>
+                            <h3>Água cristalina sem excesso de produtos químicos</h3>
+                            <p>Tecnologia de eletrólise salina aplicada a piscinas residenciais, hotéis, clubes, parques aquáticos e spas. Mantém os níveis de desinfecção estáveis de forma automática, eliminando odores de cloro, irritações na pele e olhos, e reduzindo significativamente o consumo de produtos químicos convencionais.</p>
+                        </div>
+                        <div class="app-card__carousel-wrap">
+                            <div class="app-carousel" data-carousel>
+                                <div class="app-carousel__track">
+                                    <div class="app-carousel__slide">
+                                        <img src="/images/img-hero-section.png" alt="Piscinas e Lazer">
+                                    </div>
+                                    <div class="app-carousel__slide">
+                                        <img src="/images/img-hero-pages.png" alt="Piscinas e Lazer">
+                                    </div>
+                                    <div class="app-carousel__slide">
+                                        <img src="/images/img-bg-for-cards-produtos-e-aplicacoes-home-page.png" alt="Piscinas e Lazer">
+                                    </div>
+                                    <div class="app-carousel__slide">
+                                        <img src="/images/img-footer.png" alt="Piscinas e Lazer">
+                                    </div>
+                                </div>
+                                <div class="app-carousel__bullets">
+                                    <button class="app-carousel__bullet active" aria-label="Slide 1"></button>
+                                    <button class="app-carousel__bullet" aria-label="Slide 2"></button>
+                                    <button class="app-carousel__bullet" aria-label="Slide 3"></button>
+                                    <button class="app-carousel__bullet" aria-label="Slide 4"></button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <h3>Benefícios práticos</h3>
-                    <p>Operação segura, redução de riscos químicos, economia operacional e maior confiabilidade no tratamento da água.</p>
+
+                    <!-- Card 3: Indústrias e Processos -->
+                    <div class="app-card">
+                        <div class="app-card__content">
+                            <section-tag text="Indústrias e Processos"></section-tag>
+                            <h3>Tratamento de água adaptado à demanda industrial</h3>
+                            <p>Soluções para tratamento de água em processos industriais, sistemas de resfriamento, reutilização de efluentes e geração de vapor. Compatíveis com diferentes setores — alimentício, farmacêutico, químico e de manufatura — com foco em conformidade ambiental, segurança e eficiência operacional.</p>
+                        </div>
+                        <div class="app-card__carousel-wrap">
+                            <div class="app-carousel" data-carousel>
+                                <div class="app-carousel__track">
+                                    <div class="app-carousel__slide">
+                                        <img src="/images/img-hero-section.png" alt="Indústrias e Processos">
+                                    </div>
+                                    <div class="app-carousel__slide">
+                                        <img src="/images/img-hero-pages.png" alt="Indústrias e Processos">
+                                    </div>
+                                    <div class="app-carousel__slide">
+                                        <img src="/images/img-bg-for-cards-produtos-e-aplicacoes-home-page.png" alt="Indústrias e Processos">
+                                    </div>
+                                    <div class="app-carousel__slide">
+                                        <img src="/images/img-footer.png" alt="Indústrias e Processos">
+                                    </div>
+                                </div>
+                                <div class="app-carousel__bullets">
+                                    <button class="app-carousel__bullet active" aria-label="Slide 1"></button>
+                                    <button class="app-carousel__bullet" aria-label="Slide 2"></button>
+                                    <button class="app-carousel__bullet" aria-label="Slide 3"></button>
+                                    <button class="app-carousel__bullet" aria-label="Slide 4"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Projetos Comerciais e Institucionais (carousel à esquerda) -->
+                    <div class="app-card app-card--reverse">
+                        <div class="app-card__content">
+                            <section-tag text="Projetos Comerciais e Institucionais"></section-tag>
+                            <h3>Qualidade da água para grandes empreendimentos</h3>
+                            <p>Desinfecção de água para hotéis, hospitais, condomínios, shopping centers e grandes empreendimentos. Sistemas dimensionados sob medida, com operação autônoma e monitoramento remoto, garantindo qualidade, segurança para os usuários e conformidade com as exigências sanitárias vigentes.</p>
+                        </div>
+                        <div class="app-card__carousel-wrap">
+                            <div class="app-carousel" data-carousel>
+                                <div class="app-carousel__track">
+                                    <div class="app-carousel__slide">
+                                        <img src="/images/img-hero-section.png" alt="Projetos Comerciais">
+                                    </div>
+                                    <div class="app-carousel__slide">
+                                        <img src="/images/img-hero-pages.png" alt="Projetos Comerciais">
+                                    </div>
+                                    <div class="app-carousel__slide">
+                                        <img src="/images/img-bg-for-cards-produtos-e-aplicacoes-home-page.png" alt="Projetos Comerciais">
+                                    </div>
+                                    <div class="app-carousel__slide">
+                                        <img src="/images/img-footer.png" alt="Projetos Comerciais">
+                                    </div>
+                                </div>
+                                <div class="app-carousel__bullets">
+                                    <button class="app-carousel__bullet active" aria-label="Slide 1"></button>
+                                    <button class="app-carousel__bullet" aria-label="Slide 2"></button>
+                                    <button class="app-carousel__bullet" aria-label="Slide 3"></button>
+                                    <button class="app-carousel__bullet" aria-label="Slide 4"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -115,5 +187,72 @@
     <script type="module" src="/src/components/SiteFooter.ts"></script>
     <script type="module" src="/src/components/PageHero.ts"></script>
     <script type="module" src="/src/components/CtaBanner.ts"></script>
+    <script type="module" src="/src/components/SectionTag.ts"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('[data-carousel]').forEach(carousel => {
+                const track = carousel.querySelector('.app-carousel__track');
+                const slides = carousel.querySelectorAll('.app-carousel__slide');
+                const bullets = carousel.querySelectorAll('.app-carousel__bullet');
+                let current = 0;
+
+                function goTo(index) {
+                    bullets[current].classList.remove('active');
+                    current = (index + slides.length) % slides.length;
+                    track.style.transform = `translateX(-${current * 100}%)`;
+                    bullets[current].classList.add('active');
+                }
+
+                // Bullets
+                bullets.forEach((bullet, i) => {
+                    bullet.addEventListener('click', () => goTo(i));
+                });
+
+                // Drag / touch swipe
+                let dragStartX = 0;
+                let isDragging = false;
+
+                function onDragStart(x) {
+                    dragStartX = x;
+                    isDragging = true;
+                    track.style.transition = 'none';
+                }
+
+                function onDragEnd(x) {
+                    if (!isDragging) return;
+                    isDragging = false;
+                    track.style.transition = '';
+                    const delta = dragStartX - x;
+                    if (Math.abs(delta) > 40) {
+                        goTo(delta > 0 ? current + 1 : current - 1);
+                    } else {
+                        track.style.transform = `translateX(-${current * 100}%)`;
+                    }
+                }
+
+                // Mouse drag
+                carousel.addEventListener('mousedown', e => {
+                    e.preventDefault();
+                    onDragStart(e.clientX);
+                });
+                window.addEventListener('mousemove', e => {
+                    if (!isDragging) return;
+                    const delta = dragStartX - e.clientX;
+                    track.style.transform = `translateX(calc(-${current * 100}% - ${delta}px))`;
+                });
+                window.addEventListener('mouseup', e => { if (isDragging) onDragEnd(e.clientX); });
+
+                // Touch
+                carousel.addEventListener('touchstart', e => onDragStart(e.touches[0].clientX), { passive: true });
+                carousel.addEventListener('touchmove', e => {
+                    if (!isDragging) return;
+                    const delta = dragStartX - e.touches[0].clientX;
+                    track.style.transform = `translateX(calc(-${current * 100}% - ${delta}px))`;
+                }, { passive: true });
+                carousel.addEventListener('touchend', e => onDragEnd(e.changedTouches[0].clientX));
+            });
+        });
+    </script>
 </body>
 </html>

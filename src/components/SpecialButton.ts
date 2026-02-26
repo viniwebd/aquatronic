@@ -48,7 +48,6 @@ export class SpecialButton extends HTMLElement {
           -webkit-user-select: none;
           user-select: none;
           transition: transform 0.3s ease;
-          margin:20px 0
         }
 
         .btn:active {
@@ -166,8 +165,6 @@ export class SpecialButton extends HTMLElement {
         /* ── Responsive ── */
         @media (min-width: 768px) {
           .btn {
-          margin: 0;
-          margin-top: 16px;
           }
 
           .btn__text {

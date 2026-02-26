@@ -45,6 +45,9 @@
   text-align: left;
   padding-top: 160px;
   padding-bottom: 80px;
+  margin-left: 0;
+  margin-right: auto;
+  padding-left: max(20px, calc((100vw - var(--container-width)) / 2 + 20px));
 }
 
 .hero-eyebrow {
@@ -200,16 +203,11 @@
   display: grid;
   grid-template-columns: 5fr 4fr;
   gap: 100px;
-  align-items: stretch;
-}
-
-.about-home-visual {
-  display: flex;
-  flex-direction: column;
+  align-items: center;
 }
 
 .about-home-text h2 {
-  margin-bottom: 28px;
+  margin: 20px 0 24px;
 }
 
 .about-home-text p {
@@ -223,121 +221,52 @@
   margin-top: 40px;
 }
 
-/* About Mission Cards */
-.about-mission-cards {
-  flex: 1;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-}
-
-.about-vision-card {
-  position: relative;
-  border-radius: 20px;
-  overflow: hidden;
-  min-height: 480px;
-}
-
-.about-vision-card-bg {
-  position: absolute;
-  inset: 0;
-  background-image: url('/images/img-hero-pages.png');
-  background-size: cover;
-  background-position: center;
-}
-
-.about-vision-card-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(7, 30, 53, 0.95) 0%,
-    rgba(17, 73, 115, 0.45) 55%,
-    rgba(0, 160, 227, 0.1) 100%
-  );
+/* About MVV Stack */
+.about-mvv-stack {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  padding: 28px;
+  border-left: 1px solid rgba(0, 128, 192, 0.2);
+  padding-left: 48px;
 }
 
-.about-vision-card-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 0.6rem;
-  font-weight: var(--fw-bold);
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--clr-primary-300);
-  background: rgba(0, 160, 227, 0.12);
-  border: 1px solid rgba(0, 160, 227, 0.25);
-  padding: 5px 10px;
-  border-radius: 4px;
-  margin-bottom: 12px;
-  width: fit-content;
-}
-
-.about-vision-card-body h4 {
-  color: #fff;
-  margin-bottom: 16px;
-}
-
-.about-vision-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  color: rgba(255, 255, 255, 0.7);
-  font-size: var(--fs-small);
-  font-weight: var(--fw-medium);
-  transition: gap 0.3s, color 0.3s;
-}
-
-.about-vision-link:hover {
-  color: white;
-  gap: 10px;
-}
-
-.about-compact-stack {
+.about-mvv-item {
   display: flex;
-  flex-direction: column;
-  gap: 14px;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 28px 0;
+  border-bottom: 1px solid rgba(0, 128, 192, 0.12);
 }
 
-.about-compact-card {
-  flex: 1;
-  background: var(--clr-bg-blue-light);
-  border: 1px solid rgba(0, 128, 192, 0.12);
-  border-radius: 20px;
-  padding: 24px;
-  transition: border-color 0.3s;
+.about-mvv-item:first-child {
+  padding-top: 0;
 }
 
-.about-compact-card:hover {
-  border-color: var(--clr-primary-400);
+.about-mvv-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
-.about-compact-icon {
+.about-mvv-icon {
   width: 44px;
   height: 44px;
   border-radius: 12px;
-  background: rgba(0, 128, 192, 0.1);
+  background: rgba(0, 128, 192, 0.08);
   border: 1px solid rgba(0, 128, 192, 0.18);
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--clr-primary-600);
   font-size: 1rem;
-  margin-bottom: 14px;
+  flex-shrink: 0;
 }
 
-.about-compact-card h4 {
+.about-mvv-content h4 {
   color: var(--clr-neutral-900);
   margin-bottom: 8px;
 }
 
-.about-compact-card p {
-  font-size: var(--fs-small);
+.about-mvv-content p {
+  font-size: var(--fs-body);
   color: var(--clr-neutral-500);
   line-height: var(--lh-body);
   margin: 0;
@@ -452,81 +381,23 @@
 }
 
 .products-header {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: flex-end;
   margin-bottom: 48px;
   gap: 24px;
 }
 
-
 .products-header-right {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  flex-shrink: 0;
 }
 
 .products-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
-}
-
-.product-card {
-  background: var(--clr-bg-blue-light);
-  border: 1px solid rgba(0, 128, 192, 0.12);
-  border-radius: 20px;
-  padding: 32px 24px;
-  display: flex;
-  flex-direction: column;
-  transition: border-color 0.3s;
-}
-
-.product-card:hover {
-  border-color: var(--clr-primary-400);
-}
-
-.product-card-icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
-  background: rgba(0, 128, 192, 0.1);
-  border: 1px solid rgba(0, 128, 192, 0.18);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--clr-primary-600);
-  font-size: var(--fs-body);
-  margin-bottom: 24px;
-  flex-shrink: 0;
-}
-
-.product-card h4 {
-  color: var(--clr-neutral-900);
-  margin-bottom: 10px;
-}
-
-.product-card p {
-  font-size: var(--fs-body);
-  color: var(--clr-neutral-500);
-  line-height: var(--lh-body);
-  flex: 1;
-  margin-bottom: 20px;
-}
-
-.product-card-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  color: var(--clr-primary-600);
-  font-size: var(--fs-body);
-  font-weight: var(--fw-semibold);
-  transition: gap 0.3s;
-}
-
-.product-card-link:hover {
-  gap: 10px;
 }
 
 /* ── Contact Section ── */
@@ -763,8 +634,10 @@ select.form-field {
   .products-section,
   .testimonials-section { padding: 80px 0; }
 
-  .about-mission-cards { grid-template-columns: 1fr; }
-  .about-vision-card { min-height: 300px; }
+  .about-mvv-stack {
+    border-left: none;
+    padding-left: 0;
+  }
 
   .products-grid { grid-template-columns: 1fr; }
 

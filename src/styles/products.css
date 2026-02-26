@@ -1,15 +1,4 @@
 /* Products Page Styles */
-.products-hero {
-    background-color: var(--clr-primary-800);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/img-hero-pages.png');
-    background-size: cover;
-    background-position: center;
-    min-height: 70vh;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    color: white;
-}
 
 /* Tabs Section */
 .products-tabs-section {
@@ -19,13 +8,13 @@
 .tabs-nav {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    margin-bottom: 60px;
+    gap: 12px;
+    margin-bottom: 56px;
     flex-wrap: wrap;
 }
 
 .tab-btn {
-    padding: 15px 40px;
+    padding: 13px 36px;
     border: 2px solid var(--clr-primary-500);
     background: transparent;
     color: var(--clr-primary-500);
@@ -34,23 +23,23 @@
     font-weight: var(--fw-semibold);
     font-size: var(--fs-body);
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.25s ease;
 }
 
 .tab-btn:hover {
-    background-color: rgba(1, 129, 254, 0.05);
+    background-color: rgba(0, 160, 227, 0.06);
 }
 
 .tab-btn.active {
     background-color: var(--clr-primary-500);
-    color: white;
-    box-shadow: 0 10px 20px rgba(1, 129, 254, 0.2);
+    color: var(--clr-white);
+    box-shadow: 0 8px 20px rgba(0, 160, 227, 0.25);
 }
 
 /* Tab Content */
 .tab-content {
     display: none;
-    animation: fadeIn 0.5s ease;
+    animation: fadeIn 0.4s ease;
 }
 
 .tab-content.active {
@@ -58,145 +47,237 @@
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
 }
 
-.product-header {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 50px;
+/* ===========================
+   Product Details Grid
+   Left: all info | Right: image
+   =========================== */
+
+.product-details-grid {
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 64px;
+    background: var(--clr-white);
+    padding: 56px 60px;
+    border-radius: 24px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.06);
+    align-items: start;
 }
 
-.product-header h3 {
-    color: var(--clr-primary);
-    margin-bottom: 20px;
+/* Left column */
+.product-info-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.product-info-col h2 {
+    margin: 0 0 10px;
 }
 
 .product-description {
     font-size: var(--fs-body);
-    color: var(--clr-text);
+    color: var(--clr-neutral-600);
+    line-height: var(--lh-body);
+    margin: 0;
 }
 
-.product-details-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    background: white;
-    padding: 60px;
-    border-radius: 30px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+.product-info-col h4 {
+    border-left: 3px solid var(--clr-primary-400);
+    padding-left: 12px;
+    margin: 20px 0;
 }
 
-.detail-col h4 {
-    margin-bottom: 25px;
-    color: var(--clr-primary);
-    border-left: 4px solid var(--clr-primary-500);
-    padding-left: 15px;
-}
-
-/* Lists */
-.check-list, .model-list {
+/* Check list (Indicação de uso) */
+.check-list {
     list-style: none;
-    margin-bottom: 40px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
 }
 
 .check-list li {
     padding: 10px 0;
-    border-bottom: 1px solid #eee;
-    color: var(--clr-text);
+    border-bottom: 1px solid var(--clr-neutral-200);
+    color: var(--clr-neutral-700);
+    font-size: var(--fs-body);
+}
+
+.check-list li:first-child {
+    padding-top: 0;
+}
+
+.check-list li:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+/* Benefit list (shared with technology.css) */
+.product-info-col .benefit-list {
+    margin-top: 0; /* override technology.css margin-top: 28px */
+}
+
+.product-info-col .benefit-list i {
+    color: var(--clr-primary-500);
+}
+
+/* Models box */
+.models-box {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.model-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .model-list li {
-    padding: 12px 0;
-    background: #f9f9f9;
-    margin-bottom: 10px;
-    padding: 15px 20px;
-    border-radius: 10px;
-    color: var(--clr-secondary);
-}
-
-.models-box {
-    margin-top: 40px;
-}
-
-.tab-cta {
-    margin-top: 40px;
-}
-
-.btn-outline {
-    background: transparent;
-    border: 2px solid var(--clr-primary-500);
-    color: var(--clr-primary-500);
-}
-
-.btn-outline:hover {
-    background: var(--clr-primary-500);
-    color: white;
-}
-
-/* Differentiators Grid Adjustments */
-.bg-light {
-    background-color: var(--clr-light-grey);
-}
-
-/* Support Section */
-.support-list {
-    list-style: none;
-}
-
-.support-list li {
-    background: white;
-    padding: 20px;
-    border-radius: 15px;
-    margin-bottom: 15px;
     display: flex;
     align-items: center;
-    gap: 20px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
-    font-weight: var(--fw-medium);
-    color: var(--clr-primary);
-    transition: transform 0.3s;
+    justify-content: space-between;
+    gap: 16px;
+    background: var(--clr-neutral-100);
+    padding: 14px 18px;
+    border-radius: 10px;
+    color: var(--clr-neutral-800);
+    font-size: var(--fs-body);
 }
 
-.support-list li:hover {
-    transform: translateX(10px);
+.model-list li strong {
+    color: var(--clr-primary-700);
 }
 
-.support-list i {
-    font-size: var(--fs-h4);
-    color: var(--clr-primary-500);
+.model-download {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    background: var(--gradient-action);
+    color: var(--clr-white);
+    font-size: 0.85rem;
+    flex-shrink: 0;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    text-decoration: none;
 }
 
-/* CTA */
-.products-cta.full-width {
-    background-color: var(--clr-bg-blue-light);
+.model-download:hover {
+    opacity: 0.85;
+    transform: translateY(-2px);
+}
+
+/* Right column: product image */
+.product-image-col {
+    position: sticky;
+    top: 100px;
+}
+
+.product-image-frame {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    border-radius: 20px;
+    overflow: hidden;
+    background: var(--clr-neutral-100);
+    border: 2px dashed var(--clr-neutral-200);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* ===========================
+   Differentiators Section
+   =========================== */
+
+.differentiators-section {
+    background: var(--clr-white);
+}
+
+/* 5 cards in a single row */
+.differentiators-section .cards-grid {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.differentiators-section .section-header {
     text-align: center;
+    max-width: 680px;
+    margin: 0 auto 56px;
 }
 
-/* Responsive */
+.differentiators-section .section-header h2 {
+    margin: 16px 0 12px;
+}
+
+.differentiators-section .section-header p {
+    font-size: var(--fs-body);
+    color: var(--clr-neutral-600);
+    line-height: var(--lh-body);
+}
+
+/* ===========================
+   Responsive — Tablet (≤ 1024px)
+   =========================== */
+
 @media (max-width: 1024px) {
     .product-details-grid {
+        grid-template-columns: 1fr;
         gap: 40px;
         padding: 40px;
     }
+
+    .product-image-col {
+        position: static;
+    }
+
+    .product-image-frame {
+        aspect-ratio: 16 / 9;
+    }
+
+    .differentiators-section .cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
+
+/* ===========================
+   Responsive — Mobile (≤ 768px)
+   =========================== */
 
 @media (max-width: 768px) {
     .product-details-grid {
-        grid-template-columns: 1fr;
+        padding: 28px 24px;
+        gap: 28px;
     }
-    
+
     .tabs-nav {
         flex-direction: column;
         align-items: stretch;
     }
-    
+
     .tab-btn {
         text-align: center;
     }
 
-    .cards-grid.four-col {
-        grid-template-columns: 1fr; /* Stack cards on mobile */
+    .differentiators-section .cards-grid {
+        grid-template-columns: 1fr;
     }
 }

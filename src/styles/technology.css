@@ -58,7 +58,7 @@
    ===================== */
 
 .electrolysis-section {
-    background: var(--clr-neutral-100);
+    background: var(--clr-bg-blue-light);
 }
 
 .electrolysis-section h2 {
@@ -175,54 +175,6 @@
     grid-template-columns: repeat(4, 1fr);
 }
 
-/* =====================
-   TECH CARD (base compartilhada)
-   ===================== */
-
-.tech-card {
-    background: #fff;
-    border-radius: 16px;
-    padding: 36px 28px;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    border: 1px solid var(--clr-neutral-200);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.tech-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-}
-
-/* Caixa de ícone — padrão único em todos os cards */
-.card-icon {
-    width: 52px;
-    height: 52px;
-    border-radius: 14px;
-    background: var(--gradient-action);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-}
-
-.card-icon i {
-    color: #fff;
-    font-size: var(--fs-h3);
-}
-
-.tech-card h3 {
-    font-weight: var(--fw-semibold);
-    color: var(--clr-primary-800);
-    line-height: var(--lh-heading);
-}
-
-.tech-card p {
-    color: var(--clr-neutral-600);
-    font-size: var(--fs-small);
-    line-height: var(--lh-body);
-}
 
 /* =====================
    ENGINEERING SECTION
@@ -230,7 +182,7 @@
    ===================== */
 
 .engineering-section {
-    background: var(--clr-neutral-100);
+    background: var(--clr-bg-blue-light);
 }
 
 .engineering-section h2 {

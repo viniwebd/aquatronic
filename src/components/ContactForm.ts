@@ -367,8 +367,7 @@ export class ContactForm extends HTMLElement {
             <!-- WhatsApp -->
             <div class="form-field" data-field="whatsapp">
               <label for="cf-whatsapp">
-                WhatsApp
-                <span class="label-hint">opcional</span>
+                WhatsApp <span class="required-mark" aria-hidden="true">*</span>
               </label>
               <input
                 type="tel"
@@ -376,7 +375,15 @@ export class ContactForm extends HTMLElement {
                 name="whatsapp"
                 autocomplete="tel"
                 placeholder="(11) 99999-9999"
+                maxlength="15"
+                required
+                aria-required="true"
+                aria-describedby="err-whatsapp"
               >
+              <span class="error-msg" id="err-whatsapp" role="alert">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                Informe um WhatsApp válido.
+              </span>
             </div>
 
             <!-- Assunto -->
@@ -465,8 +472,18 @@ export class ContactForm extends HTMLElement {
       charCount.classList.toggle('near-limit', len > 500);
     });
 
+    // Máscara WhatsApp: (XX) XXXXX-XXXX
+    const whatsappInput = this.shadowRoot.getElementById('cf-whatsapp') as HTMLInputElement;
+    whatsappInput?.addEventListener('input', () => {
+      const d = whatsappInput.value.replace(/\D/g, '').slice(0, 11);
+      if (d.length === 0)       whatsappInput.value = '';
+      else if (d.length <= 2)   whatsappInput.value = `(${d}`;
+      else if (d.length <= 7)   whatsappInput.value = `(${d.slice(0, 2)}) ${d.slice(2)}`;
+      else                      whatsappInput.value = `(${d.slice(0, 2)}) ${d.slice(2, 7)}-${d.slice(7)}`;
+    });
+
     // Validação inline ao sair do campo (somente após o usuário interagir)
-    const requiredFields = ['firstName', 'email', 'subject', 'message'];
+    const requiredFields = ['firstName', 'email', 'whatsapp', 'subject', 'message'];
     requiredFields.forEach((name) => {
       const el = this.shadowRoot!.getElementById(`cf-${name}`) as HTMLInputElement;
       const wrapper = this.shadowRoot!.querySelector(`[data-field="${name}"]`)!;
@@ -494,6 +511,8 @@ export class ContactForm extends HTMLElement {
       invalid = true;
     } else if (el.type === 'email' && !isEmpty) {
       invalid = !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value);
+    } else if (el.type === 'tel' && !isEmpty) {
+      invalid = !/^\(\d{2}\) \d{5}-\d{4}$/.test(el.value);
     }
 
     wrapper.classList.toggle('has-error', invalid);
@@ -510,7 +529,7 @@ export class ContactForm extends HTMLElement {
     const btn = this.shadowRoot.querySelector('.btn-submit') as HTMLButtonElement;
 
     // Valida todos os campos obrigatórios
-    const requiredFields = ['firstName', 'email', 'subject', 'message'];
+    const requiredFields = ['firstName', 'email', 'whatsapp', 'subject', 'message'];
     let allValid = true;
 
     requiredFields.forEach((name) => {

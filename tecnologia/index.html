@@ -74,21 +74,21 @@
                     <p>Nossas soluções foram projetadas para reduzir impactos ambientais e aumentar a segurança operacional, alinhando desempenho técnico com responsabilidade ambiental.</p>
                 </div>
                 <div class="cards-grid three-col" role="list">
-                    <article class="tech-card" role="listitem">
-                        <div class="card-icon" aria-hidden="true"><i class="fas fa-flask"></i></div>
-                        <h3>Produção local de desinfetante</h3>
-                        <p>Geração de cloro diretamente no ponto de uso, eliminando transporte e estocagem de químicos perigosos.</p>
-                    </article>
-                    <article class="tech-card" role="listitem">
-                        <div class="card-icon" aria-hidden="true"><i class="fas fa-shield-alt"></i></div>
-                        <h3>Mais segurança operacional</h3>
-                        <p>Redução de riscos para operadores, usuários e equipes de manutenção, com operação automatizada e controlada.</p>
-                    </article>
-                    <article class="tech-card" role="listitem">
-                        <div class="card-icon" aria-hidden="true"><i class="fas fa-leaf"></i></div>
-                        <h3>Menor impacto ambiental</h3>
-                        <p>Processo eficiente, com menos resíduos, menor logística química e economia de recursos a médio e longo prazo.</p>
-                    </article>
+                    <tech-card
+                        icon="fas fa-flask"
+                        title="Produção local de desinfetante"
+                        description="Geração de cloro diretamente no ponto de uso, eliminando transporte e estocagem de químicos perigosos.">
+                    </tech-card>
+                    <tech-card
+                        icon="fas fa-shield-alt"
+                        title="Mais segurança operacional"
+                        description="Redução de riscos para operadores, usuários e equipes de manutenção, com operação automatizada e controlada.">
+                    </tech-card>
+                    <tech-card
+                        icon="fas fa-leaf"
+                        title="Menor impacto ambiental"
+                        description="Processo eficiente, com menos resíduos, menor logística química e economia de recursos a médio e longo prazo.">
+                    </tech-card>
                 </div>
             </div>
         </section>
@@ -126,30 +126,22 @@
                     <p>A Aquatronic vai além da fabricação de equipamentos. Oferecemos serviços integrados que garantem operação contínua, segura e eficiente desde a instalação até o suporte permanente.</p>
                 </div>
                 <div class="cards-grid four-col" role="list">
-                    <article class="tech-card numbered-card" role="listitem">
-                        <span class="card-number" aria-hidden="true">01</span>
-                        <div class="card-icon" aria-hidden="true"><i class="fas fa-tools"></i></div>
-                        <h3>Manutenção especializada</h3>
-                        <p>Programas preventivos e corretivos para manter os sistemas sempre operando com máxima performance.</p>
-                    </article>
-                    <article class="tech-card numbered-card" role="listitem">
-                        <span class="card-number" aria-hidden="true">02</span>
-                        <div class="card-icon" aria-hidden="true"><i class="fas fa-box-open"></i></div>
-                        <h3>Locação de equipamentos</h3>
-                        <p>Soluções flexíveis para projetos temporários, emergenciais ou de curta duração.</p>
-                    </article>
-                    <article class="tech-card numbered-card" role="listitem">
-                        <span class="card-number" aria-hidden="true">03</span>
-                        <div class="card-icon" aria-hidden="true"><i class="fas fa-desktop"></i></div>
-                        <h3>Monitoramento e operação segura</h3>
-                        <p>Acompanhamento técnico para otimização de desempenho e redução de riscos operacionais.</p>
-                    </article>
-                    <article class="tech-card numbered-card" role="listitem">
-                        <span class="card-number" aria-hidden="true">04</span>
-                        <div class="card-icon" aria-hidden="true"><i class="fas fa-headset"></i></div>
-                        <h3>Suporte técnico completo</h3>
-                        <p>Assistência especializada em todas as etapas do ciclo de vida do sistema.</p>
-                    </article>
+                    <image-card
+                        title="Manutenção especializada"
+                        description="Programas preventivos e corretivos para manter os sistemas sempre operando com máxima performance.">
+                    </image-card>
+                    <image-card
+                        title="Locação de equipamentos"
+                        description="Soluções flexíveis para projetos temporários, emergenciais ou de curta duração.">
+                    </image-card>
+                    <image-card
+                        title="Monitoramento e operação segura"
+                        description="Acompanhamento técnico para otimização de desempenho e redução de riscos operacionais.">
+                    </image-card>
+                    <image-card
+                        title="Suporte técnico completo"
+                        description="Assistência especializada em todas as etapas do ciclo de vida do sistema.">
+                    </image-card>
                 </div>
             </div>
         </section>
@@ -174,5 +166,7 @@
     <script type="module" src="/src/components/SectionTag.ts"></script>
     <script type="module" src="/src/components/StatBadge.ts"></script>
     <script type="module" src="/src/components/CtaBanner.ts"></script>
+    <script type="module" src="/src/components/TechCard.ts"></script>
+    <script type="module" src="/src/components/ImageCard.ts"></script>
 </body>
 </html>

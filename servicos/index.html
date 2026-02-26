@@ -9,92 +9,117 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;0,9..40,900;1,9..40,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/src/styles/global.css">
-    <link rel="stylesheet" href="/src/styles/technology.css"> <!-- Reusing tech-card styles -->
+    <link rel="stylesheet" href="/src/styles/technology.css">
     <link rel="stylesheet" href="/src/styles/services.css">
 </head>
 <body>
     <site-header></site-header>
-    
+
     <main id="app">
-        <!-- Page Hero Component -->
+        <!-- Page Hero -->
         <page-hero
             title="Muito além do equipamento"
             subtitle="Serviços especializados que garantem eficiência, segurança e desempenho contínuo em todas as etapas do tratamento de água.">
         </page-hero>
 
-        <!-- Block 2: Intro -->
-        <section class="intro-section section-padding container">
-            <div class="center-header">
-                <h2>Soluções completas ao longo de todo o ciclo de vida</h2>
-                <p>
-                    A Aquatronic não entrega apenas tecnologia. Oferecemos um portfólio completo de serviços especializados que acompanham nossos clientes desde a implantação até a operação contínua dos sistemas.
-                    <br>
-                    Essa abordagem garante maior confiabilidade, redução de riscos operacionais e melhor aproveitamento do investimento em tratamento de água.
-                </p>
-            </div>
-        </section>
-
-        <!-- Block 3: Services Grid -->
-        <section id="servicos" class="services-grid-section section-padding bg-light">
+        <!-- Serviços Grid -->
+        <section id="servicos" class="services-grid-section section-padding bg-light" aria-labelledby="services-grid-title">
             <div class="container">
+                <div class="services-section-header">
+                    <div class="services-header-left">
+                        <section-tag text="Nossos Serviços"></section-tag>
+                        <h2 id="services-grid-title">Soluções ao longo de todo o ciclo de vida</h2>
+                    </div>
+                    <div class="services-header-right">
+                        <p>Serviços especializados que acompanham nossos clientes desde a implantação até a operação contínua dos sistemas.</p>
+                    </div>
+                </div>
                 <div class="cards-grid four-col">
-                    <!-- Card 1 -->
-                    <div class="tech-card">
-                        <i class="fas fa-tools"></i>
-                        <h3>Manutenção Técnica Especializada</h3>
-                        <p>Programas de manutenção preventiva e corretiva que asseguram o funcionamento contínuo dos sistemas, mantendo alta performance e prolongando a vida útil dos equipamentos.</p>
-                    </div>
-                    <!-- Card 2 -->
-                    <div class="tech-card">
-                        <i class="fas fa-truck-loading"></i>
-                        <h3>Locação de Equipamentos</h3>
-                        <p>Soluções flexíveis para projetos temporários, emergenciais ou sazonais, com entrega rápida, operação segura e suporte técnico incluso.</p>
-                    </div>
-                    <!-- Card 3 -->
-                    <div class="tech-card">
-                        <i class="fas fa-chalkboard-teacher"></i>
-                        <h3>Suporte e Treinamento Técnico</h3>
-                        <p>Acompanhamento técnico contínuo e capacitação de operadores para garantir uso correto, ajustes operacionais e máxima eficiência dos sistemas.</p>
-                    </div>
-                    <!-- Card 4 -->
-                    <div class="tech-card">
-                        <i class="fas fa-project-diagram"></i>
-                        <h3>Consultoria em Projetos de Tratamento de Água</h3>
-                        <p>Apoio técnico especializado para análise, dimensionamento e implementação de soluções personalizadas, alinhadas às necessidades de cada projeto.</p>
-                    </div>
+                    <tech-card
+                        icon="fas fa-tools"
+                        title="Manutenção Técnica Especializada"
+                        description="Programas de manutenção preventiva e corretiva que asseguram o funcionamento contínuo dos sistemas, mantendo alta performance e prolongando a vida útil dos equipamentos.">
+                    </tech-card>
+                    <tech-card
+                        icon="fas fa-truck-loading"
+                        title="Locação de Equipamentos"
+                        description="Soluções flexíveis para projetos temporários, emergenciais ou sazonais, com entrega rápida, operação segura e suporte técnico incluso.">
+                    </tech-card>
+                    <tech-card
+                        icon="fas fa-chalkboard-teacher"
+                        title="Suporte e Treinamento Técnico"
+                        description="Acompanhamento técnico contínuo e capacitação de operadores para garantir uso correto, ajustes operacionais e máxima eficiência dos sistemas.">
+                    </tech-card>
+                    <tech-card
+                        icon="fas fa-project-diagram"
+                        title="Consultoria em Projetos de Tratamento de Água"
+                        description="Apoio técnico especializado para análise, dimensionamento e implementação de soluções personalizadas, alinhadas às necessidades de cada projeto.">
+                    </tech-card>
                 </div>
             </div>
         </section>
 
-        <!-- Block 4: How It Works -->
-        <section class="how-it-works-section section-padding container">
-            <div class="center-header">
-                <h2>Como funciona</h2>
-            </div>
-            <div class="cards-grid three-col">
-                <!-- Card 1 -->
-                <div class="explanation-card">
-                    <div class="icon-box">
-                        <i class="fas fa-clipboard-list"></i>
+        <!-- Como Funciona — Process Flow -->
+        <section class="how-it-works-section section-padding" aria-labelledby="how-title">
+            <div class="container">
+                <section-tag text="Como funciona"></section-tag>
+                <h2 id="how-title">Do diagnóstico ao resultado</h2>
+
+                <div class="process-flow" role="list">
+                    <!-- Wave SVG -->
+                    <svg class="process-wave" viewBox="0 0 1260 280" preserveAspectRatio="none" fill="none" aria-hidden="true" focusable="false">
+                        <defs>
+                            <linearGradient id="process-wave-grad" x1="0" y1="0" x2="1260" y2="0" gradientUnits="userSpaceOnUse">
+                                <stop offset="0%" stop-color="#006ba3"/>
+                                <stop offset="100%" stop-color="#4dbef0"/>
+                            </linearGradient>
+                        </defs>
+                        <line x1="0" y1="52" x2="1260" y2="52"
+                              stroke="url(#process-wave-grad)"
+                              stroke-width="2"/>
+                    </svg>
+
+                    <!-- Step 1: texto topo, ícone baixo -->
+                    <div class="process-step" data-step="1" role="listitem">
+                        <div class="step-text">
+                            <h3>Antes</h3>
+                            <p>Análise técnica da necessidade, avaliação da aplicação e definição da melhor solução em tecnologia, equipamentos e serviços.</p>
+                        </div>
+                        <span class="step-ghost-num" aria-hidden="true">1</span>
+                        <div class="step-node">
+                            <div class="step-icon-circle">
+                                <i class="fas fa-clipboard-list" aria-hidden="true"></i>
+                            </div>
+                        </div>
                     </div>
-                    <h3>Antes</h3>
-                    <p>Análise técnica da necessidade, avaliação da aplicação e definição da melhor solução em tecnologia, equipamentos e serviços.</p>
-                </div>
-                <!-- Card 2 -->
-                <div class="explanation-card highlight">
-                    <div class="icon-box">
-                        <i class="fas fa-cogs"></i>
+
+                    <!-- Step 2: ícone topo, texto baixo -->
+                    <div class="process-step process-step--flip" data-step="2" role="listitem">
+                        <div class="step-node">
+                            <div class="step-icon-circle">
+                                <i class="fas fa-cogs" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="step-text">
+                            <h3>Durante</h3>
+                            <p>Implantação, acompanhamento técnico, ajustes operacionais e suporte contínuo para garantir uma operação segura e eficiente.</p>
+                        </div>
+                        <span class="step-ghost-num" aria-hidden="true">2</span>
                     </div>
-                    <h3>Durante</h3>
-                    <p>Implantação, acompanhamento técnico, ajustes operacionais e suporte contínuo para garantir uma operação segura e eficiente.</p>
-                </div>
-                <!-- Card 3 -->
-                <div class="explanation-card">
-                    <div class="icon-box">
-                        <i class="fas fa-chart-line"></i>
+
+                    <!-- Step 3: ícone topo, texto baixo -->
+                    <div class="process-step process-step--flip" data-step="3" role="listitem">
+                        <div class="step-node">
+                            <div class="step-icon-circle">
+                                <i class="fas fa-chart-line" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="step-text">
+                            <h3>Depois</h3>
+                            <p>Manutenção, monitoramento, suporte técnico e evolução contínua para assegurar desempenho, confiabilidade e longevidade do sistema.</p>
+                        </div>
+                        <span class="step-ghost-num" aria-hidden="true">3</span>
                     </div>
-                    <h3>Depois</h3>
-                    <p>Manutenção, monitoramento, suporte técnico e evolução contínua para assegurar desempenho, confiabilidade e longevidade do sistema.</p>
                 </div>
             </div>
         </section>
@@ -117,6 +142,8 @@
     <script type="module" src="/src/components/SiteHeader.ts"></script>
     <script type="module" src="/src/components/SiteFooter.ts"></script>
     <script type="module" src="/src/components/PageHero.ts"></script>
+    <script type="module" src="/src/components/SectionTag.ts"></script>
     <script type="module" src="/src/components/CtaBanner.ts"></script>
+    <script type="module" src="/src/components/TechCard.ts"></script>
 </body>
 </html>

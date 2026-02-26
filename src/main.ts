@@ -32,6 +32,31 @@ document.addEventListener('DOMContentLoaded', () => {
     console.error('Swiper error:', e);
   }
 
+  try {
+    const clientsSwiperEl = document.querySelector('.logo-swiper-clients');
+    if (clientsSwiperEl) {
+      new Swiper('.logo-swiper-clients', {
+        modules: [Autoplay],
+        slidesPerView: 3,
+        spaceBetween: 40,
+        loop: true,
+        autoplay: {
+          delay: 0,
+          disableOnInteraction: false,
+        },
+        allowTouchMove: false,
+        speed: 6000,
+        breakpoints: {
+          640: { slidesPerView: 4, spaceBetween: 40 },
+          1024: { slidesPerView: 5, spaceBetween: 60 }
+        }
+      });
+      console.log('Clients swiper initialized');
+    }
+  } catch (e) {
+    console.error('Clients swiper error:', e);
+  }
+
   // Accordion Logic
   console.log('Setting up accordions...');
   const accordions = document.querySelectorAll('.accordion-header');
