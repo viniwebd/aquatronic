@@ -47,16 +47,10 @@
     background-position: center;
 }
 
-.mv-card--vision .mv-card-bg {
-    background-image: url('/images/img-hero-pages.png');
-}
-
-.mv-card--mission .mv-card-bg {
-    background-image: url('/images/img-footer.png');
-}
-
+.mv-card--vision .mv-card-bg,
+.mv-card--mission .mv-card-bg,
 .mv-card--values .mv-card-bg {
-    background-image: url('/images/img-hero-section.png');
+    background-image: url('/images/img-geral.jpeg');
 }
 
 

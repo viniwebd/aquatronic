@@ -159,26 +159,11 @@
 /* ── Logo Carousel ── */
 .carousel-section {
   padding: 60px 0;
-  background-color: var(--clr-primary-900);
-  background-image: url('/images/img-footer.png');
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
-  position: relative;
+  background: var(--gradient-brand);
   overflow: hidden;
 }
 
-.carousel-section::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(148deg, #0853a0 0%, #009fe3 100%);
-  opacity: 0.74;
-}
-
 .carousel-container {
-  position: relative;
-  z-index: 1;
   width: 100%;
 }
 

@@ -25,7 +25,8 @@
       "Bash(netstat -ano)",
       "Bash(findstr :5173)",
       "Bash(ls \"c:\\\\Users\\\\vinim\\\\.claude\\\\plugins\"\" 2>/dev/null && ls \"c:Usersvinim.claude\"\")",
-      "Bash(head -3 grep -o \"hero-content-wrapper.\\\\{0,300\\\\}\" \"c:/Users/vinim/OneDrive/Área de Trabalho/Antigravity/aquatronic/dist/assets/main-gmeS4iYV.css\")"
+      "Bash(head -3 grep -o \"hero-content-wrapper.\\\\{0,300\\\\}\" \"c:/Users/vinim/OneDrive/Área de Trabalho/Antigravity/aquatronic/dist/assets/main-gmeS4iYV.css\")",
+      "Bash(vercel:*)"
     ]
   },
   "enableAllProjectMcpServers": true,

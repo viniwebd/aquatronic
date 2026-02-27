@@ -60,6 +60,8 @@
 /* ── Carousel wrapper ── */
 .app-card__carousel-wrap {
     padding: 5px;
+    height: 408px;
+    overflow: hidden;
 }
 
 /* ── Carousel ── */

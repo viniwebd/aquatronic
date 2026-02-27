@@ -22,10 +22,7 @@ export class ImageCard extends HTMLElement {
     this.innerHTML = `
       <div class="image-card">
         <div class="image-card__image">
-          ${image
-            ? `<img src="${image}" alt="${alt}" loading="lazy" />`
-            : '<div class="image-card__placeholder"></div>'
-          }
+          <img src="${image}" alt="${alt}" loading="lazy" />
         </div>
         <div class="image-card__body">
           <h3 class="image-card__title">${title}</h3>

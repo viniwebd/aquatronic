@@ -288,23 +288,14 @@ image-card {
   flex-shrink: 0;
 }
 
-.image-card__image img,
-.image-card__placeholder {
+.image-card__image img {
   width: 100%;
   aspect-ratio: 5 / 4;
   object-fit: cover;
   display: block;
   border-radius: 14px;
-  background: var(--clr-bg-blue-light);
 }
 
-.image-card__image img {
-  transition: transform 0.4s ease;
-}
-
-.image-card:hover .image-card__image img {
-  transform: scale(1.03);
-}
 
 .image-card__body {
   padding: 24px;
