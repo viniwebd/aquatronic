@@ -158,7 +158,7 @@ export class SiteFooter extends HTMLElement {
           <!-- Main Link Columns -->
           <div class="footer-grid">
             <div class="footer-info">
-              <img src="/src/assets/images/logo-aquatronic-branco.png" alt="Aquatronic Logo">
+              <img src="/images/logo-aquatronic-branco.png" alt="Aquatronic Logo">
               <p>Soluções completas em tratamento e desinfecção de água por eletrólise, unindo tecnologia, engenharia aplicada e sustentabilidade para garantir água segura em todo o Brasil.</p>
             </div>
 

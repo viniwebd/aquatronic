@@ -59,6 +59,15 @@
     font-size: var(--fs-nav);
 }
 
+.info-content a {
+    color: var(--clr-primary-600);
+    text-decoration: none;
+}
+
+.info-content a:hover {
+    text-decoration: underline;
+}
+
 /* ── Map Section ── */
 .map-section {
     line-height: 0;

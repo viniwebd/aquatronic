@@ -113,7 +113,7 @@ export class SiteHeader extends HTMLElement {
 
         nav a i {
           font-size: 0.8rem;
-          color: var(--clr-neutral-400);
+          color: currentColor;
           transition: transform 0.3s;
         }
 
