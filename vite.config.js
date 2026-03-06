@@ -20,7 +20,6 @@ export default defineConfig({
         applications: resolve(__dirname, 'aplicacoes/index.html'),
         services: resolve(__dirname, 'servicos/index.html'),
         clients: resolve(__dirname, 'clientes-e-cases/index.html'),
-        designSystem: resolve(__dirname, 'design-system/index.html'),
         notFound: resolve(__dirname, '404.html'),
       },
     },
@@ -40,8 +39,7 @@ export default defineConfig({
             '/tecnologia',
             '/aplicacoes',
             '/contato',
-            '/clientes-e-cases',
-            '/design-system'
+            '/clientes-e-cases'
           ];
           
           // Check if the request matches a folder route (but not a specific file)

@@ -72,6 +72,31 @@ export class FaqAccordion extends HTMLElement {
   connectedCallback() {
     this.render();
     this.setupListeners();
+    this.injectSchema();
+  }
+
+  private injectSchema() {
+    // Prevent duplicate schema injections if multiple accordions exist
+    if (document.querySelector('#faq-schema')) return;
+
+    const schema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": ITEMS.map(item => ({
+        "@type": "Question",
+        "name": item.q,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": item.a
+        }
+      }))
+    };
+
+    const script = document.createElement('script');
+    script.id = 'faq-schema';
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(schema, null, 2);
+    document.head.appendChild(script);
   }
 
   attributeChangedCallback() {

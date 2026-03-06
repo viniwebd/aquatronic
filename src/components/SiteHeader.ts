@@ -52,11 +52,6 @@ export class SiteHeader extends HTMLElement {
           display: block;
         }
 
-        .logo img.logo-white { display: none; }
-
-        :host(.header-solid) .logo img.logo-blue { display: none; }
-        :host(.header-solid) .logo img.logo-white { display: block; }
-
         /* Desktop Nav */
         @media (min-width: 1025px) {
           nav {
@@ -337,8 +332,7 @@ export class SiteHeader extends HTMLElement {
         <div class="header-container">
           <div class="logo">
             <a href="/">
-              <img src="/images/logo-aquatronic-auzl.png" alt="Aquatronic Logo" class="logo-blue">
-              <img src="/images/logo-aquatronic-branco.png" alt="Aquatronic Logo" class="logo-white">
+              <img src="/images/logo-aquatronic-branco.png" alt="Aquatronic Logo">
             </a>
           </div>
           
@@ -367,7 +361,7 @@ export class SiteHeader extends HTMLElement {
                   <li><a href="/produtos#aquamax" class="nested-item">AquaMax</a></li>
                   <div style="height:1px; background:#eee; margin:5px 0;"></div>
                   <li><a href="/aplicacoes">Aplicações</a></li>
-                  <li><a href="/contato">Simulação de Cloro</a></li>
+                  <!-- <li><a href="/contato">Simulação de Cloro</a></li> -->
                 </ul>
               </li>
 
@@ -413,7 +407,7 @@ export class SiteHeader extends HTMLElement {
                   <a href="/produtos#aquacore" class="mobile-sublink mobile-nested">AquaCore</a>
                   <a href="/produtos#aquamax" class="mobile-sublink mobile-nested">AquaMax</a>
                   <a href="/aplicacoes" class="mobile-sublink">Aplicações</a>
-                  <a href="/contato" class="mobile-sublink">Simulação de Cloro</a>
+                  <!-- <a href="/contato" class="mobile-sublink">Simulação de Cloro</a> -->
                 </div>
             </div>
 

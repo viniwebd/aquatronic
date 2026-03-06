@@ -353,7 +353,7 @@ export class ContactForm extends HTMLElement {
                 id="cf-email"
                 name="email"
                 autocomplete="email"
-                placeholder="voce@empresa.com.br"
+                placeholder="comercial@aquatronic.com.br"
                 required
                 aria-required="true"
                 aria-describedby="err-email"
@@ -550,23 +550,44 @@ export class ContactForm extends HTMLElement {
     btn.classList.add('loading');
     btn.disabled = true;
 
-    // Substitua este bloco pela chamada real à sua API
-    await new Promise((res) => setTimeout(res, 1400));
+    try {
+        const formData = Object.fromEntries(new FormData(form));
+        
+        const response = await fetch('/send-email.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+        });
 
-    // Despacha evento com os dados do formulário
-    this.dispatchEvent(
-      new CustomEvent('contact-submitted', {
-        bubbles: true,
-        composed: true,
-        detail: Object.fromEntries(new FormData(form)),
-      })
-    );
+        if (!response.ok) {
+            throw new Error('Falha no envio');
+        }
 
-    // Exibe mensagem de sucesso
-    const wrapper = this.shadowRoot.querySelector('.form-wrapper')!;
-    const success = this.shadowRoot.querySelector('.success-message')!;
-    wrapper.classList.add('submitted');
-    success.classList.add('visible');
+        const result = await response.json();
+
+        // Despacha evento com os dados do formulário
+        this.dispatchEvent(
+            new CustomEvent('contact-submitted', {
+                bubbles: true,
+                composed: true,
+                detail: result,
+            })
+        );
+
+        // Exibe mensagem de sucesso
+        const wrapper = this.shadowRoot.querySelector('.form-wrapper')!;
+        const success = this.shadowRoot.querySelector('.success-message')!;
+        wrapper.classList.add('submitted');
+        success.classList.add('visible');
+
+    } catch (error) {
+        console.error('Erro ao enviar:', error);
+        alert('Ocorreu um erro ao enviar sua mensagem. Por favor, tente novamente mais tarde.');
+        btn.classList.remove('loading');
+        btn.disabled = false;
+    }
   }
 }
 

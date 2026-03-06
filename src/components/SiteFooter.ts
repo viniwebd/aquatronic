@@ -170,7 +170,7 @@ export class SiteFooter extends HTMLElement {
                 <li><a href="/tecnologia">Tecnologia</a></li>
                 <li><a href="/produtos">Produtos</a></li>
                 <li><a href="/aplicacoes">Aplicações</a></li>
-                <li><a href="/simulacao">Simulações de Cloro</a></li>
+                <!-- <li><a href="/simulacao">Simulações de Cloro</a></li> -->
                 <li><a href="/clientes">Clientes</a></li>
                 <li><a href="/contato">Contato</a></li>
               </ul>
@@ -179,20 +179,21 @@ export class SiteFooter extends HTMLElement {
             <div class="footer-column">
               <h6>Links rápidos</h6>
               <ul>
-                <li><a href="/geradores">Geradores de Cloro por Eletrólise</a></li>
-                <li><a href="/simulacao">Simulação de Geradores</a></li>
-                <li><a href="/diferenciais">Diferenciais Aquatronic</a></li>
-                <li><a href="/clientes">Clientes & Projetos</a></li>
-                <li><a href="/carreiras">Trabalhe Conosco</a></li>
+                <li><a href="/produtos">Geradores de Cloro por Eletrólise</a></li>
+                <li><a href="/produtos">Simulação de Geradores</a></li>
+                <li><a href="/sobre-nos">Diferenciais Aquatronic</a></li>
+                <li><a href="/clientes-e-cases">Clientes & Projetos</a></li>
+                <li><a href="/contato">Trabalhe Conosco</a></li>
               </ul>
             </div>
 
             <div class="footer-column contact-col">
               <h6>Contato</h6>
               <ul>
-                <li><a href="#">(54) 12345-1234</a></li>
-                <li><a href="mailto:contato@aquatronic.com.br">contato@aquatronic.com.br</a></li>
-                <li><a href="">Matriz: Passo Fundo – RS<br>Filial: Fortaleza – CE</a></li>
+                <li><a href="tel:5436323688">Atendimento | Financeiro: (54) 3632-3688</a></li>
+                <li><a href="https://wa.me/5554999698052">Comercial: (54) 9 9969-8052</a></li>
+                <li><a href="mailto:comercial@aquatronic.com.br">comercial@aquatronic.com.br</a></li>
+                <li><a>Matriz: Rua Rio Branco, 1538 – Passo Fundo, RS<br>Filial: Fortaleza – CE</a></li>
               </ul>
             </div>
           </div>

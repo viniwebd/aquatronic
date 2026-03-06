@@ -3,3 +3,13 @@ node_modules/
 dist/
 .env
 .env*.local
+.agents
+.claude
+.mcp.json
+
+# Arquivos temporários e ocultos (Scripts e PDFs)
+.Site*
+.apply-seo.js
+.parse-pdf.js
+.pdf-content.txt
+.DS_Store
