@@ -128,35 +128,19 @@
 
 /* ── Clients / Logos Section ── */
 .clients-section {
-    background-color: var(--clr-bg-blue-light);
+    background: var(--gradient-brand);
     overflow: hidden;
     padding: 80px 0 60px;
 }
 
 .clients-center-header h2 {
-    color: var(--clr-primary-800);
+    color: var(--clr-white);
 }
 
-.clients-center-header p {
-    color: var(--clr-neutral-500);
-}
 
 /* ── Clients Swiper ── */
 .logo-swiper-clients .swiper-wrapper {
     transition-timing-function: linear !important;
-}
-
-.logo-swiper-clients img {
-    height: 28px;
-    width: auto;
-    opacity: 0.55;
-    filter: grayscale(100%);
-    transition: opacity 0.3s, filter 0.3s;
-}
-
-.logo-swiper-clients .swiper-slide:hover img {
-    opacity: 0.9;
-    filter: grayscale(0%);
 }
 
 /* ── Background Utility ── */

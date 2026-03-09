@@ -12,18 +12,19 @@ document.addEventListener('DOMContentLoaded', () => {
     if (swiperEl) {
       new Swiper('.logo-swiper', {
         modules: [Autoplay],
-        slidesPerView: 2,
-        spaceBetween: 50,
+        slidesPerView: 3,
+        spaceBetween: 20,
         loop: true,
         autoplay: {
           delay: 0,
           disableOnInteraction: false,
+          pauseOnMouseEnter: false,
         },
-        allowTouchMove: false,
         speed: 7000,
         breakpoints: {
-          768: { slidesPerView: 4, spaceBetween: 43 },
-          1024: { slidesPerView: 4, spaceBetween: 77 }
+          480: { slidesPerView: 4, spaceBetween: 30 },
+          768: { slidesPerView: 4, spaceBetween: 40 },
+          1024: { slidesPerView: 6, spaceBetween: 50 }
         }
       });
       console.log('Swiper initialized');
@@ -38,17 +39,18 @@ document.addEventListener('DOMContentLoaded', () => {
       new Swiper('.logo-swiper-clients', {
         modules: [Autoplay],
         slidesPerView: 3,
-        spaceBetween: 40,
+        spaceBetween: 20,
         loop: true,
         autoplay: {
           delay: 0,
           disableOnInteraction: false,
+          pauseOnMouseEnter: false,
         },
-        allowTouchMove: false,
-        speed: 6000,
+        speed: 7000,
         breakpoints: {
-          640: { slidesPerView: 4, spaceBetween: 40 },
-          1024: { slidesPerView: 5, spaceBetween: 60 }
+          480: { slidesPerView: 4, spaceBetween: 30 },
+          768: { slidesPerView: 4, spaceBetween: 40 },
+          1024: { slidesPerView: 6, spaceBetween: 50 }
         }
       });
       console.log('Clients swiper initialized');
@@ -57,6 +59,32 @@ document.addEventListener('DOMContentLoaded', () => {
     console.error('Clients swiper error:', e);
   }
 
+  try {
+    const reverseEl = document.querySelector('.logo-swiper-clients-reverse');
+    if (reverseEl) {
+      new Swiper('.logo-swiper-clients-reverse', {
+        modules: [Autoplay],
+        slidesPerView: 3,
+        spaceBetween: 20,
+        loop: true,
+        autoplay: {
+          delay: 0,
+          disableOnInteraction: false,
+          reverseDirection: true,
+          pauseOnMouseEnter: false,
+        },
+        speed: 7000,
+        breakpoints: {
+          480: { slidesPerView: 4, spaceBetween: 30 },
+          768: { slidesPerView: 4, spaceBetween: 40 },
+          1024: { slidesPerView: 6, spaceBetween: 50 }
+        }
+      });
+      console.log('Clients reverse swiper initialized');
+    }
+  } catch (e) {
+    console.error('Clients reverse swiper error:', e);
+  }
   // Accordion Logic
   console.log('Setting up accordions...');
   const accordions = document.querySelectorAll('.accordion-header');

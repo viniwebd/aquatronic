@@ -156,27 +156,6 @@
   background: var(--clr-primary-500);
 }
 
-/* ── Logo Carousel ── */
-.carousel-section {
-  padding: 60px 0;
-  background: var(--gradient-brand);
-  overflow: hidden;
-}
-
-.carousel-container {
-  width: 100%;
-}
-
-.logo-swiper .swiper-wrapper {
-  transition-timing-function: linear !important;
-}
-
-.logo-swiper img {
-  height: 40px;
-  width: auto;
-  filter: brightness(0) invert(1);
-  opacity: 0.8;
-}
 
 /* ── About Section ── */
 .about-home-section {
@@ -603,6 +582,15 @@ select.form-field {
     grid-template-columns: 1fr 1fr;
   }
 
+  .products-header {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .products-header-right {
+    justify-content: flex-start;
+  }
+
   .faq-layout {
     grid-template-columns: 1fr;
     gap: 48px;
@@ -625,6 +613,14 @@ select.form-field {
   }
 
   .products-grid { grid-template-columns: 1fr; }
+
+  .products-header {
+    margin-bottom: 32px;
+  }
+
+  .products-header-right special-button {
+    width: 100%;
+  }
 
   .contact-form-container { padding: 24px; }
 

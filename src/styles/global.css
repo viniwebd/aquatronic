@@ -57,9 +57,17 @@
   --clr-baby-blue: #e9f4ff;
   --clr-light-grey: #f3f3f3;
   --clr-text-main: #000000;
-  --clr-bg-blue-light: #009FE31A;
-  --gradient-brand: linear-gradient(135deg, var(--clr-primary-700), var(--clr-primary-400));
-  --gradient-action: linear-gradient(135deg, var(--clr-primary-600), var(--clr-primary-300));
+  --clr-bg-blue-light: #009fe31a;
+  --gradient-brand: linear-gradient(
+    135deg,
+    var(--clr-primary-700),
+    var(--clr-primary-400)
+  );
+  --gradient-action: linear-gradient(
+    135deg,
+    var(--clr-primary-600),
+    var(--clr-primary-300)
+  );
 
   /* ── Legacy aliases (não usar em código novo) ── */
   --home-blue-gradient: var(--gradient-brand);
@@ -189,7 +197,9 @@ img {
   padding: 14px 28px;
   border-radius: 9999px;
   font-weight: var(--fw-semibold);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .section-padding {
@@ -296,7 +306,6 @@ image-card {
   border-radius: 14px;
 }
 
-
 .image-card__body {
   padding: 24px;
   display: flex;
@@ -348,10 +357,86 @@ image-card {
 }
 
 .section-tag::before {
-  content: '';
+  content: "";
   display: block;
   width: 32px;
   height: 2px;
   background: currentColor;
   flex-shrink: 0;
+}
+
+/* ── Logo Carousel ── */
+.carousel-section {
+  padding: 40px 0;
+  background: var(--gradient-brand);
+  overflow: hidden;
+}
+
+.carousel-container {
+  width: 100%;
+}
+
+.logo-swiper .swiper-wrapper,
+.logo-swiper-clients .swiper-wrapper,
+.logo-swiper-clients-reverse .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+.logo-swiper img,
+.logo-swiper-clients img,
+.logo-swiper-clients-reverse img {
+  height: 65px;
+  width: auto;
+  max-width: 180px;
+  object-fit: contain;
+  opacity: 0.75;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.logo-swiper img:hover,
+.logo-swiper-clients img:hover,
+.logo-swiper-clients-reverse img:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* Carousel slide alignment - overflow visible allows scale hover without clipping */
+.logo-swiper .swiper-slide,
+.logo-swiper-clients .swiper-slide,
+.logo-swiper-clients-reverse .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+
+/* Ensure the swiper wrapper doesn't clip slides */
+.logo-swiper,
+.logo-swiper-clients,
+.logo-swiper-clients-reverse {
+  overflow: visible !important;
+}
+
+/* ── Carousel Mobile ── */
+@media (max-width: 480px) {
+  .carousel-section {
+    padding: 28px 0;
+  }
+
+  .logo-swiper img,
+  .logo-swiper-clients img,
+  .logo-swiper-clients-reverse img {
+    height: 35px;
+    max-width: 100px;
+  }
+}
+
+/* Disable hover scale on touch devices (no true hover) */
+@media (hover: none) {
+  .logo-swiper img:hover,
+  .logo-swiper-clients img:hover,
+  .logo-swiper-clients-reverse img:hover {
+    transform: none;
+    opacity: 0.75;
+  }
 }
