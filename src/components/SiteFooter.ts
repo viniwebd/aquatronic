@@ -190,10 +190,12 @@ export class SiteFooter extends HTMLElement {
             <div class="footer-column contact-col">
               <h6>Contato</h6>
               <ul>
-                <li><a href="tel:5436323688">Atendimento | Financeiro: (54) 3632-3688</a></li>
-                <li><a href="https://wa.me/5554999698052">Comercial: (54) 9 9969-8052</a></li>
-                <li><a href="mailto:comercial@aquatronic.com.br">comercial@aquatronic.com.br</a></li>
-                <li><a>Matriz: Rua Rio Branco, 1538 – Passo Fundo, RS<br>Filial: Fortaleza – CE</a></li>
+                <li><a href="tel:5436323688">Suporte: (54) 3632-3688</a></li>
+                <li><a href="https://wa.me/5554999698052">Comercial: (54) 99969-8052</a></li>
+                <li><a href="https://wa.me/5585992624585">WhatsApp Fortaleza: (85) 99262-4585</a></li>
+                <li><a href="mailto:Comercial@aquatronic.com.br">comercial@aquatronic.com.br</a></li>
+                <li><a>Matriz: Rua Princesa Isabel, 414 – Petrópolis, Passo Fundo – RS, CEP 99.050-100</a></li>
+                <li><a>Filial: Av. Manoel Mavignier, 5975, LJ F – Sabiaguaba, Fortaleza – CE, CEP 60.835-025</a></li>
               </ul>
             </div>
           </div>

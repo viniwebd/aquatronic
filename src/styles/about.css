@@ -1,389 +1,435 @@
 /* ============================================================
-   SOBRE NÓS — Editorial Clean
-   Palette: white + blue, no dark section backgrounds
+   SOBRE NÓS — Liquid Engineering Aesthetic
+   Concept: Fluid, Clean, Technical, Premium.
    ============================================================ */
 
-/* ── Mission / Vision / Values — 3 Cards ── */
+/* ── Mission / Vision / Values — Glass Cards ── */
 .mv-section {
-    padding: 120px 0 80px;
+    padding: 140px 0 100px;
+    background: #fff;
 }
 
 .mv-header {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: flex-end;
-    margin-bottom: 60px;
-    gap: 40px;
+    margin-bottom: 80px;
+    gap: 80px;
 }
 
 .mv-header h2 {
-    max-width: 480px;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    line-height: 1.1;
 }
 
 .mv-header-note {
-    font-size: var(--fs-body);
+    font-size: 1.15rem;
     color: var(--clr-neutral-500);
-    line-height: var(--lh-body);
-    text-align: right;
+    line-height: 1.7;
+    border-left: 2px solid var(--clr-primary-100);
+    padding-left: 40px;
+    margin: 0;
 }
 
 .mv-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 3px;
+    gap: 32px;
 }
 
 .mv-card {
-    position: relative;
-    height: 520px;
-    overflow: hidden;
-    cursor: pointer;
-}
-
-.mv-card-bg {
-    position: absolute;
-    inset: 0;
-    background-size: cover;
-    background-position: center;
-}
-
-.mv-card--vision .mv-card-bg,
-.mv-card--mission .mv-card-bg,
-.mv-card--values .mv-card-bg {
-    background-image: url('/images/img-geral.jpeg');
-}
-
-
-.mv-card-overlay {
-    position: absolute;
-    inset: 0;
+    background: #fff;
+    border: 1px solid rgba(0, 128, 192, 0.08);
+    border-radius: 32px;
+    padding: 56px 48px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    padding: 40px;
-    transition: background 0.5s ease;
+    gap: 32px;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
 }
 
-.mv-card--vision .mv-card-overlay,
-.mv-card--mission .mv-card-overlay,
-.mv-card--values .mv-card-overlay {
-    background: linear-gradient(
-        to top,
-        rgba(7, 30, 53, 0.95) 0%,
-        rgba(17, 73, 115, 0.45) 55%,
-        rgba(0, 160, 227, 0.1) 100%
-    );
+.mv-card:hover {
+    transform: translateY(-12px);
+    border-color: var(--clr-primary-300);
+    box-shadow: 0 30px 60px rgba(0, 128, 192, 0.08);
 }
 
-.mv-card:hover .mv-card-overlay {
-    background: linear-gradient(
-        to top,
-        rgba(7, 30, 53, 1) 0%,
-        rgba(17, 73, 115, 0.7) 60%,
-        rgba(0, 160, 227, 0.2) 100%
-    );
+.mv-card-icon {
+    width: 72px;
+    height: 72px;
+    background: linear-gradient(135deg, var(--clr-primary-50), #fff);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 160, 227, 0.1);
+    transition: all 0.4s ease;
+}
+
+.mv-card-icon i {
+    font-size: 28px;
+    color: var(--clr-primary-600);
+}
+
+.mv-card:hover .mv-card-icon {
+    background: var(--gradient-action);
+    border-color: transparent;
+    transform: rotate(-5deg);
+}
+
+.mv-card:hover .mv-card-icon i {
+    color: #fff;
 }
 
 .mv-card-tag {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 0.65rem;
-    font-weight: var(--fw-bold);
-    letter-spacing: 0.22em;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--clr-primary-300);
-    background: rgba(0, 160, 227, 0.12);
-    border: 1px solid rgba(0, 160, 227, 0.25);
-    padding: 6px 14px;
-    border-radius: 4px;
-    margin-bottom: 20px;
-    width: fit-content;
+    color: var(--clr-primary-500);
+    margin: 0;
 }
 
 .mv-card-body h3 {
-    color: #fff;
-    margin-bottom: 12px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--clr-neutral-900);
+    margin-bottom: 16px;
+    line-height: 1.3;
 }
 
 .mv-card-body p {
-    font-size: var(--fs-small);
-    color: rgba(255, 255, 255, 0.65);
-    line-height: var(--lh-body);
+    font-size: 1rem;
+    color: var(--clr-neutral-500);
+    line-height: 1.6;
+    margin: 0;
 }
 
-/* ── Stats Section — White, clean ── */
+/* ── Stats Section — Integrated Flow ── */
 .stats-section {
-    background: #fff;
-    border-top: 1px solid rgba(0, 128, 192, 0.1);
-    border-bottom: 1px solid rgba(0, 128, 192, 0.1);
-    padding: 0;
+    padding: 100px 0;
+    background: var(--clr-primary-900);
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.stats-section::after {
+    content: '';
+    position: absolute;
+    bottom: -20%; left: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(0, 160, 227, 0.1) 0%, transparent 70%);
 }
 
 .stats-inner {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    position: relative;
+    z-index: 2;
 }
 
 .stat-item {
-    padding: 80px 60px;
-    border-right: 1px solid rgba(0, 128, 192, 0.1);
-}
-
-.stat-item:last-child {
-    border-right: none;
+    text-align: center;
+    padding: 20px;
 }
 
 .stat-number {
-    font-size: clamp(3.5rem, 6vw, 5.5rem);
+    font-size: clamp(4rem, 8vw, 6rem);
     font-weight: 900;
     line-height: 1;
-    margin-bottom: 16px;
-    background: linear-gradient(135deg, var(--clr-primary-700), var(--clr-primary-400));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    margin-bottom: 12px;
+    color: #fff;
+    letter-spacing: -0.05em;
 }
 
 .stat-label {
-    font-size: var(--fs-nav);
-    color: var(--clr-neutral-500);
-    font-weight: var(--fw-regular);
-    line-height: var(--lh-body);
-    max-width: 180px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--clr-primary-300);
+    font-weight: 700;
 }
 
-/* ── History Section ── */
+/* ── Anderson / Leadership Section — Premium Clean ── */
+.leadership-section {
+    padding: 160px 0;
+    background: radial-gradient(at 0% 0%, #fff 0%, #f4faff 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.leadership-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 120px;
+    align-items: flex-start;
+}
+
+.leadership-text {
+    position: relative;
+}
+
+.leadership-text h2 {
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    margin-bottom: 48px;
+    color: var(--clr-neutral-900);
+    line-height: 1.1;
+}
+
+.leadership-text p {
+    color: var(--clr-neutral-600);
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-bottom: 32px;
+}
+
+.leadership-quote-box {
+    margin-top: 64px;
+    padding: 64px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    border-radius: 40px;
+    border: 1px solid #fff;
+    box-shadow: 0 30px 60px rgba(0, 80, 160, 0.08);
+    position: relative;
+}
+
+.leadership-quote-box::after {
+    content: '“';
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    font-size: 10rem;
+    color: var(--clr-primary-100);
+    font-family: serif;
+    line-height: 1;
+    z-index: -1;
+}
+
+.leadership-quote-box blockquote {
+    font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+    font-weight: 800;
+    color: var(--clr-primary-700);
+    line-height: 1.25;
+    margin: 0;
+}
+
+.leadership-quote-box span {
+    display: block;
+    margin-top: 32px;
+    font-size: 0.95rem;
+    color: var(--clr-primary-500);
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    font-weight: 800;
+}
+
+.leadership-image-container {
+    position: relative;
+}
+
+.leadership-image-container::before {
+    content: '';
+    position: absolute;
+    top: -20px; right: -20px; bottom: 20px; left: 20px;
+    background: var(--clr-primary-50);
+    border-radius: 40px;
+    z-index: 1;
+}
+
+.leadership-image-container img {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    border-radius: 40px;
+    box-shadow: 20px 40px 80px rgba(0, 0, 0, 0.1);
+}
+
+/* ── History Section (Quem Somos & Evolução) ── */
 .history-section {
-    padding: 140px 0;
+    padding: 160px 0;
+    background: #fff;
 }
 
 .history-grid {
     display: grid;
-    grid-template-columns: 5fr 4fr;
-    gap: 100px;
-    align-items: start;
+    grid-template-columns: 1fr 1fr;
+    gap: 120px;
 }
 
 .history-text {
-    position: relative;
-}
-
-.history-section .section-tag {
-    position: relative;
-    z-index: 1;
-}
-
-.history-text h2 {
-    margin-bottom: 32px;
-    position: relative;
-    z-index: 1;
-}
-
-.history-text p {
-    font-size: var(--fs-body);
-    line-height: var(--lh-body);
-    color: var(--clr-neutral-500);
-    margin-bottom: 20px;
-    position: relative;
-    z-index: 1;
-}
-
-.history-actions {
-    margin-top: 40px;
-    position: relative;
-    z-index: 1;
-}
-
-.history-visual {
-    position: relative;
-}
-
-.history-img-frame {
-    position: relative;
-    border-radius: 4px 24px 4px 24px;
-    overflow: hidden;
-    aspect-ratio: 4/5;
-}
-
-.history-img-frame img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-/* ── Values Section — White + icon list ── */
-.values-section {
-    background: var(--clr-bg-blue-light);
-    padding: 140px 0;
-}
-
-.values-layout {
-    display: grid;
-    grid-template-columns: 4fr 5fr;
-    gap: 100px;
-    align-items: start;
-}
-
-.values-image-col {
-    position: relative;
-}
-
-.values-img-frame {
-    border-radius: 24px 4px 24px 4px;
-    overflow: hidden;
-    aspect-ratio: 3/4;
-}
-
-.values-img-frame img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.values-text-col {
-    padding-top: 10px;
-}
-
-.values-text-col h2 {
-    margin-bottom: 56px;
-}
-
-.values-list {
-    list-style: none;
-    padding: 0;
     display: flex;
     flex-direction: column;
+    gap: 120px;
 }
 
-.value-item {
-    display: grid;
-    grid-template-columns: 52px 1fr;
-    gap: 24px;
-    align-items: start;
-    padding: 28px 0;
-    border-bottom: 1px solid rgba(0, 128, 192, 0.12);
+.history-block h2 {
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
+    line-height: 1.2;
+    margin-bottom: 32px;
 }
 
-.value-item:first-child {
-    border-top: 1px solid rgba(0, 128, 192, 0.12);
-}
-
-.value-icon {
-    width: 52px;
-    height: 52px;
-    border-radius: 12px;
-    background: rgba(0, 128, 192, 0.08);
-    border: 1px solid rgba(0, 128, 192, 0.15);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-}
-
-.value-icon i {
-    color: var(--clr-primary-600);
-    font-size: var(--fs-h4);
-}
-
-.value-content strong {
-    display: block;
-    font-size: var(--fs-body);
-    font-weight: var(--fw-bold);
-    color: var(--clr-neutral-900);
-    margin-bottom: 6px;
-}
-
-.value-content p {
-    font-size: var(--fs-small);
+.history-block p {
+    font-size: 1.15rem;
     color: var(--clr-neutral-500);
-    line-height: var(--lh-body);
+    line-height: 1.8;
+}
+
+.evolution-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 48px;
+}
+
+.evolution-card {
+    padding: 40px;
+    background: #f8fbff;
+    border-radius: 24px;
+    border: 1px solid rgba(0, 160, 227, 0.08);
+    transition: all 0.3s ease;
+}
+
+.evolution-card:hover {
+    background: #fff;
+    border-color: var(--clr-primary-400);
+    box-shadow: 0 15px 40px rgba(0, 128, 192, 0.08);
+    transform: translateY(-5px);
+}
+
+.evolution-card i {
+    font-size: 24px;
+    color: var(--clr-primary-500);
+    margin-bottom: 20px;
+    display: block;
+}
+
+.evolution-card h4 {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+    color: var(--clr-neutral-900);
+}
+
+.evolution-card p {
+    font-size: 0.95rem;
+    color: var(--clr-neutral-400);
+    line-height: 1.6;
     margin: 0;
 }
 
-/* ── Technology Section — White, light cards ── */
+.history-sticky-visual {
+    position: sticky;
+    top: 140px;
+    height: fit-content;
+}
+
+.history-image-frame {
+    border-radius: 40px;
+    overflow: hidden;
+    position: relative;
+}
+
+.history-image-frame::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.2), transparent);
+}
+
+.history-image-frame img {
+    width: 100%;
+    display: block;
+}
+
+/* ── Technology Section ── */
 .technology-section {
-    padding: 140px 0;
-    background: #fff;
+    padding: 160px 0;
+    background: #fdfdfe;
 }
 
 .tech-header {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    margin-bottom: 64px;
-    align-items: end;
+    margin-bottom: 80px;
+    max-width: 800px;
 }
 
-
-.tech-header-right p {
-    font-size: var(--fs-body);
-    color: var(--clr-neutral-500);
-    line-height: var(--lh-body);
-    text-align: right;
+.tech-header h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 24px;
 }
 
 .tech-bento {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
+    gap: 24px;
 }
 
+/* ── Responsive Refinements ── */
+@media (max-width: 1200px) {
+    .mv-header, .leadership-grid, .history-grid {
+        gap: 60px;
+    }
+}
 
-/* ── Responsive ── */
-@media (max-width: 1100px) {
-    .mv-cards {
+@media (max-width: 1024px) {
+    .mv-header {
         grid-template-columns: 1fr;
-        gap: 3px;
+        gap: 32px;
     }
 
-    .mv-card { height: 380px; }
+    .mv-header-note {
+        padding-left: 0;
+        border-left: none;
+        max-width: 600px;
+    }
+
+    .mv-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-inner {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .leadership-grid, .history-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .leadership-image-container {
+        order: -1;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .history-sticky-visual {
+        display: none;
+    }
+
+    .tech-bento {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .mv-section, .stats-section, .leadership-section, .history-section, .technology-section {
+        padding: 100px 0;
+    }
 
     .stats-inner {
         grid-template-columns: 1fr;
     }
 
-    .stat-item {
-        padding: 50px 40px;
-        border-right: none;
-        border-bottom: 1px solid rgba(0, 128, 192, 0.1);
-    }
+    .stat-number { font-size: 4.5rem; }
 
-    .stat-item:last-child { border-bottom: none; }
-
-    .history-grid,
-    .values-layout,
-    .tech-header {
-        grid-template-columns: 1fr;
-        gap: 60px;
-    }
-
-    .tech-bento {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .history-visual { display: none; }
-
-    .mv-header {
+    .evolution-grid {
         grid-template-columns: 1fr;
     }
-}
 
-@media (max-width: 768px) {
-    .mv-section { padding: 80px 0 60px; }
-    .history-section,
-    .values-section,
-    .technology-section { padding: 80px 0; }
-
-    .mv-card { height: 320px; }
-    .mv-card-overlay { padding: 28px; }
-    .stat-item { padding: 40px 24px; }
-    .history-number { display: none; }
-
-    .tech-bento { grid-template-columns: 1fr; }
-
-    .values-image-col { display: none; }
-    .values-layout { grid-template-columns: 1fr; }
+    .leadership-quote-box {
+        padding: 40px 32px;
+    }
 }

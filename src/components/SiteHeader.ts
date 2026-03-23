@@ -366,7 +366,6 @@ export class SiteHeader extends HTMLElement {
               </li>
 
               <li><a href="/clientes-e-cases">Clientes</a></li>
-              <li><a href="/contato">Contato</a></li>
             </ul>
           </nav>
 
@@ -412,7 +411,6 @@ export class SiteHeader extends HTMLElement {
             </div>
 
             <a href="/clientes-e-cases" class="mobile-link">Clientes</a>
-            <a href="/contato" class="mobile-link">Contato</a>
         </div>
       </header>
     `;

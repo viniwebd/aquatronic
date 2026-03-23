@@ -14,8 +14,8 @@ const ITEMS = [
     a: 'Sim. A eletrólise salina é uma das tecnologias mais recomendadas para esses ambientes, pois mantém a concentração de cloro estável, reduz irritação na pele e nos olhos e elimina a necessidade de armazenar cloro no local.',
   },
   {
-    q: 'A tecnologia atende projetos de grande porte como ETAs?',
-    a: 'Sim. Os sistemas Aquatronic são dimensionáveis e já operam em estações de tratamento de água, sistemas de saneamento e projetos industriais de alto volume. Cada solução é projetada conforme a demanda.',
+    q: 'A tecnologia atende projetos de grande porte, como ETAs (Estação de Tratamento de Água) e ETEs (Estação de Tratamento de Esgoto)?',
+    a: 'Sim. Os sistemas Aquatronic são dimensionáveis e já operam em Estações de Tratamento de Água (ETAs) e Estações de Tratamento de Esgoto (ETEs), além de sistemas de saneamento e projetos industriais de alto volume. Cada solução é projetada conforme a demanda.',
   },
   {
     q: 'Qual é a vida útil dos equipamentos?',
@@ -42,12 +42,8 @@ const ITEMS = [
     a: 'Oferecemos suporte técnico presencial e remoto, com equipes treinadas em todo o território nacional. O atendimento pode ser acionado via telefone, e-mail ou portal de suporte, com SLA definido por contrato.',
   },
   {
-    q: 'É possível integrar o sistema a automações e CLPs existentes?',
-    a: 'Sim. Os sistemas Aquatronic possuem saídas de sinal compatíveis com os principais protocolos industriais (Modbus, 4–20 mA, relé), permitindo integração com CLPs, SCADA e sistemas de automação já instalados.',
-  },
-  {
     q: 'Qual economia posso esperar ao migrar para a eletrólise?',
-    a: 'A economia varia conforme o projeto, mas clientes relatam redução de 30 % a 60 % nos custos com produtos químicos de desinfecção, além de ganhos com segurança operacional, logística e conformidade ambiental.',
+    a: 'A economia pode chegar a até 90% nos custos com produtos químicos de desinfecção, além de ganhos expressivos com segurança operacional, logística e conformidade ambiental.',
   },
   {
     q: 'A Aquatronic atende projetos fora do Rio Grande do Sul?',
@@ -110,8 +106,8 @@ export class FaqAccordion extends HTMLElement {
     const heading =
       this.getAttribute('heading') || 'Dúvidas frequentes sobre nossas soluções';
 
-    const left = ITEMS.slice(0, 7);
-    const right = ITEMS.slice(7, 14);
+    const left = ITEMS.slice(0, 6);
+    const right = ITEMS.slice(6, 13);
 
     const renderItems = (items: typeof ITEMS) =>
       items

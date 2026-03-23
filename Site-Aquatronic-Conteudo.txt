@@ -1,0 +1,208 @@
+CONTEÚDO EXTRAÍDO DO PDF: Site Aquatronic .pdf
+
+---
+
+### **Página 1**
+**SITE AQUATRONIC BRASIL**
+* Site modelo 1: Home | De Nora América Latina
+* Site modelo 2: Catálogo de produtos - ProMinent
+* Topo da Página Inicial – Acesso Rápido Aquatronic
+    * BLOCO 1 – Onde Atuamos & Presença
+    * Regiões Onde Atendemos
+        * Ícone: Mapa + pinos
+        * Texto curto: Atendemos projetos em todo o Brasil, com suporte técnico especializado e atendimento próximo ao cliente.
+        * CTA: Ver regiões atendidas
+    * Onde Estamos
+        * Ícone: Pin de localização
+        * Texto curto: Estrutura própria para atender você com agilidade e eficiência.
+        * Conteúdo direto:
+            * Matriz: Passo Fundo – RS
+            * Filial: Fortaleza – CE
+* CTA: Ver unidades
+
+---
+
+### **Página 2**
+* BLOCO 2 – Relacionamento & Parcerias
+    * Seja um Representante Comercial
+        * Ícone: Aperto de mãos / crescimento
+        * Texto curto: Faça parte da rede Aquatronic e leve tecnologia sustentável para mais regiões do Brasil.
+        * CTA: Quero ser representante
+    * Fale com um Representante
+        * Ícone: Headset / balão de conversa
+        * Texto curto: Nossa equipe está pronta para entender sua necessidade e indicar a melhor solução.
+        * CTA: Falar com um especialista
+* BLOCO 3 – Simulação & Soluções
+    * Faça sua Simulação
+        * Ícone: Gráfico + gota d’água
+        * Texto curto: Descubra o gerador ideal para o seu projeto com base na sua demanda de cloro.
+        * CTA: Iniciar simulação (Pode levar para um formulário simples ou ferramenta interativa)
+
+---
+
+### **Página 3**
+* BLOCO 4 – Contato Direto (Ação Rápida)
+    * Contato
+        * Ícone: Envelope / WhatsApp
+        * Texto curto: Entre em contato conosco e tire suas dúvidas com rapidez e transparência.
+        * CTA primário: Entrar em contato
+        * CTA secundário (opcional): WhatsApp
+
+**Sugestão de Layout Visual (Topo)**
+* Opção 1 – Cards Horizontais (estilo ProMinent)
+* Opção 2 – Hero + Ícones (estilo De Nora)
+    * Hero com frase institucional: Tecnologia sustentável para o tratamento de água
+    * Abaixo – Ícones clicáveis: Regiões | Representante | Simulação | Contato | Unidades
+
+---
+
+### **Página 4**
+**Texto curto para SEO + UX (opcional no topo):**
+A Aquatronic oferece soluções completas em geradores de cloro por eletrólise, com atendimento nacional, suporte técnico especializado e presença estratégica no Brasil.
+
+**1. Home / Página Inicial**
+* (Banner) Título: Tecnologia que transforma o tratamento de água
+* Subtítulo: Soluções completas de desinfecção com inovação, eficiência e sustentabilidade, garantindo água segura para empresas e comunidades.
+* Call to Action: Conheça nossas soluções
+* Destaques rápidos (3 cards ou ícones):
+    * Inovação tecnológica: Equipamentos inteligentes que garantem eficiência e segurança
+    * Soluções sustentáveis: Redução de impactos ambientais e economia operacional
+    * Serviço completo ao cliente: Suporte técnico e soluções integradas ao ciclo de vida
+
+---
+
+### **Página 5**
+**2. Seção de Tecnologia**
+Na Aquatronic, acreditamos que o tratamento de água eficiente começa com tecnologia de ponta, processos sustentáveis e engenharia aplicada.
+
+**Eletrólise Salina – Tecnologia Principal**
+* Geração de cloro no próprio local de uso
+* Utiliza água e sal como insumos
+* Processo eletroquímico seguro, eficiente e contínuo
+* Elimina o uso e manuseio de cloro químico tradicional
+
+**Tecnologia de Processo Sustentável**
+* Produção local do agente desinfetante
+* Redução de riscos no transporte e armazenamento
+
+**Engenharia Aplicada e Projetos Personalizados**
+* Sistemas dimensionados conforme a necessidade de cada cliente
+* Adaptação para diferentes volumes de água e aplicações
+
+---
+
+### **Página 6**
+* Maior eficiência, desempenho e confiabilidade do sistema
+* Integração com diferentes infraestruturas de tratamento de água
+* **Serviços Integrados ao Ciclo de Vida**
+    * Manutenção especializada, Locação de equipamentos, Monitoramento e suporte técnico completo.
+
+**⚡ Eletrólise Salina – Tecnologia Principal**
+Nosso processo de eletrólise salina permite a geração de cloro no próprio local de uso, a partir de água e sal. É uma solução eficiente, contínua e segura, que elimina a necessidade de cloro químico concentrado.
+
+---
+
+### **Página 7**
+* **Processo Sustentável:** Desenvolvemos soluções que reduzem riscos operacionais e impactos ambientais. Gera economia operacional e operação mais segura.
+* **Engenharia Aplicada e Projetos Personalizados:** Cada projeto é único. Dimensionamos sistemas de acordo com a necessidade do cliente, garantindo soluções sob medida.
+* **Serviços Integrados ao Ciclo de Vida:** Nossa tecnologia vai além dos equipamentos. Oferecemos serviços completos que garantem operação contínua e confiável.
+
+---
+
+### **Página 8**
+**3. Criação de Valor Compartilhado**
+* Título: Criando Valor para Clientes, Comunidades e Meio Ambiente
+* Cards de Exemplos:
+    * Produtos Sustentáveis (água segura)
+    * Processos Sustentáveis (logística otimizada)
+    * Engenharia Aplicada (confiabilidade)
+    * Serviços Integrados (fortalecimento de operadores)
+
+**4. Sobre a Empresa**
+* Propósito: Transformar o tratamento de água no Brasil de forma sustentável, promovendo inovação tecnológica que beneficia empresas, pessoas e comunidades.
+
+---
+
+### **Página 9**
+**Missão, Visão e Quem Somos**
+* **Missão:** Desenvolver e fornecer soluções completas de tratamento de água, integrando tecnologia avançada e serviços especializados.
+* **Visão:** Ser referência nacional em tecnologias e serviços integrados para tratamento de água.
+* **Quem Somos:** Fundada em 2004, a Aquatronic construiu uma trajetória marcada por inovação e compromisso com a sustentabilidade. Responsável pelo maior sistema de saneamento rural do Brasil e o terceiro maior da América Latina.
+
+---
+
+### **Página 10**
+* **Evolução e Crescimento:** Desde o primeiro gerador de cloro estático até geradores contínuos totalmente automatizados.
+* **Liderança, Cultura e Compromisso com o Cliente:** À frente da Aquatronic está Anderson Baseggio Nunes, sócio-administrador. Foco na transparência e honestidade.
+
+**5. Produtos / Portfólio**
+Soluções completas para cada necessidade.
+
+---
+
+### **Página 11**
+* **Cards de Produtos:** Geradores de cloro por eletrólise, Sistemas modulares, Locação e Manutenção.
+* **6. Diferenciais / Por que escolher Aquatronic:** Tecnologia avançada, Processos sustentáveis, Engenharia aplicada, Mais de 20 anos de experiência.
+* **7. Clientes / Cases:** Destaque de projetos, Experiências, Fotos e Logos.
+* **8. Contato:** Formulário rápido, Telefone, E-mail, Mapa e Call to Action.
+
+---
+
+### **Página 12**
+**Seção: Produtos** (Título: Produtos que fazem a diferença no tratamento de água)
+**Categorias de Produtos:** Linha Aqua Series – Tecnologia Progressiva Aquatronic
+1. AquaStart – Compactos inteligentes (Pequenas demandas)
+2. AquaCore – Versão intermediária robusta (Médias demandas)
+3. AquaMax – Alta performance para grandes demandas (Grandes demandas)
+
+---
+
+### **Página 13**
+**Tabelas de Modelos:**
+* **AquaStart:** Modelos 050 (~50 g/dia) e 100 (~100 g/dia).
+* **AquaCore:** Modelos 2000, 4000, 8000 (~2.000 a 8.000 g/dia).
+* **AquaMax:** Modelos 12000 e 18000 (~12.000 a 18.000 g/dia).
+
+---
+
+### **Página 14**
+**AquaMax (Continuação):** Modelos 24000 e 36000 (~24.000 a 36.000 g/dia).
+* Elementos Visuais: Ícones interativos representando capacidade e faixa de utilização.
+* Download de Fichas Técnicas: Links diretos para download do PDF de cada produto.
+
+---
+
+### **Página 15**
+**Seção: Aplicações**
+* Saneamento Básico, Piscinas e Lazer, Indústrias & Processos, Projetos Comerciais & Institucionais.
+
+---
+
+### **Página 16**
+**Seção: Mercados & Indústrias**
+* Atuação em múltiplos setores: Saneamento, Hospitalidade, Indústria, Projetos de Engenharia, Educação.
+
+**Seção: Marcas & Serviços**
+* Portfolio de serviços especializados e marcas representadas.
+
+---
+
+### **Página 17**
+**Serviços oferecidos:** Manutenção Técnica, Locação de Equipamentos, Suporte e Treinamento, Consultoria em Projetos.
+
+---
+
+### **Página 18**
+**Modelo De Cálculo – Cloro X Geradores De Cloro (sal)**
+* Cálculo de dosagem baseada em região (Ceará vs RS) e volume de água.
+* Premissa: 1 ppm = 1 g de cloro ativo por m³ de água.
+* Consumo de sal: média de 4 kg de sal para 1 kg de cloro ativo.
+
+---
+
+### **Página 19**
+**Capacidade típica de geração por modelo:**
+* GCE 050: 50 g/dia
+* GCE 100: 100 g/dia
+* GCC 02.000: 2.000 g/dia até GCC 36.000: 36.000 g/dia.
+* Seleção do Gerador: Cálculo de Cloro Diário Necessário com margem de folga (20% para Ceará, 10% para RS).
