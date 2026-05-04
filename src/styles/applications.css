@@ -51,6 +51,10 @@
     background: #fff;
 }
 
+.app-card__content section-tag span {
+    font-size: 24px;
+}
+
 .app-card__content p {
     color: var(--clr-neutral-600);
     font-size: var(--fs-nav);
@@ -148,6 +152,18 @@
         padding-right: 0;
     }
 
+    /* Alinhar primeira seção à esquerda */
+    .app-section-header {
+        text-align: left;
+        margin-left: 0;
+        margin-bottom: 48px;
+    }
+
+    /* Diminuir fonte dos badges dentro dos cards */
+    .app-card__content section-tag span {
+        font-size: 20px;
+    }
+
     .app-card {
         grid-template-columns: 1fr;
     }
@@ -171,9 +187,5 @@
 
     .app-cards-list {
         gap: 20px;
-    }
-
-    .app-section-header {
-        margin-bottom: 48px;
     }
 }

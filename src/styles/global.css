@@ -237,27 +237,44 @@ tech-card {
   flex-direction: column;
   gap: 14px;
   border: 1px solid rgba(0, 128, 192, 0.12);
-  transition: border-color 0.3s;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  position: relative;
 }
 
 .tech-card:hover {
-  border-color: var(--clr-primary-400);
+  transform: translateY(-12px);
+  border-color: var(--clr-primary-300);
+  box-shadow: 0 30px 60px rgba(0, 128, 192, 0.08);
 }
 
 .card-icon {
   width: 52px;
   height: 52px;
   border-radius: 14px;
-  background: var(--gradient-action);
+  background: linear-gradient(135deg, var(--clr-primary-50), #fff);
+  border: 1px solid rgba(0, 160, 227, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  transition: all 0.4s ease;
+}
+
+.tech-card:hover .card-icon {
+  background: var(--gradient-action);
+  border-color: transparent;
+  transform: rotate(-5deg);
 }
 
 .card-icon i {
-  color: #fff;
+  color: var(--clr-primary-600);
   font-size: var(--fs-h3);
+  transition: color 0.4s ease;
+}
+
+.tech-card:hover .card-icon i {
+  color: #fff;
 }
 
 .tech-card h3 {

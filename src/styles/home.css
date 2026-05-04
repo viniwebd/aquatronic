@@ -612,6 +612,17 @@ select.form-field {
     padding-left: 0;
   }
 
+  /* Ajuste seção tecnologia - diminuir espaçamento entre título e descrição */
+  .tech-header-right {
+    padding-top: 0;
+  }
+
+  /* Remover padding horizontal extra da seção de contato (já vem do .container) */
+  .contact-section {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .products-grid { grid-template-columns: 1fr; }
 
   .products-header {

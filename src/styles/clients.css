@@ -108,7 +108,7 @@
 
 .results-box .check-list li {
     position: relative;
-    padding-left: 22px;
+    padding-left: 28px;
     margin-bottom: 8px;
     color: var(--clr-neutral-700);
     font-size: 0.95rem;
@@ -116,14 +116,32 @@
 }
 
 .results-box .check-list li::before {
-    content: '\f00c';
     font-family: 'Font Awesome 6 Free';
     font-weight: 900;
     position: absolute;
     left: 0;
     color: var(--clr-primary-400);
-    font-size: 0.75rem;
-    top: 3px;
+    font-size: 1rem;
+    top: 2px;
+    width: 18px;
+    text-align: center;
+}
+
+/* Ícones específicos por posição na lista */
+.results-box .check-list li:nth-child(1)::before {
+    content: '\f06c'; /* fa-leaf - sustentabilidade */
+}
+
+.results-box .check-list li:nth-child(2)::before {
+    content: '\f2db'; /* fa-microchip - tecnologia */
+}
+
+.results-box .check-list li:nth-child(3)::before {
+    content: '\f155'; /* fa-dollar-sign - dinheiro */
+}
+
+.results-box .check-list li:nth-child(4)::before {
+    content: '\f21e'; /* fa-heartbeat - saúde/vida */
 }
 
 /* ── Clients / Logos Section ── */
@@ -157,6 +175,12 @@
 }
 
 @media (max-width: 768px) {
+    /* Alinhar primeira seção à esquerda */
+    .center-header {
+        text-align: left;
+        margin-left: 0;
+    }
+
     .cases-section {
         padding-left: 0;
         padding-right: 0;

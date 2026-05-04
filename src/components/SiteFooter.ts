@@ -11,6 +11,7 @@ export class SiteFooter extends HTMLElement {
   render() {
     if (!this.shadowRoot) return;
     this.shadowRoot.innerHTML = `
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
       <style>
         @import url('/src/styles/global.css');
         
@@ -104,11 +105,50 @@ export class SiteFooter extends HTMLElement {
           opacity: 0.9;
         }
 
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+          position: fixed;
+          bottom: 30px;
+          right: 30px;
+          width: 60px;
+          height: 60px;
+          background: #25D366;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4), 0 8px 32px rgba(0, 0, 0, 0.15);
+          cursor: pointer;
+          z-index: 9999;
+          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+          text-decoration: none;
+          animation: pulse-whatsapp 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+          transform: scale(1.1);
+          box-shadow: 0 6px 24px rgba(37, 211, 102, 0.6), 0 12px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .whatsapp-float i {
+          color: white;
+          font-size: 32px;
+        }
+
+        @keyframes pulse-whatsapp {
+          0%, 100% {
+            box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4), 0 8px 32px rgba(0, 0, 0, 0.15);
+          }
+          50% {
+            box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4), 0 8px 32px rgba(0, 0, 0, 0.15), 0 0 0 10px rgba(37, 211, 102, 0.2);
+          }
+        }
+
         @media (max-width: 768px) {
           :host {
             padding: 40px 0;
           }
-          
+
           .footer-container {
             margin-top: 4rem;
             padding: 0 20px;
@@ -143,13 +183,24 @@ export class SiteFooter extends HTMLElement {
             margin-bottom: 15px;
             font-size: 1rem;
           }
-          
+
           .footer-bottom {
             flex-direction: column-reverse;
             gap: 15px;
             text-align: center;
             align-items: center;
             padding: 30px 0;
+          }
+
+          .whatsapp-float {
+            bottom: 20px;
+            right: 20px;
+            width: 56px;
+            height: 56px;
+          }
+
+          .whatsapp-float i {
+            font-size: 28px;
           }
         }
       </style>
@@ -206,6 +257,15 @@ export class SiteFooter extends HTMLElement {
             <div class="copyright">© Aquatronic Brasil — Todos os direitos reservados</div>
           </div>
         </div>
+
+        <!-- WhatsApp Floating Button -->
+        <a href="https://wa.me/555499698052?text=Ol%C3%A1!%20Vim%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es"
+           class="whatsapp-float"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Fale conosco pelo WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
       </footer>
     `;
   }

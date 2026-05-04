@@ -347,7 +347,6 @@ export class SiteHeader extends HTMLElement {
                 <ul class="dropdown">
                   <li><a href="/sobre-nos">Sobre a Aquatronic</a></li>
                   <li><a href="/tecnologia">Tecnologia</a></li>
-                  <li><a href="/servicos">Serviços</a></li>
                 </ul>
               </li>
 
@@ -357,9 +356,10 @@ export class SiteHeader extends HTMLElement {
                 <ul class="dropdown">
                   <li><a href="/produtos" style="font-weight:600;">Produtos</a></li>
                   <li><a href="/produtos#aquastart" class="nested-item">AquaStart</a></li>
-                  <li><a href="/produtos#aquacore" class="nested-item">AquaCore</a></li>
+                  <li><a href="/produtos#aquapro" class="nested-item">AquaPro</a></li>
                   <li><a href="/produtos#aquamax" class="nested-item">AquaMax</a></li>
                   <div style="height:1px; background:#eee; margin:5px 0;"></div>
+                  <li><a href="/servicos">Serviços</a></li>
                   <li><a href="/aplicacoes">Aplicações</a></li>
                   <!-- <li><a href="/contato">Simulação de Cloro</a></li> -->
                 </ul>
@@ -391,7 +391,6 @@ export class SiteHeader extends HTMLElement {
                 <div class="mobile-content" id="empresa-content">
                   <a href="/sobre-nos" class="mobile-sublink">Sobre a Aquatronic</a>
                   <a href="/tecnologia" class="mobile-sublink">Tecnologia</a>
-                  <a href="/servicos" class="mobile-sublink">Serviços</a>
                 </div>
             </div>
 
@@ -403,14 +402,16 @@ export class SiteHeader extends HTMLElement {
                 <div class="mobile-content" id="solucoes-content">
                   <a href="/produtos" class="mobile-sublink" style="font-weight:600">Produtos</a>
                   <a href="/produtos#aquastart" class="mobile-sublink mobile-nested">AquaStart</a>
-                  <a href="/produtos#aquacore" class="mobile-sublink mobile-nested">AquaCore</a>
+                  <a href="/produtos#aquapro" class="mobile-sublink mobile-nested">AquaPro</a>
                   <a href="/produtos#aquamax" class="mobile-sublink mobile-nested">AquaMax</a>
+                  <a href="/servicos" class="mobile-sublink">Serviços</a>
                   <a href="/aplicacoes" class="mobile-sublink">Aplicações</a>
                   <!-- <a href="/contato" class="mobile-sublink">Simulação de Cloro</a> -->
                 </div>
             </div>
 
             <a href="/clientes-e-cases" class="mobile-link">Clientes</a>
+            <a href="/contato" class="mobile-link">Contato</a>
         </div>
       </header>
     `;

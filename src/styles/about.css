@@ -110,7 +110,7 @@
 /* ── Stats Section — Integrated Flow ── */
 .stats-section {
     padding: 100px 0;
-    background: var(--clr-primary-900);
+    background: var(--clr-primary-500);
     color: #fff;
     position: relative;
     overflow: hidden;
@@ -189,7 +189,7 @@
 }
 
 .leadership-quote-box {
-    margin-top: 64px;
+    margin-top: 40px;
     padding: 64px;
     background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(20px);
@@ -419,6 +419,11 @@
         padding: 100px 0;
     }
 
+    /* Ajustar padding dos cards MVV */
+    .mv-card {
+        padding: 36px 20px;
+    }
+
     .stats-inner {
         grid-template-columns: 1fr;
     }
@@ -431,5 +436,10 @@
 
     .leadership-quote-box {
         padding: 40px 32px;
+    }
+
+    /* Seção tecnologia: 1 card por linha (4 linhas) */
+    .tech-bento {
+        grid-template-columns: 1fr;
     }
 }

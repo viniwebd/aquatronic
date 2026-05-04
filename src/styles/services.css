@@ -7,6 +7,82 @@
     background-color: var(--clr-bg-blue-light);
 }
 
+/* ── Services Section ── */
+.services-section {
+    background: #fff;
+}
+
+.services-intro {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 80px;
+}
+
+.services-intro h2 {
+    margin: 20px 0 18px;
+}
+
+.services-intro p {
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+    color: var(--clr-neutral-700);
+}
+
+/* ── Service Item ── */
+.service-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    margin-bottom: 120px;
+}
+
+.service-item:last-of-type {
+    margin-bottom: 0;
+}
+
+.service-item--reverse {
+    direction: rtl;
+}
+
+.service-item--reverse > * {
+    direction: ltr;
+}
+
+.service-image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.1);
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.service-content h3 {
+    color: var(--clr-primary-800);
+    margin-bottom: 24px;
+    font-size: var(--fs-h3);
+}
+
+.service-content p {
+    color: var(--clr-neutral-700);
+    line-height: var(--lh-body);
+    margin-bottom: 16px;
+    font-size: var(--fs-body);
+}
+
+.service-content site-button {
+    display: inline-block;
+    margin-top: 16px;
+}
+
 /* ── Services Section Header (2-column split) ── */
 .services-section-header {
     display: grid;
@@ -137,6 +213,16 @@
 
 /* Tablet */
 @media (max-width: 1024px) {
+    .services-intro {
+        margin-bottom: 60px;
+    }
+
+    .service-item,
+    .service-item--reverse {
+        gap: 48px;
+        margin-bottom: 80px;
+    }
+
     .services-section-header {
         grid-template-columns: 1fr;
         gap: 20px;
@@ -198,6 +284,32 @@
 
 /* Mobile */
 @media (max-width: 768px) {
+    /* Alinhar primeira seção à esquerda */
+    .services-intro {
+        text-align: left;
+        margin-left: 0;
+        margin-bottom: 48px;
+    }
+
+    /* Remover padding das seções (já vem do .container) */
+    .services-section,
+    .how-it-works-section {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .service-item,
+    .service-item--reverse {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        margin-bottom: 60px;
+        direction: ltr;
+    }
+
+    .service-image {
+        aspect-ratio: 16 / 10;
+    }
+
     .how-it-works-section .container > h2 {
         margin-bottom: 48px;
     }

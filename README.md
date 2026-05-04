@@ -2,48 +2,110 @@
 
 Este é o repositório oficial do novo site institucional da **Aquatronic**, empresa brasileira com mais de 20 anos de experiência especializada no desenvolvimento de geradores de cloro por eletrólise salina para indústrias, saneamento básico, piscinas e projetos comerciais.
 
-## 🛠 Entendendo o Projeto e a Stack Tecnológica
+---
 
-Optamos por construir este projeto **do zero com código puro (Vanilla Flow via Vite)** em vez de utilizar plataformas pré-moldadas como o WordPress. A stack atual compreende:
+## 🛠 Stack Tecnológica
 
-- **HTML5 Semântico:** Estrutura otimizada para SEO e acessibilidade.
-- **CSS3 (Vanilla):** Sem frameworks utilitários (como Tailwind) ou bibliotecas pesadas de templates (como Elementor), garantindo que apenas os bytes necessários sejam carregados.
-- **TypeScript & Web Components:** Toda a interatividade e modularização de UI (Header, Footer, Banners, Cards) foi construída usando _Native Web Components_ (classes customizadas do TS compiladas).
-- **Vite:** Ferramenta de build incrivelmente rápida para ambiente de desenvolvimento e empacotamento (`/dist`) em produção.
-- **NPM & Node.js:** Gerenciamento dos scripts de otimização (SEO, sitemaps, etc) e dependências de ambiente.
-- **PHP 8+:** Script leve no back-end (`send-email.php`) para lidar com formulários sem a necessidade de plugins.
+O projeto foi construído do zero com foco em performance extrema e SEO técnico:
 
-## 🚀 Por Que Código Puro (Code + IA) e não WordPress?
+- **Vite:** Ferramenta de build e servidor de desenvolvimento ultra-rápido.
+- **TypeScript & Native Web Components:** Interface modularizada sem dependência de frameworks pesados (React/Vue).
+- **Vanilla CSS:** Estilização pura com variáveis globais para consistência visual.
+- **PHP 8+:** Script de processamento de formulários (`public/send-email.php`).
 
-Essa foi uma decisão arquitetural estratégica que rendeu vantagens drásticas:
+---
 
-### 1. Performance Incomparável (Nota 100 no Lighthouse)
+## 🚀 Como Editar o Projeto
 
-Ao removermos o ecossistema do WordPress, nós eliminamos: requisições ao banco de dados SQL a cada visita da página, dezenas de arquivos CSS/JS injetados por plugins aleatórios, e o gargalo do renderizador de temas. O Vite compila nosso HTML/CSS/TS num pacote estático ultraleve e veloz. O site abrirá quase instantaneamente, mesmo em conexões rurais 3G.
+Siga estes passos para configurar seu ambiente local:
 
-### 2. Segurança Reforçada (Zero Vulnerabilidades)
+### 1. Pré-requisitos
 
-A grande maioria dos ataques a sites corporativos ocorre por brechas em plugins do WordPress (formulários vulneráveis, construtores antigos). Um site gerado estaticamente via Web Components nativos não possui banco de dados dinâmico sendo consultado na ponta, tornando injeções maliciosas (SQL injection e XSS) virtualmente impossíveis.
+Certifique-se de ter o **Node.js** instalado em sua máquina.
 
-### 3. SEO e AEO Cirúrgicos
+### 2. Configuração Inicial
 
-Construtores de páginas, mesmo com plugins de SEO (como Yoast), têm limitações severas de injeção técnica. Construindo direto no código, conseguimos injetar programaticamente:
+Clone o repositório e instale as dependências:
 
-- **Schema Markup avançado (JSON-LD)** nativo para Organização, Negócio Local e Produtos.
-- Web Components gerando HTML semântico (`<section-tag>`, `<page-hero>`) que respeita regras rígidas de hierarquias `H1` e `H2` exigidas pelo Google.
-- **AEO (AI Engine Optimization):** Criamos componentes como o `FaqAccordion.ts` que geram e injetam esquemas dinâmicos de perguntas sob demanda na DOM, facilitando a extração de dados por plataformas como ChatGPT, Perplexity e Google AI Overviews.
+```bash
+# Instalar dependências
+npm install
+```
 
-### 4. Ganhos de Tempo (A Revolução do Desenvolvimento com IA)
+### 3. Ambiente de Desenvolvimento
 
-Antigamente, codificar um site moderno, modularizado e de altíssimo padrão sem um CMS levaria o triplo do tempo de um WordPress por causa da estruturação de arquivos. Contudo, usando **Design Systems e IA Agentica Avançada**, fomos capazes de:
+Para visualizar o site em tempo real enquanto edita:
 
-- Escalar rapidamente dezenas de páginas reutilizando _Web Components Customizados_.
-- Gerar dinamicamente tags canônicas, metadados B2B engajadores, `sitemap.xml` e `robots.txt` escrevendo scripts Node no terminal via IA em questão de segundos para o site todo (ao invés de alterar manualmente página por página ou depender de plugins pagos obscuros).
-- Escalar segurança: O código PHP do formulário de contato foi gerado e polido contra falhas instantaneamente.
-- Realizar revisões ortográficas e garantir alinhamento com escopo físico (através de upload e parse de PDFs locais) em frações de minutos, aplicando as mudanças de copy direto nos arquivos finais sem intervenção manual prolongada.
+```bash
+# Iniciar servidor local
+npm run dev
+```
 
-### Como Rodar o Projeto
+O site estará disponível em `http://localhost:5173`.
 
-1. Instale as dependências: `npm install`
-2. Rode o servidor de dev: `npm run dev`
-3. Compile para produção: `npm run build` (Suba a pasta `/dist` para a hospedagem).
+---
+
+## 🤖 Trabalhando com o Claude (IA Agentic Coding)
+
+Este projeto foi otimizado para ser mantido via IA. Ao abrir este projeto no VS Code com o Claude (ou Antigravity), você pode dar comandos diretos em linguagem natural.
+
+**Como iniciar uma conversa/edição:**
+
+1. Abra o terminal no VS Code.
+2. Certifique-se de que o agente está ativo.
+3. Use comandos como:
+   - _"Analise o site e adicione uma nova seção de benefícios na home."_
+   - _"Crie uma nova página de produto para o modelo AquaPro 500."_
+   - _"Ajuste as cores do design system para um azul mais escuro."_
+   - _"Otimize o SEO da página de tecnologia."_
+
+O Claude cuidará da criação de componentes, rotas e estilos automaticamente.
+
+---
+
+## 📦 Build e Deploy (Hospedagem Turbo Cloud)
+
+Quando estiver pronto para subir as alterações para o site oficial:
+
+### 1. Gerar o Build
+
+Execute o comando abaixo para compilar e otimizar todos os arquivos:
+
+```bash
+npm run build
+```
+
+Este comando criará uma pasta chamada `dist/` na raiz do projeto.
+
+### 2. Onde Hospedar
+
+O site foi projetado para rodar em servidores PHP modernos, como a **Turbo Cloud** (ou qualquer hospedagem cPanel/Apache/Nginx).
+
+### 3. Quais Arquivos Subir
+
+Você deve subir **APENAS** o conteúdo de dentro da pasta `dist/` para a raiz da sua hospedagem (dentro da pasta `public_html`).
+
+**Importante:**
+
+- O arquivo `send-email.php` agora é movido automaticamente para a pasta `dist/` durante o build.
+- Certifique-se de que o arquivo `.htaccess` (se houver) ou as configurações do servidor permitam o roteamento de pastas (o site usa URLs limpas como `/produtos`).
+
+---
+
+## 🎯 Estratégia de SEO e Performance
+
+Diferente de sites em WordPress, a Aquatronic utiliza uma arquitetura estática que garante:
+
+- **Nota 100 no Lighthouse:** Carregamento instantâneo.
+- **Schema Markup Nativo:** Dados estruturados para Google e IAs (AEO).
+- **Segurança Total:** Sem banco de dados exposto, eliminando riscos de SQL Injection.
+
+---
+
+## 📂 Estrutura de Pastas
+
+- `/src`: Código fonte (TypeScript, Componentes, Estilos).
+- `/public`: Arquivos estáticos (Imagens, PDFs, scripts PHP).
+- `/dist`: Arquivo final compilado (O que vai para o ar).
+- `index.html`: Ponto de entrada principal.
+- `vite.config.js`: Configurações de rotas e build.
